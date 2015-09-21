@@ -1,0 +1,353 @@
+@media only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait) {
+  @font-face {
+    font-family: "akkuratRegular";
+    src: url('../fonts/AkkuratRegular.otf') format('opentype');
+  }
+  @font-face {
+    font-family: "akkuratLight";
+    src: url('../fonts/AkkuratLight.otf') format('opentype');
+  }
+  #desktop {
+    display: none;
+  }
+  .mNewsletter {
+    display: none;
+  }
+  .tNav {
+    display: none;
+  }
+  .tSideNav {
+    display: none;
+  }
+  .m3br {
+    display: none;
+  }
+  .tSpace {
+    display: none;
+  }
+  #mobile {
+    display: inline-block;
+  }
+  .mHeader {
+    border: 1px solid transparent;
+    width: 100vw;
+  }
+  .mHeader .logoWrapper {
+    width: 50vw;
+  }
+  .mHeader .logoWrapper img {
+    display: inline-block;
+    margin-left: 4vw;
+    margin-top: 4vw;
+  }
+  .mHeader .mSocWrapper {
+    display: inline-block;
+    float: right;
+    width: 49vw;
+    height: 20vh;
+  }
+  .mHeader .mSocWrapper ul {
+    margin-left: 8vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3vh;
+  }
+  .mHeader .mSocWrapper ul li {
+    display: inline-block;
+    margin-right: 6vw;
+  }
+  .mHeader .mSocWrapper p {
+    width: 35vw;
+    display: block;
+    margin-left: 8vw;
+    margin-top: 4vh;
+    font-family: 'akkuratRegular', arial, sans-serif;
+    color: #fff;
+    font-size: 4.3vw;
+  }
+  .mContent h1 {
+    font-family: 'akkuratRegular', arial, sans-serif;
+    font-size: 11vw;
+  }
+  .mContent h1 span {
+    text-decoration: underline;
+  }
+  .mButton {
+    font-family: 'akkuratRegular', arial, sans-serif;
+    font-size: 4vw;
+    text-transform: uppercase;
+    background: #1B3F45;
+    text-align: center;
+    border-radius: 2px;
+    height: 7vh;
+  }
+  .mButton a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top: 2vh;
+  }
+  .mButton a img {
+    width: 3.7vw;
+    background: #1B3F45;
+  }
+  .mSpace {
+    width: 100vw;
+    height: 16vh;
+  }
+  .mNav {
+    width: 100vw;
+    height: 16vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #00afd4;
+  }
+  .mNav .mNavWrapper {
+    margin-top: 3vw;
+    display: flex;
+    justify-content: space-between;
+    width: 92vw;
+    margin-left: 4vw;
+  }
+  .mNav .mNavWrapper .mNavLink {
+    display: inline-block;
+  }
+  .mNav .mNavWrapper .mNavLink a img {
+    width: 13vw;
+  }
+  .mNav .mNavWrapper .mNavLink p {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'akkuratRegular', arial, sans-serif;
+    font-size: 3vw;
+    margin-top: 1vh;
+  }
+  .mNav .mNavWrapper .mNavLink p a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .mNav .mNavWrapper .mNavLink:nth-child(4) img {
+    margin-bottom: 1vh;
+  }
+  .mSection1 {
+    background: #00bcdd;
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+  }
+  .mSection1 .mContent h1 {
+    margin-top: 5vh;
+    margin-left: 4vw;
+  }
+  .mSection1 .mContent .mText {
+    line-height: 4vh;
+    margin-top: 3vh;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    font-family: 'akkuratRegular', arial, sans-serif;
+    font-size: 4vw;
+  }
+  .mSection1 .mContent .mText p {
+    margin-top: 3vh;
+  }
+  .mSection1 .mContent .mButton {
+    width: 50vw;
+    margin-left: 4vw;
+    margin-top: 2.5vh;
+  }
+  .mSection2 {
+    background: #ffd03e;
+    width: 100vw;
+    height: 114vh;
+    position: relative;
+  }
+  .mSection2 .mContent {
+    color: #fff;
+    margin-left: 4vw;
+    margin-top: 4vh;
+  }
+  .mSection2 .mContent p {
+    font-size: 6vw;
+    font-family: 'akkuratRegular', arial, sans-serif;
+    margin-top: 4vh;
+    line-height: 5vh;
+  }
+  .mSection2 .mContent .imgWrapper {
+    margin-top: 4vh;
+    margin-right: 4vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  .mSection2 .mContent .imgWrapper img {
+    width: 43vw;
+    height: 43vw;
+  }
+  .mSection2 .mContent .mButton {
+    width: 48vw;
+    margin-top: 4vh;
+  }
+  .mSection2 .mNav {
+    color: #fff;
+  }
+  .mSection3 {
+    background: #aa7bc9;
+    width: 100vw;
+    height: 185vh;
+    position: relative;
+  }
+  .mSection3 .mContent {
+    color: #fff;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    margin-top: 6vh;
+  }
+  .mSection3 .mContent h1 {
+    line-height: 8vh;
+  }
+  .mSection3 .mContent p {
+    margin-top: 6vh;
+    font-family: 'akkuratRegular', arial, sans-serif;
+    font-size: 4.8vw;
+    line-height: 4.2vh;
+  }
+  .mSection3 .mContent .mTiles {
+    margin-top: 4vh;
+  }
+  .mSection3 .mContent .mTiles div {
+    margin-bottom: 4vh;
+  }
+  .mSection3 .mContent .mTiles div img {
+    display: inline-block;
+    width: 23vw;
+    margin-right: 9vw;
+  }
+  .mSection3 .mContent .mTiles div div {
+    margin-top: 0;
+    display: inline-block;
+  }
+  .mSection3 .mContent .mTiles div div p {
+    font-size: 4.5vw;
+    margin-top: 1vh;
+    line-height: 4vh;
+  }
+  .mSection3 .mContent .mTiles div div h2 {
+    font-size: 8vw;
+    font-family: 'akkuratRegular', arial, sans-serif;
+  }
+  .mSection3 .mNav {
+    color: #fff;
+  }
+  .mSection4 {
+    background: #48c3b1;
+    width: 100vw;
+    height: 140vh;
+    position: relative;
+  }
+  .mSection4 .mContent {
+    color: #fff;
+    margin-left: 4vw;
+    margin-top: 7vh;
+  }
+  .mSection4 .mContent h1 {
+    line-height: 8vh;
+  }
+  .mSection4 .mContent p {
+    font-size: 6vw;
+    font-family: 'akkuratRegular', arial, sans-serif;
+    margin-top: 4vh;
+    line-height: 5vh;
+  }
+  .mSection4 .mContent .mButton {
+    width: 40vw;
+    margin-top: 6vh;
+  }
+  .mSection4 .mNav {
+    color: #fff;
+  }
+  .mSection5 {
+    background: #eb6851;
+    width: 100vw;
+    height: 193vh;
+    position: relative;
+  }
+  .mSection5 .mContent {
+    color: #fff;
+    margin-left: 4vw;
+    margin-top: 7vh;
+  }
+  .mSection5 .mContent h1 {
+    line-height: 8vh;
+  }
+  .mSection5 .mContent div {
+    margin-top: 8vh;
+    margin-right: 4vw;
+  }
+  .mSection5 .mContent div .mBlogTitle {
+    text-transform: uppercase;
+    font-family: 'akkuratRegular', arial, sans-serif;
+    font-size: 6vw;
+    line-height: 5vh;
+  }
+  .mSection5 .mContent div .mBlogDate {
+    font-family: 'akkuratLight', arial, sans-serif;
+    margin-top: 4vh;
+    font-size: 3.4vw;
+  }
+  .mSection5 .mContent div .mBlogDate .mBlogSection {
+    font-family: 'akkuratRegular', arial, sans-serif;
+  }
+  .mSection5 .mContent div .mBlogSnip {
+    margin-top: 4vh;
+    font-family: 'akkuratRegular', arial, sans-serif;
+    font-size: 4.2vw;
+    line-height: 6vw;
+  }
+  .mSection5 .mContent .mButton {
+    width: 40vw;
+    margin-top: 6vh;
+  }
+  .mSection5 .mNav {
+    color: #fff;
+  }
+  .mContact {
+    background: #2D2C2B;
+    height: 30vh;
+    width: 100vw;
+  }
+  .mContact .mContactContent p {
+    color: #fff;
+    font-family: 'akkuratRegular', arial, sans-serif;
+    padding-top: 5vh;
+    padding-right: 6vw;
+    padding-left: 6vw;
+    font-size: 4.6vw;
+    line-height: 4vh;
+  }
+  .mContact .mContactContent .mButton {
+    margin-top: 4vh;
+    background: #eb6851;
+    color: #fff;
+    width: 37vw;
+    margin-left: 6vw;
+  }
+  .mContact .mContactContent .mButton a img {
+    background: #eb6851;
+  }
+  footer {
+    background: #E9EAEA;
+    width: 100vw;
+    padding-top: 5vw;
+  }
+  footer .mFooter p {
+    font-family: 'akkuratRegular', arial, sans-serif;
+    font-size: 4vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-bottom: 3vh;
+  }
+}
+/*# sourceMappingURL=E:/wamp/www/templates/working-three/assets/css/main.css.map */

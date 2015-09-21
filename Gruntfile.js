@@ -48,6 +48,12 @@ module.exports = function(grunt) {
         files: {
           'assets/css/main.css': [
             'assets/less/main.less'
+          ],
+          'assets/css/tablet.css': [
+            'assets/less/tablet.less'
+          ],
+          'assets/css/mobile.css': [
+            'assets/less/mobile.less'
           ]
         },
         options: {
@@ -57,7 +63,7 @@ module.exports = function(grunt) {
           sourceMap: true,
           outputSourceFiles: true, // with this param you'll have your less in your map and you can see it
           sourceMapFilename: 'assets/css/main.css.map',
-          sourceMapRootpath: 'E:/wamp/www/templates/crowdfund/'
+          sourceMapRootpath: 'E:/wamp/www/templates/working-three/'
         }
       },
       build: {
