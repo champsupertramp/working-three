@@ -1,0 +1,452 @@
+@media only screen and (min-width: 0px)
+and (max-width: 767px)
+and (orientation: portrait) {
+
+//VARIABLES//
+@topNavFontSize: 0.9vw;
+@sideNavFontSize: 1vw;
+@headerFontSize: 4.5vw;
+@h2FontSize: 2.2vw;
+@akRegular: 'akkuratRegular',
+arial,
+sans-serif;
+@akLight: 'akkuratLight',
+arial,
+sans-serif;
+@p1FontSize: 1.1vw;
+@p2FontSize: 1.6vw;
+@buttonFontSize: 1.2vw;
+@blueBg: #00BCDD;
+@yellowBg: #FFD03E;
+@purpleBg: #AA7BC9;
+@greenBg: #48C3B1;
+@redBg: #EB6851;
+@blueBgDark: #00AFD4;
+@yellowBgDark: #FFC627;
+@purpleBgDark: #906FB4;
+@greenBgDark: #24B9AD;
+@redBgDark: #E95944;
+
+  .mSection1 {
+    .mHeader {
+      .logoWrapper {
+//        border: 1px solid green;
+        img {
+//          border: 1px solid red;
+        }
+      }
+      p {
+//        border: 1px solid yellow;
+      }
+      .mSocWrapper {
+//        border: 1px solid black;
+        ul {
+//          border: 1px solid white;
+        }
+        p {
+//          border: 1px solid red;
+        }
+      }
+    }
+    .mContentWrapper {
+//      border: 1px solid black;
+      .mContent {
+        h1 {}
+        .mText {}
+        .mButton {}
+      }
+    }
+  }
+
+//FONTS//
+@font-face {
+  font-family: "akkuratRegular";
+  src: url('../fonts/AkkuratRegular.otf') format('opentype');
+}
+@font-face {
+  font-family: "akkuratLight";
+  src: url('../fonts/AkkuratLight.otf') format('opentype');
+}
+
+  #desktop {
+    display:none;
+  }
+
+  .mNewsletter {
+    display: none;
+  }
+
+  .tNav {
+    display: none;
+  }
+
+  .tSideNav {
+    display: none;
+  }
+
+  .m3br {
+    display: none;
+  }
+
+  .tSpace {
+    display: none;
+  }
+
+
+  #mobile {
+    display: inline-block;
+    .mHeader {
+    }
+  }
+
+  .mHeader {
+    border: 1px solid transparent;
+    width: 100vw;
+    .logoWrapper {
+      width: 50vw;
+      img {
+        display: inline-block;
+        margin-left: 4vw;
+        margin-top: 4vw;
+      }
+    }
+    .mSocWrapper {
+      display: inline-block;
+      float: right;
+      width: 49vw;
+      height: 20vh;
+      ul {
+        margin-left: 8vw;
+        display:flex;
+        justify-content:space-between;
+        margin-top: 3vh;
+        li {
+          display: inline-block;
+          margin-right: 6vw;
+        }
+      }
+      p {
+        width: 35vw;
+        display: block;
+        margin-left: 8vw;
+        margin-top: 4vh;
+        font-family: @akRegular;
+        color: #fff;
+        font-size: 4.3vw;
+      }
+    }
+  }
+  .mContent {
+    h1 {
+      font-family: @akRegular;
+      font-size: 11vw;
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+  .mButton {
+    font-family: @akRegular;
+    font-size: 4vw;
+    text-transform: uppercase;
+    background: #1B3F45;
+    text-align: center;
+    border-radius: 2px;
+    height: 7vh;
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-top: 2vh;
+      img {
+        width: 3.7vw;
+        background: #1B3F45;
+      }
+    }
+  }
+
+  .mSpace {
+    width: 100vw;
+    height: 16vh;
+  }
+
+
+  .mNav {
+    width: 100vw;
+    height: 16vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: @blueBgDark;
+    .mNavWrapper {
+      margin-top: 3vw;
+      display:flex;
+      justify-content:space-between;
+      width: 92vw;
+      margin-left: 4vw;
+      .mNavLink {
+        display: inline-block;
+        a {
+          img {
+            width: 13vw;
+          }
+        }
+        p {
+          text-align: center;
+          text-transform: uppercase;
+          font-family: @akRegular;
+          font-size: 3vw;
+          margin-top: 1vh;
+          a {
+            color: inherit;
+            text-decoration: none;
+          }
+        }
+      }
+      .mNavLink:nth-child(4) {
+        img {
+          margin-bottom: 1vh;
+        }
+      }
+    }
+  }
+
+  .mSection1 {
+    background: @blueBg;
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+    .mContent {
+      h1 {
+        margin-top: 5vh;
+        margin-left: 4vw;
+      }
+      .mText {
+        line-height: 4vh;
+        margin-top: 3vh;
+        margin-left: 4vw;
+        margin-right: 4vw;
+        font-family: @akRegular;
+        font-size: 4vw;
+        p {
+          margin-top: 3vh;
+        }
+      }
+      .mButton{
+        width: 50vw;
+        margin-left: 4vw;
+        margin-top: 2.5vh;
+      }
+    }
+    .mNav {
+//      background: @blueBgDark;
+    }
+  }
+
+  .mSection2 {
+    background: @yellowBg;
+    width: 100vw;
+    height: 114vh;
+    position: relative;
+    .mContent {
+      color: #fff;
+      margin-left: 4vw;
+      margin-top: 4vh;
+      p {
+        font-size: 6vw;
+        font-family: @akRegular;
+        margin-top: 4vh;
+        line-height: 5vh;
+      }
+      .imgWrapper {
+        margin-top: 4vh;
+        margin-right: 4vw;
+        display:flex;
+        justify-content:space-between;
+        img {
+          width: 43vw;
+          height: 43vw;
+        }
+      }
+      .mButton {
+        width: 48vw;
+        margin-top: 4vh;
+      }
+    }
+    .mNav {
+//      background: @yellowBgDark;
+      color: #fff;
+    }
+  }
+  .mSection3 {
+    background: @purpleBg;
+    width: 100vw;
+    height: 185vh;
+    position: relative;
+    .mContent {
+      color: #fff;
+      margin-left: 4vw;
+      margin-right: 4vw;
+      margin-top: 6vh;
+      h1 {
+        line-height: 8vh;
+      }
+      p {
+        margin-top: 6vh;
+        font-family: @akRegular;
+        font-size: 4.8vw;
+        line-height: 4.2vh;
+      }
+      .mTiles {
+        margin-top: 4vh;
+        div {
+          margin-bottom: 4vh;
+          img {
+            display: inline-block;
+            width: 23vw;
+            margin-right: 9vw;
+          }
+          div {
+            margin-top: 0;
+            display: inline-block;
+            p {
+              font-size: 4.5vw;
+              margin-top: 1vh;
+              line-height: 4vh;
+            }
+            h2 {
+              font-size: 8vw;
+              font-family: @akRegular
+            }
+          }
+        }
+      }
+    }
+    .mNav {
+//      background: @purpleBgDark;
+      color: #fff;
+    }
+  }
+
+  .mSection4 {
+    background: @greenBg;
+    width: 100vw;
+    height: 140vh;
+    position: relative;
+    .mContent {
+      color: #fff;
+      margin-left: 4vw;
+      margin-top: 7vh;
+      h1 {
+        line-height: 8vh;
+      }
+      p {
+        font-size: 6vw;
+        font-family: @akRegular;
+        margin-top: 4vh;
+        line-height: 5vh;
+      }
+      .mButton {
+        width: 40vw;
+        margin-top: 6vh;
+      }
+    }
+    .mNav {
+//      background: @greenBgDark;
+      color: #fff;
+    }
+  }
+
+  .mSection5 {
+    background: @redBg;
+    width: 100vw;
+    height: 193vh;
+    position: relative;
+    .mContent {
+      color: #fff;
+      margin-left: 4vw;
+      margin-top: 7vh;
+      h1 {
+        line-height: 8vh;
+      }
+      div {
+        margin-top: 8vh;
+        margin-right: 4vw;
+        .mBlogTitle {
+          text-transform: uppercase;
+          font-family: @akRegular;
+          font-size: 6vw;
+          line-height: 5vh;
+        }
+        .mBlogDate {
+          font-family: @akLight;
+          margin-top: 4vh;
+          font-size: 3.4vw;
+          .mBlogSection {
+            font-family: @akRegular;
+          }
+        }
+        .mBlogSnip {
+          margin-top: 4vh;
+          font-family: @akRegular;
+          font-size: 4.2vw;
+          line-height: 6vw;
+        }
+        .mButton {}
+      }
+      .mButton {
+        width: 40vw;
+        margin-top: 6vh;
+      }
+    }
+    .mNav {
+//      background: @redBgDark;
+      color: #fff;
+    }
+  }
+
+  .mContact {
+    background: #2D2C2B;
+    height: 30vh;
+    width: 100vw;
+    .mContactContent {
+      p {
+        color: #fff;
+        font-family: @akRegular;
+        padding-top: 5vh;
+        padding-right: 6vw;
+        padding-left: 6vw;
+        font-size: 4.6vw;
+        line-height: 4vh;
+      }
+      .mButton {
+        margin-top: 4vh;
+        background: @redBg;
+        color: #fff;
+        width: 37vw;
+        margin-left: 6vw;
+        a img {
+          background: @redBg;
+        }
+      }
+    }
+  }
+
+  footer {
+    background: #E9EAEA;
+    width: 100vw;
+    padding-top: 5vw;
+    .mFooter {
+      p {
+        font-family: @akRegular;
+        font-size: 4vw;
+        padding-left: 4vw;
+        padding-right: 4vw;
+        padding-bottom: 3vh;
+      }
+    }
+  }
+}
