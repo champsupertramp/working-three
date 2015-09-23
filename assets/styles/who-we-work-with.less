@@ -1,0 +1,566 @@
+//CSS RESET//
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#mobile, #tablet {
+  display: none;
+}
+
+//VARIABLES//
+@menu-font-size: 0.9vw;
+@side-nav-font-size: 1vw;
+@h1-font-size: 5vw;
+@h2-font-Size: 2.5vw;
+@akRegular: 'akkuratRegular',
+arial,
+sans-serif;
+@akLight: 'akkuratLight',
+arial,
+sans-serif;
+@p1-font-size: 1.15vw;
+@p2-font-size: 1.8vw;
+@button-font-size: 1.2vw;
+@blue-bg: #00BCDD;
+@yellow-bg: #FFD03E;
+@purple-bg: #AA7BC9;
+@blue-bg-dark: #00AFD4;
+@purple-bg-dark: #906FB4;
+@white-bg: #fff;
+@white-bg-dark: #F2F2F3;
+@grey-bg: #F2F2F3;
+@grey-bg-dark: #E2E3E4;
+@blue-grad-dark: linear-gradient(rgba(0, 175, 212, 1) 60%, rgba(0, 175, 212, 0));
+@blue-grad: linear-gradient(rgba(0, 188, 221, 1) 60%, rgba(0, 188, 221, 0));
+
+//FONTS//
+@font-face {
+  font-family: "akkuratRegular";
+  src: url('../fonts/AkkuratRegular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "akkuratLight";
+  src: url('../fonts/AkkuratLight.otf') format('opentype');
+}
+
+.nav-top {
+  font-family: @akRegular;
+  width: 100vw;
+  height: 20vh;
+  display: block;
+  position: absolute;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: @menu-font-size;
+  .logo-wrap {
+    width: 16vw;
+    display: inline-block;
+    height: 20vh;
+    margin: 0;
+    float: left;
+    .logo {
+      margin: 6.5vh 0 0 2vw;
+      width: 9vw;
+    }
+  }
+  .menu-wrap {
+    width: 68vw;
+    display: inline-block;
+    height: 20vh;
+    margin: 0;
+    float: left;
+    .ns-text {
+      margin-left: 12vw;
+      margin-top: 4vh;
+      .ns-link {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+    .menu-top {
+      margin-left: 12vw;
+      margin-top: 6vh;
+      .menu-top-item {
+        display: inline;
+        margin-right: 3vw;
+        .menu-top-link {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .soc-wrap {
+    width: 16vw;
+    display: inline-block;
+    height: 20vh;
+    margin: 0;
+    float: left;
+    .soc-menu {
+      margin: 3.7vh 0 5vh 0;
+      .soc-icons {
+        display: inline;
+        margin-right: 1.9vw;
+      }
+    }
+    .soc-phone {
+      margin-left: 0;
+    }
+  }
+}
+
+//BACKGROUND COLORS//
+
+.blue-gradient {
+  background-image: @blue-grad;
+}
+
+.blue-gradient-dark {
+  background-image: @blue-grad-dark;
+}
+
+.blue {
+  background: @blue-bg
+}
+
+.blue-dark {
+  background: @blue-bg-dark;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.white {
+  background: @white-bg;
+}
+
+.white-dark {
+  background: @white-bg-dark;
+}
+
+.grey {
+  background: @grey-bg;
+}
+
+.grey-dark {
+  background: @grey-bg-dark;
+}
+
+.black {
+  background: #333333;
+}
+
+.black-dark {
+  background: #262626;
+}
+
+//NEWSLETTER//
+#dNewsletter {
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  float: left;
+  z-index: 100000;
+  position: fixed;
+  .closeWrap {
+    width: 100vw;
+    height: 3vh;
+    padding-top: 17vh;
+    .closeButton {
+      margin-left: 77.5vw;
+      text-transform: uppercase;
+      font-family: @akRegular;
+      font-size: 1vw;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  .newsletterLogo {
+    width: 6vw;
+    height: 6vw;
+    display: block;
+    text-align: justify;
+    margin-left: 45vw;
+  }
+  .newsletterContent {
+
+    .newsletterTitle {
+      margin-left: 38vw;
+      text-transform: uppercase;
+      font-family: @akRegular;
+      font-size: 2.5vw;
+      margin-top: 3vh;
+      position: absolute;
+    }
+    .newsletterText {
+      position: absolute;
+      width: 30vw;
+      font-family: @akRegular;
+      font-size: 1vw;
+      line-height: 3vh;
+      margin-left: 15vw;
+      margin-top: 15vh;
+    }
+    .signupForm {
+      width: 35vw;
+      position: absolute;
+      float: left;
+      margin-top: 15vh;
+      margin-left: 50vw;
+      label {
+        display: block;
+        font-family: @akRegular;
+        font-size: 1.2vw;
+        margin-bottom: 1vh;
+      }
+      input {
+        display: block;
+        width: 30vw;
+        margin-bottom: 3vh;
+        height: 35px;
+      }
+      .nsButton {
+        display: block;
+        position: absolute;
+        margin-top: 27vh;
+        margin-left: 22.5vw;
+        button {
+          width: 8vw;
+          font-family: @akRegular;
+          font-size: 1.2vw;
+          color: #fff;
+          background: #00BCDD;
+          border: 0;
+          border-radius: 3px;
+          height: 5vh;
+        }
+      }
+    }
+  }
+}
+
+//SECTIONS//
+.sec-1 {
+  height: 70vh;
+  width: 100vw;
+  display: block;
+  .sec-1-sidebar {
+    height: 70vh;
+    width: 16vw;
+    display: inline-block;
+  }
+  .sec-1-bg {
+    width: 84vw;
+    height: 70vh;
+    display: inline-block;
+    float: right;
+    color: #fff;
+    font-family: @akRegular;
+    .sec-1-content {
+      margin: 25vh 0 0 12vw;
+      h1 {
+        font-size: @h1-font-size;
+        margin-bottom: 6vh;
+      }
+      .p1 {
+        font-size: @p1-font-size;
+        margin-bottom: 3vh;
+        width: 37vw;
+        line-height: 3vh;
+      }
+      .p2 {
+        font-size: @p2-font-size;
+        margin-top: 10vh;
+      }
+      .soc-menu {
+        margin-top: 4vh;
+        .soc-icons {
+          display: inline;
+          margin-right: 2vw;
+          .soc-link {
+            img {
+              height: 3vh;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.sec-2 {
+  height: 285vh;
+  width: 100vw;
+  display: block;
+  .sec-2-sidebar {
+    height: 285vh;
+    width: 16vw;
+    display: inline-block;
+  }
+
+  *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+
+  .controls{
+    margin-top: -10vh;
+    background: @blue-bg;
+    height: 10vh;
+    color: #eee;
+    width: 84vw;
+    display: inline-block;
+    float: right;
+  }
+
+  label{
+    font-weight: 300;
+    margin: 0 .4em 0 0;
+  }
+
+  button{
+    display: inline-block;
+    padding: .4em .8em;
+    background: @blue-bg;
+    border: 0;
+    color: #fff;
+    font-size: 0.9vw;
+    font-weight: 300;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  button:first-child {
+    margin-left: 10vw;
+  }
+
+  button.active{
+    color: #000;
+  }
+
+  button:focus{
+    outline: 0 none;
+  }
+
+  button + label{
+    margin-left: 1em;
+  }
+
+  .container{
+    text-align: justify;
+    font-size: 0.1px;
+    background: @white-bg;
+    display: inline-block;
+    float: right;
+    width: 84vw;
+    height: 250vh;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .container:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+
+  .container .mix,
+  .container .gap{
+    display: inline-block;
+    width: 24%;
+  }
+
+  .container .mix .client-logo {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .container .mix .mix-study-wrap {
+    height: 6vh;
+  }
+  .on {
+    display: block;
+  }
+  .off {
+    display: none;
+  }
+
+  .container .mix .mix-study {
+    font-size: 0.9vw;
+    font-family: @akRegular;
+    text-align: center;
+    line-height: 6vh;
+  }
+  .container .mix{
+    text-align: left;
+    background: transparent;
+    margin: 0 0 2vh 0;
+    border: 1px solid lightgray;
+    display: none;
+  }
+  .mix-container {
+    margin-left: 2vh;
+    margin-top: 2vh;
+  }
+
+  .container .mix:after{
+    content: attr(data-myorder);
+    color: white;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: top;
+    font-weight: 700;
+  }
+
+  .container .mix:before{
+    content: '';
+    display: inline-block;
+  }
+
+
+}
+
+.sec-contact {
+  height: 14vh;
+  width: 100vw;
+  display: block;
+  .sec-contact-sidebar {
+    height: 14vh;
+    width: 16vw;
+    display: inline-block;
+  }
+  .sec-contact-bg {
+    height: 14vh;
+    width: 84vw;
+    display: inline-block;
+    float: right;
+    .sec-contact-content {
+      display: inline-block;
+      float: left;
+      .sec-contact-text {
+        width: 47vw;
+        color: #fff;
+        font-family: @akRegular;
+        font-size: 1.1vw;
+        margin-left: 12vw;
+        margin-top: 5vh;
+      }
+      .button {
+        vertical-align: top;
+        display: inline-block;
+        float: right;
+        background: @blue-bg;
+        padding: 0.6vw;
+        margin-top: -3.5vh;
+        text-decoration: none;
+        img {
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  height: 14vh;
+  width: 100vw;
+  display: block;
+  .footer-sidebar {
+    height: 14vh;
+    width: 16vw;
+    display: inline-block;
+  }
+  .footer-bg {
+    width: 84vw;
+    height: 14vh;
+    display: inline-block;
+    float: right;
+    color: #000;
+    font-family: @akRegular;
+    font-size: 0.9vw;
+    .footer-content {
+      margin-left: 12vw;
+      margin-top: 6vh;
+      p {
+        display: inline;
+        margin-right: 10.7vw;
+      }
+    }
+  }
+}
+
+.button {
+  font-family: @akRegular;
+  font-size: @button-font-size;
+  text-transform: uppercase;
+  background: #1B3F45;
+  text-align: center;
+  border-radius: 2px;
+//  height: 6vh;
+  border: none;
+  color: #fff;
+  padding: 0 1vw;
+  img {
+    width: 1.2vw;
+    background: #1B3F45;
+  }
+}
