@@ -6,3 +6,8 @@ assets/manifest.json
 /nbproject/private/
 lib/config.php
 npm-debug.log
+*.php
+style.css
+screenshot.png
+codestar-framework
+

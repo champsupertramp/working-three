@@ -1,32 +1,95 @@
-(function( $ ) {
-  'use strict';
+ var $ = jQuery.noConflict();
+ function toggle_visibility(id) {
+        var e = document.getElementById(id);
+        if(e.style.display == 'block')
+            e.style.display = 'none';
+        else
+            e.style.display = 'block';
+    }
+    $('a').click(function () {
+        $('html, body').animate({
+            scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+        }, 400);
+        return false;
+    });
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > $(window).height() * 0.9) {
+                $(".topNav").addClass("scrolled2", 300, "linear");
+            } else {
+                $(".topNav").removeClass("scrolled2", 300, "linear");
+            }
+            if ($(document).scrollTop() > $(window).height() * 1.9) {
+                $(".topNav").addClass("scrolled3");
+            } else {
+                $(".topNav").removeClass("scrolled3");
+            }
+            if ($(document).scrollTop() > $(window).height() * 2.9) {
+                $(".topNav").addClass("scrolled4");
+            } else {
+                $(".topNav").removeClass("scrolled4");
+            }
+            if ($(document).scrollTop() > $(window).height() * 3.9) {
+                $(".topNav").addClass("scrolled5");
+            } else {
+                $(".topNav").removeClass("scrolled5");
+            }
+        });
 
-  /**
-   * All of the code for your admin-specific JavaScript source
-   * should reside in this file.
-   *
-   * Note that this assume you're going to use jQuery, so it prepares
-   * the $ function reference to be used within the scope of this
-   * function.
-   *
-   * From here, you're able to define handlers for when the DOM is
-   * ready:
-   *
-   * $(function() {
-   *
-   * });
-   *
-   * Or when the window is loaded:
-   *
-   * $( window ).load(function() {
-   *
-   * });
-   *
-   * ...and so on.
-   *
-   * Remember that ideally, we should not attach any more than a single DOM-ready or window-load handler
-   * for any particular page. Though other scripts in WordPress core, other plugins, and other themes may
-   * be doing this, we should try to minimize doing that in our own work.
-   */
+    });
 
-})( jQuery );
+    $(document).ready(function () {
+        var scroll_pos = 0;
+        $(document).scroll(function () {
+            scroll_pos = $(this).scrollTop();
+
+            if (scroll_pos < $(window).height() * 0.09) {
+                $(".tNav").css('background-color', '#00AFD4');
+            }
+            else if (scroll_pos > $(window).height() * 0.09 && scroll_pos < $(window).height() * 1.09) {
+                $(".tNav").css('background-color', '#FFC627');
+            }
+            else if (scroll_pos > $(window).height() * 1.09 && scroll_pos < $(window).height() * 2.09) {
+                $(".tNav").css('background-color', '#906FB4');
+
+            }
+            else if (scroll_pos > $(window).height() * 2.09 && scroll_pos < $(window).height() * 3.09) {
+                $(".tNav").css('background-color', '#24B9AD');
+
+            }
+            else if (scroll_pos > $(window).height() * 3.09 && scroll_pos < $(window).height() * 4.09) {
+                $(".tNav").css('background-color', '#E95944');
+
+            }
+            console.log(scroll_pos)
+
+        });
+    });
+
+    $(document).ready(function () {
+        var scroll_pos = 0;
+        $(document).scroll(function () {
+            scroll_pos = $(this).scrollTop();
+
+            if (scroll_pos < $(window).height() * 0.09) {
+                $(".mNav").css('background-color', '#00AFD4');
+            }
+            else if (scroll_pos > $(window).height() * 0.09 && scroll_pos < $(window).height() * 1.23) {
+                $(".mNav").css('background-color', '#FFC627');
+            }
+            else if (scroll_pos > $(window).height() * 1.23 && scroll_pos < $(window).height() * 3.08) {
+                $(".mNav").css('background-color', '#906FB4');
+
+            }
+            else if (scroll_pos > $(window).height() * 3.08 && scroll_pos < $(window).height() * 4.45) {
+                $(".mNav").css('background-color', '#24B9AD');
+
+            }
+            else if (scroll_pos > $(window).height() * 4.45 && scroll_pos < $(window).height() * 6.50) {
+                $(".mNav").css('background-color', '#E95944');
+
+            }
+            console.log(scroll_pos)
+
+        });
+    });
