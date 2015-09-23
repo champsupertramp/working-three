@@ -19,47 +19,47 @@
   #topNav2 .navWrapper {
     height: 18vh;
   }
-  .topNav {
+  .nav-top {
     height: 10vh;
     position: absolute;
   }
-  .topNav .logoWrapper {
+  .nav-top .logoWrapper {
     width: 33vw;
     background: #aa7bc9;
   }
-  .topNav .logoWrapper img {
+  .nav-top .logoWrapper img {
     width: 17vw;
     margin-top: 6vw;
     margin-left: 6vw;
   }
-  .topNav .navWrapper {
+  .nav-top .navWrapper {
     width: 33vw;
   }
-  .topNav .navWrapper .newsletter {
+  .nav-top .navWrapper .newsletter {
     margin-left: 5.5vw;
     margin-top: 8.3vh;
   }
-  .topNav .navWrapper .newsletter a {
+  .nav-top .navWrapper .newsletter a {
     font-size: 2vw;
   }
-  .topNav .navWrapper .navMenu {
+  .nav-top .navWrapper .navMenu {
     display: none;
   }
-  .topNav .socialWrapper {
+  .nav-top .socialWrapper {
     width: 33vw;
   }
-  .topNav .socialWrapper ul {
+  .nav-top .socialWrapper ul {
     margin-left: 9vw;
     margin-top: 3vh;
     display: flex;
     width: 16vw;
     justify-content: space-between;
   }
-  .topNav .socialWrapper ul li img {
+  .nav-top .socialWrapper ul li img {
     height: 1.7vh;
     margin-right: 3.5vw;
   }
-  .topNav .socialWrapper p {
+  .nav-top .socialWrapper p {
     display: block;
     margin-left: 8vw;
     margin-top: -1.8vh;

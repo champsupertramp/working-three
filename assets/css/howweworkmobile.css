@@ -22,37 +22,37 @@
   #topNav2 .navWrapper {
     height: 18vh;
   }
-  .topNav {
+  .nav-top {
     height: 10vh;
     position: absolute;
   }
-  .topNav .logoWrapper {
+  .nav-top .logoWrapper {
     width: 50vw;
     background: #aa7bc9;
   }
-  .topNav .logoWrapper img {
+  .nav-top .logoWrapper img {
     width: 30vw;
     margin-top: 6vw;
     margin-left: 6vw;
   }
-  .topNav .navWrapper {
+  .nav-top .navWrapper {
     display: none;
   }
-  .topNav .socialWrapper {
+  .nav-top .socialWrapper {
     width: 50vw;
   }
-  .topNav .socialWrapper ul {
+  .nav-top .socialWrapper ul {
     margin-left: 15vw;
     margin-top: 3vh;
     display: flex;
     width: 35vw;
     justify-content: space-between;
   }
-  .topNav .socialWrapper ul li img {
+  .nav-top .socialWrapper ul li img {
     height: 2.5vh;
     margin-right: 3.5vw;
   }
-  .topNav .socialWrapper p {
+  .nav-top .socialWrapper p {
     display: block;
     margin-left: 14vw;
     margin-top: -1.8vh;

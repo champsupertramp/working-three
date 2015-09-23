@@ -234,66 +234,66 @@ body {
   float: left;
   height: 20vh;
 }
-.topNav {
+.nav-top {
   position: fixed;
   width: 100vw;
   font-family: 'akkuratRegular', arial, sans-serif;
   font-size: 0.9vw;
   color: #fff;
 }
-.topNav .logoWrapper {
+.nav-top .logoWrapper {
   background-image: linear-gradient(#00afd4 60%, rgba(0, 175, 212, 0));
   width: 16vw;
 }
-.topNav .logoWrapper img {
+.nav-top .logoWrapper img {
   margin: 6.5vh 0 0 2vw;
   width: 9vw;
 }
-.topNav .navWrapper {
+.nav-top .navWrapper {
   background-image: linear-gradient(#00bcdd 60%, rgba(0, 188, 221, 0));
   width: 60vw;
   text-transform: uppercase;
 }
-.topNav .navWrapper p {
+.nav-top .navWrapper p {
   margin-left: 12vw;
   margin-top: 4vh;
 }
-.topNav .navWrapper p a {
+.nav-top .navWrapper p a {
   color: inherit;
   text-decoration: none;
 }
-.topNav .navWrapper p a img {
+.nav-top .navWrapper p a img {
   height: 1.2vh;
 }
-.topNav .navWrapper ul {
+.nav-top .navWrapper ul {
   margin-left: 12vw;
   margin-top: 6vh;
 }
-.topNav .navWrapper ul li {
+.nav-top .navWrapper ul li {
   display: inline;
   margin-right: 3vw;
 }
-.topNav .navWrapper ul a {
+.nav-top .navWrapper ul a {
   color: inherit;
   text-decoration: none;
 }
-.topNav #mobileSection2,
-.topNav #mobileSection3,
-.topNav #mobileSection4,
-.topNav #mobileSection5 {
+.nav-top #mobileSection2,
+.nav-top #mobileSection3,
+.nav-top #mobileSection4,
+.nav-top #mobileSection5 {
   display: none;
 }
-.topNav .socialWrapper {
+.nav-top .socialWrapper {
   background-image: linear-gradient(#00bcdd 60%, rgba(0, 188, 221, 0));
   width: 24vw;
 }
-.topNav .socialWrapper p {
+.nav-top .socialWrapper p {
   margin-left: 3vw;
 }
-.topNav .socialWrapper ul {
+.nav-top .socialWrapper ul {
   margin: 3vh 0 5vh 3vw;
 }
-.topNav .socialWrapper ul li {
+.nav-top .socialWrapper ul li {
   display: inline;
   margin-right: 1.9vw;
 }

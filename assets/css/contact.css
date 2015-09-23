@@ -1,0 +1,601 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+#mobile,
+#tablet {
+  display: none;
+}
+@font-face {
+  font-family: "akkuratRegular";
+  src: url('../fonts/AkkuratRegular.otf') format('opentype');
+}
+@font-face {
+  font-family: "akkuratLight";
+  src: url('../fonts/AkkuratLight.otf') format('opentype');
+}
+.nav-top {
+  font-family: 'akkuratRegular', arial, sans-serif;
+  width: 100vw;
+  height: 20vh;
+  display: block;
+  position: absolute;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 0.9vw;
+}
+.nav-top .logo-wrap {
+  width: 16vw;
+  display: inline-block;
+  height: 20vh;
+  margin: 0;
+  float: left;
+}
+.nav-top .logo-wrap .logo {
+  margin: 6.5vh 0 0 2vw;
+  width: 9vw;
+}
+.nav-top .menu-wrap {
+  width: 68vw;
+  display: inline-block;
+  height: 20vh;
+  margin: 0;
+  float: left;
+}
+.nav-top .menu-wrap .ns-text {
+  margin-left: 12vw;
+  margin-top: 4vh;
+}
+.nav-top .menu-wrap .ns-text .ns-link {
+  color: inherit;
+  text-decoration: none;
+}
+.nav-top .menu-wrap .menu-top {
+  margin-left: 12vw;
+  margin-top: 6vh;
+}
+.nav-top .menu-wrap .menu-top .menu-top-item {
+  display: inline;
+  margin-right: 3vw;
+}
+.nav-top .menu-wrap .menu-top .menu-top-item .menu-top-link {
+  color: inherit;
+  text-decoration: none;
+}
+.nav-top .soc-wrap {
+  width: 16vw;
+  display: inline-block;
+  height: 20vh;
+  margin: 0;
+  float: left;
+}
+.nav-top .soc-wrap .soc-menu {
+  margin: 3.7vh 0 5vh 0;
+}
+.nav-top .soc-wrap .soc-menu .soc-icons {
+  display: inline;
+  margin-right: 1.9vw;
+}
+.nav-top .soc-wrap .soc-phone {
+  margin-left: 0;
+}
+.blue-gradient {
+  background-image: linear-gradient(#00bcdd 60%, rgba(0, 188, 221, 0));
+}
+.blue-gradient-dark {
+  background-image: linear-gradient(#00afd4 60%, rgba(0, 175, 212, 0));
+}
+.blue {
+  background: #00bcdd;
+}
+.blue-dark {
+  background: #00afd4;
+}
+.purple {
+  background: #aa7bc9;
+}
+.purple-dark {
+  background: #906fb4;
+}
+.underline {
+  text-decoration: underline;
+}
+.white {
+  background: #ffffff;
+}
+.white-dark {
+  background: #f2f2f3;
+}
+.grey {
+  background: #f2f2f3;
+}
+.grey-dark {
+  background: #e2e3e4;
+}
+#dNewsletter {
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  float: left;
+  z-index: 100000;
+  position: fixed;
+}
+#dNewsletter .closeWrap {
+  width: 100vw;
+  height: 3vh;
+  padding-top: 17vh;
+}
+#dNewsletter .closeWrap .closeButton {
+  margin-left: 77.5vw;
+  text-transform: uppercase;
+  font-family: 'akkuratRegular', arial, sans-serif;
+  font-size: 1vw;
+  color: #fff;
+  text-decoration: none;
+}
+#dNewsletter .newsletterLogo {
+  width: 6vw;
+  height: 6vw;
+  display: block;
+  text-align: justify;
+  margin-left: 45vw;
+}
+#dNewsletter .newsletterContent .newsletterTitle {
+  margin-left: 38vw;
+  text-transform: uppercase;
+  font-family: 'akkuratRegular', arial, sans-serif;
+  font-size: 2.5vw;
+  margin-top: 3vh;
+  position: absolute;
+}
+#dNewsletter .newsletterContent .newsletterText {
+  position: absolute;
+  width: 30vw;
+  font-family: 'akkuratRegular', arial, sans-serif;
+  font-size: 1vw;
+  line-height: 3vh;
+  margin-left: 15vw;
+  margin-top: 15vh;
+}
+#dNewsletter .newsletterContent .signupForm {
+  width: 35vw;
+  position: absolute;
+  float: left;
+  margin-top: 15vh;
+  margin-left: 50vw;
+}
+#dNewsletter .newsletterContent .signupForm label {
+  display: block;
+  font-family: 'akkuratRegular', arial, sans-serif;
+  font-size: 1.2vw;
+  margin-bottom: 1vh;
+}
+#dNewsletter .newsletterContent .signupForm input {
+  display: block;
+  width: 30vw;
+  margin-bottom: 3vh;
+  height: 35px;
+}
+#dNewsletter .newsletterContent .signupForm .nsButton {
+  display: block;
+  position: absolute;
+  margin-top: 27vh;
+  margin-left: 22.5vw;
+}
+#dNewsletter .newsletterContent .signupForm .nsButton button {
+  width: 8vw;
+  font-family: 'akkuratRegular', arial, sans-serif;
+  font-size: 1.2vw;
+  color: #fff;
+  background: #00BCDD;
+  border: 0;
+  border-radius: 3px;
+  height: 5vh;
+}
+.sec-1 {
+  height: 90vh;
+  width: 100vw;
+  display: block;
+}
+.sec-1 .sec-1-sidebar {
+  height: 90vh;
+  width: 16vw;
+  display: inline-block;
+}
+.sec-1 .sec-1-bg {
+  width: 84vw;
+  height: 90vh;
+  display: inline-block;
+  float: right;
+  color: #fff;
+  font-family: 'akkuratRegular', arial, sans-serif;
+}
+.sec-1 .sec-1-bg .sec-1-content {
+  margin: 25vh 0 0 12vw;
+}
+.sec-1 .sec-1-bg .sec-1-content h1 {
+  font-size: 5vw;
+  margin-bottom: 6vh;
+}
+.sec-1 .sec-1-bg .sec-1-content .p1 {
+  font-size: 1.15vw;
+  margin-bottom: 3vh;
+  width: 37vw;
+  line-height: 3vh;
+}
+.sec-1 .sec-1-bg .sec-1-content .p2 {
+  font-size: 1.8vw;
+  margin-top: 10vh;
+}
+.sec-1 .sec-1-bg .sec-1-content .soc-menu {
+  margin-top: 4vh;
+}
+.sec-1 .sec-1-bg .sec-1-content .soc-menu .soc-icons {
+  display: inline;
+  margin-right: 2vw;
+}
+.sec-1 .sec-1-bg .sec-1-content .soc-menu .soc-icons .soc-link img {
+  height: 3vh;
+}
+.sec-2 {
+  height: 45vh;
+  width: 100vw;
+  display: block;
+}
+.sec-2 .sec-2-sidebar {
+  height: 45vh;
+  width: 16vw;
+  display: inline-block;
+}
+.sec-2 .sec-2-bg {
+  width: 84vw;
+  height: 45vh;
+  display: inline-block;
+  float: right;
+  color: #fff;
+  font-family: 'akkuratRegular', arial, sans-serif;
+}
+.sec-2 .sec-2-bg .sec-2-content {
+  width: 60vw;
+  margin-left: 12vw;
+  margin-top: 8vh;
+}
+.sec-2 .sec-2-bg .sec-2-content .p2 {
+  font-size: 1.8vw;
+  line-height: 4.5vh;
+}
+.sec-2 .sec-2-bg .sec-2-content .signup-form {
+  margin-top: 10vh;
+}
+.sec-2 .sec-2-bg .sec-2-content .signup-form .input-name {
+  display: inline;
+  margin-right: 1vw;
+}
+.sec-2 .sec-2-bg .sec-2-content .signup-form .input-name input {
+  width: 18vw;
+  height: 5vh;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  font-family: 'akkuratRegular', arial, sans-serif;
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-2 .sec-2-bg .sec-2-content .signup-form .input-name input::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-2 .sec-2-bg .sec-2-content .signup-form .input-name input::-moz-placeholder {
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-2 .sec-2-bg .sec-2-content .signup-form .input-name input:-moz-placeholder {
+  /* Older versions of Firefox */
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-2 .sec-2-bg .sec-2-content .signup-form .input-name input:-ms-input-placeholder {
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-2 .sec-2-bg .sec-2-content .signup-form .input-email {
+  display: inline;
+  margin-right: 1vw;
+}
+.sec-2 .sec-2-bg .sec-2-content .signup-form .input-email input {
+  width: 18vw;
+  height: 5vh;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  font-family: 'akkuratRegular', arial, sans-serif;
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-2 .sec-2-bg .sec-2-content .signup-form .input-email input::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-2 .sec-2-bg .sec-2-content .signup-form .input-email input::-moz-placeholder {
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-2 .sec-2-bg .sec-2-content .signup-form .input-email input:-moz-placeholder {
+  /* Older versions of Firefox */
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-2 .sec-2-bg .sec-2-content .signup-form .input-email input:-ms-input-placeholder {
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-2 .sec-2-bg .sec-2-content .signup-form .form-button {
+  display: inline;
+}
+.sec-3 {
+  height: 116vh;
+  width: 100vw;
+  display: block;
+}
+.sec-3 .sec-3-sidebar {
+  height: 116vh;
+  width: 16vw;
+  display: inline-block;
+}
+.sec-3 .sec-3-bg {
+  width: 84vw;
+  height: 116vh;
+  display: inline-block;
+  float: right;
+  color: #808285;
+  font-family: 'akkuratRegular', arial, sans-serif;
+}
+.sec-3 .sec-3-bg .sec-3-content {
+  margin-left: 12vw;
+  margin-top: 10vh;
+}
+.sec-3 .sec-3-bg .sec-3-content .title {
+  font-size: 2.5vw;
+  color: #000;
+}
+.sec-3 .sec-3-bg .sec-3-content .title span {
+  color: #aa7bc9;
+}
+.sec-3 .sec-3-bg .sec-3-content .p2 {
+  font-size: 1.8vw;
+  margin-top: 6vh;
+}
+.sec-3 .sec-3-bg .sec-3-content .signup-form {
+  margin-top: 4vh;
+  font-size: 1.4vw;
+  width: 48vw;
+}
+.sec-3 .sec-3-bg .sec-3-content .signup-form .input-name label {
+  display: block;
+  margin-bottom: 2vh;
+}
+.sec-3 .sec-3-bg .sec-3-content .signup-form .input-name #name {
+  display: block;
+  width: 33vw;
+  height: 6vh;
+  margin-bottom: 2vh;
+  font-family: 'akkuratRegular', arial, sans-serif;
+  color: #808285;
+  font-size: 1.2vw;
+  padding-left: 1vw;
+}
+.sec-3 .sec-3-bg .sec-3-content .signup-form .input-email label {
+  display: block;
+  margin-bottom: 2vh;
+}
+.sec-3 .sec-3-bg .sec-3-content .signup-form .input-email #email {
+  display: block;
+  width: 33vw;
+  height: 6vh;
+  margin-bottom: 2vh;
+  font-family: 'akkuratRegular', arial, sans-serif;
+  color: #808285;
+  font-size: 1.2vw;
+  padding-left: 1vw;
+}
+.sec-3 .sec-3-bg .sec-3-content .signup-form .input-company label {
+  display: block;
+  margin-bottom: 2vh;
+}
+.sec-3 .sec-3-bg .sec-3-content .signup-form .input-company #company {
+  display: block;
+  width: 33vw;
+  height: 6vh;
+  margin-bottom: 2vh;
+  font-family: 'akkuratRegular', arial, sans-serif;
+  color: #808285;
+  font-size: 1.2vw;
+  padding-left: 1vw;
+}
+.sec-3 .sec-3-bg .sec-3-content .signup-form .input-message label {
+  display: block;
+  margin-bottom: 2vh;
+}
+.sec-3 .sec-3-bg .sec-3-content .signup-form .input-message #message {
+  display: block;
+  width: 33vw;
+  height: 30vh;
+  margin-bottom: 2vh;
+  font-family: 'akkuratRegular', arial, sans-serif;
+  color: #808285;
+  font-size: 1.2vw;
+  padding-left: 1vw;
+}
+.sec-3 .sec-3-bg .sec-3-content .signup-form .form-button {
+  display: inline-block;
+  float: right;
+  margin-top: -8vh;
+}
+footer {
+  height: 14vh;
+  width: 100vw;
+  display: block;
+}
+footer .footer-sidebar {
+  height: 14vh;
+  width: 16vw;
+  display: inline-block;
+}
+footer .footer-bg {
+  width: 84vw;
+  height: 14vh;
+  display: inline-block;
+  float: right;
+  color: #000;
+  font-family: 'akkuratRegular', arial, sans-serif;
+  font-size: 0.9vw;
+}
+footer .footer-bg .footer-content {
+  margin-left: 12vw;
+  margin-top: 6vh;
+}
+footer .footer-bg .footer-content p {
+  display: inline;
+  margin-right: 10.7vw;
+}
+.button {
+  font-family: 'akkuratRegular', arial, sans-serif;
+  font-size: 1.2vw;
+  text-transform: uppercase;
+  background: #1B3F45;
+  text-align: center;
+  border-radius: 2px;
+  height: 6vh;
+  border: none;
+  color: #fff;
+  padding: 0 1vw;
+}
+.button img {
+  width: 1.2vw;
+  background: #1B3F45;
+}
