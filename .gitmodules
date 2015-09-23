@@ -1,0 +1,3 @@
+[submodule "codestar-framework"]
+	path = codestar-framework
+	url = https://github.com/Codestar/codestar-framework.git
