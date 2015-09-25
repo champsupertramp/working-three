@@ -458,7 +458,6 @@ table {
   text-align: left;
   background: transparent;
   margin: 0 0 2vh 0;
-  border: 1px solid lightgray;
   display: none;
 }
 .sec-2 .mix-container {
@@ -527,7 +526,7 @@ footer .footer-sidebar {
   width: 16vw;
   display: inline-block;
 }
-footer .footer-sidebar .footer-bg {
+footer .footer-bg {
   width: 84vw;
   height: 14vh;
   display: inline-block;
@@ -536,15 +535,15 @@ footer .footer-sidebar .footer-bg {
   font-family: 'akkuratRegular', arial, sans-serif;
   font-size: 0.9vw;
 }
-footer .footer-sidebar .footer-bg .footer-content {
+footer .footer-bg .footer-content {
   margin-left: 12vw;
   margin-top: 6vh;
 }
-footer .footer-sidebar .footer-bg .footer-content p {
+footer .footer-bg .footer-content p {
   display: inline;
   margin-right: 10.7vw;
 }
-footer .button {
+.button {
   font-family: 'akkuratRegular', arial, sans-serif;
   font-size: 1.2vw;
   text-transform: uppercase;
@@ -555,7 +554,12 @@ footer .button {
   color: #fff;
   padding: 0 1vw;
 }
-footer .button img {
+.button img {
   width: 1.2vw;
   background: #1B3F45;
+}
+.br-t,
+.br-m,
+.nav-bot {
+  display: none;
 }
