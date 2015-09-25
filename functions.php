@@ -101,9 +101,28 @@ class WD_WorkingThree{
 
         //stylesheets
         wp_enqueue_style( 'jquery-ui', "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" );
-        wp_enqueue_style( 'working-three-main', $this->tpl_url['assets'].'css/main.css' );
-        wp_enqueue_style( 'working-three-mobile', $this->tpl_url['assets'].'css/mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
-        wp_enqueue_style( 'working-three-table', $this->tpl_url['assets'].'css/tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
+
+        if ( is_home() || is_front_page() ) {
+            wp_enqueue_style( 'working-three-landing', $this->tpl_url['assets'].'css/main.css' );
+            wp_enqueue_style( 'working-three-landing-mobile', $this->tpl_url['assets'].'css/mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
+            wp_enqueue_style( 'working-three-landing-table', $this->tpl_url['assets'].'css/tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
+        }elseif( is_page_template("template-contact.php") ){
+            wp_enqueue_style( 'working-three-contact', $this->tpl_url['assets'].'css/contact.css' );
+            wp_enqueue_style( 'working-three-contact-mobile', $this->tpl_url['assets'].'css/contact_mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
+            wp_enqueue_style( 'working-three-contact-table', $this->tpl_url['assets'].'css/contact_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
+        }elseif( is_page_template("template-work.php") ){
+            wp_enqueue_style( 'working-three-howwework', $this->tpl_url['assets'].'css/howwework.css' );
+            wp_enqueue_style( 'working-three-howwework-mobile', $this->tpl_url['assets'].'css/howweworkmobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
+            wp_enqueue_style( 'working-three-howwework-table', $this->tpl_url['assets'].'css/howweworktablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
+        }elseif( is_page_template("template-contact.php") ){
+            wp_enqueue_style( 'working-three-contact', $this->tpl_url['assets'].'css/contact.css' );
+            wp_enqueue_style( 'working-three-contact-mobile', $this->tpl_url['assets'].'css/contact_mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
+            wp_enqueue_style( 'working-three-contact-table', $this->tpl_url['assets'].'css/contact_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
+        }else{
+            wp_enqueue_style( 'working-three-contact', $this->tpl_url['assets'].'css/contact.css' );
+            wp_enqueue_style( 'working-three-contact-mobile', $this->tpl_url['assets'].'css/contact_mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
+            wp_enqueue_style( 'working-three-contact-table', $this->tpl_url['assets'].'css/contactt_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
+        }
 
         //scripts
         wp_enqueue_script( 'less', '//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js', array(), '1.0.0', true );

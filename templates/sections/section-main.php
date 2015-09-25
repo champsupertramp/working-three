@@ -7,13 +7,17 @@
     <div class="navWrapper">
         <p class="newsletter"><a href="#" onclick="toggle_visibility('dNewsletter');">Newsletter Sign Up&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['img']; ?>/newsletter-arrow.png"></a>
         </p>
-        <ul>
-            <li><a href=""><span>Services</span></a></li>
-            <li><a href=""><span>Our Work</span></a></li>
-            <li><a href=""><span>Leadership</span></a></li>
-            <li><a href=""><span>Insights</span></a></li>
-            <li><a href=""><span>Contact Us</span></a></li>
-        </ul>
+
+        <?php
+          $defaults = array(
+            'theme_location'  => 'primary_navigation',
+            'menu'            => '',
+            'container'       => false,
+          );
+
+          wp_nav_menu( $defaults );
+        ?>
+
     </div>
     <div class="socialWrapper">
         <ul>

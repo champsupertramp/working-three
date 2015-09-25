@@ -160,11 +160,16 @@
     </nav>
     <nav class="tNav">
         <div class="tNavWrapper">
-            <a href="">Services</a>
-            <a href="">Our Work</a>
-            <a href="">Leadership</a>
-            <a href="">Insights</a>
-            <a href="">Contact Us</a>
+
+        <?php
+          $defaults = array(
+            'theme_location'  => 'primary_navigation',
+            'menu'            => '',
+            'container'       => false,
+          );
+
+          wp_nav_menu( $defaults );
+        ?>
         </div>
     </nav>
 </section>
@@ -453,6 +458,7 @@
         </div>
     </nav>
 </section>
+
 <section class="mContact">
     <div class="mContactContent">
         <p>Create outstanding digital experiences <br class="m3br">for you and your customers</p>
@@ -460,6 +466,7 @@
         <div class="mButton"><a href="">Contact Us&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a></div>
     </div>
 </section>
+
 <footer>
     <div class="mFooter">
         <p>41 Cubitt Street,<br class="m2br">Cremorne VIC 3121, Australia<br>Copyright © Working Three</p>
