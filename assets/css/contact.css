@@ -236,6 +236,12 @@ table {
 .grey-dark {
   background: #e2e3e4;
 }
+.br-t {
+  display: none;
+}
+.nav-bot {
+  display: none;
+}
 #dNewsletter {
   color: #fff;
   width: 100vw;
