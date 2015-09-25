@@ -239,6 +239,9 @@ table {
 .br-t {
   display: none;
 }
+.br-m {
+  display: none;
+}
 .nav-bot {
   display: none;
 }

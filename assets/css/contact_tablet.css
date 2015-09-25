@@ -106,6 +106,9 @@
   .br-t {
     display: block;
   }
+  .br-m {
+    display: none;
+  }
   #dNewsletter {
     color: #fff;
     width: 100vw;
