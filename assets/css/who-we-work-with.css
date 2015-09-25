@@ -527,7 +527,7 @@ footer .footer-sidebar {
   width: 16vw;
   display: inline-block;
 }
-footer .footer-bg {
+footer .footer-sidebar .footer-bg {
   width: 84vw;
   height: 14vh;
   display: inline-block;
@@ -536,15 +536,15 @@ footer .footer-bg {
   font-family: 'akkuratRegular', arial, sans-serif;
   font-size: 0.9vw;
 }
-footer .footer-bg .footer-content {
+footer .footer-sidebar .footer-bg .footer-content {
   margin-left: 12vw;
   margin-top: 6vh;
 }
-footer .footer-bg .footer-content p {
+footer .footer-sidebar .footer-bg .footer-content p {
   display: inline;
   margin-right: 10.7vw;
 }
-.button {
+footer .button {
   font-family: 'akkuratRegular', arial, sans-serif;
   font-size: 1.2vw;
   text-transform: uppercase;
@@ -555,7 +555,7 @@ footer .footer-bg .footer-content p {
   color: #fff;
   padding: 0 1vw;
 }
-.button img {
+footer .button img {
   width: 1.2vw;
   background: #1B3F45;
 }

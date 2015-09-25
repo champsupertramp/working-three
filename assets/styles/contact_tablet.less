@@ -1,0 +1,560 @@
+@media only screen and (min-width: 768px)
+and (max-width: 959px)
+and (orientation: portrait) {
+
+  //VARIABLES//
+  @menu-font-size: 0.9vw;
+  @side-nav-font-size: 1vw;
+  @h1-font-size: 9vw;
+  @h2-font-Size: 5.3vw;
+  @akRegular: 'akkuratRegular',
+  arial,
+  sans-serif;
+  @akLight: 'akkuratLight',
+  arial,
+  sans-serif;
+  @p1-font-size: 2.5vw;
+  @p2-font-size: 4vw;
+  @button-font-size: 2.5vw;
+  @blue-bg: #00BCDD;
+  @yellow-bg: #FFD03E;
+  @purple-bg: #AA7BC9;
+  @blue-bg-dark: #00AFD4;
+  @purple-bg-dark: #906FB4;
+  @white-bg: #fff;
+  @white-bg-dark: #F2F2F3;
+  @grey-bg: #F2F2F3;
+  @grey-bg-dark: #E2E3E4;
+  @blue-grad-dark: linear-gradient(rgba(0, 175, 212, 1) 60%, rgba(0, 175, 212, 0));
+  @blue-grad: linear-gradient(rgba(0, 188, 221, 1) 60%, rgba(0, 188, 221, 0));
+
+  //FONTS//
+  @font-face {
+    font-family: "akkuratRegular";
+    src: url('../fonts/AkkuratRegular.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: "akkuratLight";
+    src: url('../fonts/AkkuratLight.otf') format('opentype');
+  }
+
+
+  .nav-top {
+    font-family: @akRegular;
+    width: 100vw;
+    height: 20vh;
+    display: block;
+    position: absolute;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: @menu-font-size;
+    .logo-wrap {
+      width: 33vw;
+      display: inline-block;
+      height: 20vh;
+      margin: 0;
+      float: left;
+      background-image: none;
+      .logo {
+        margin: 6vw 0px 0px 4vw;
+        width: 18vw;
+      }
+    }
+    .menu-wrap {
+      width: 33vw;
+      display: inline-block;
+      height: 20vh;
+      margin: 0;
+      float: left;
+      .ns-text {
+        display: block;
+        text-align: center;
+        margin: 11vw auto 0 auto;
+        font-size: 1.7vw;
+        .ns-link {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+      .menu-top {
+        display: none;
+      }
+    }
+    .soc-wrap {
+      width: 34vw;
+      display: inline-block;
+      height: 20vh;
+      margin: 0;
+      float: left;
+      .soc-menu {
+        margin-left: 10vw;
+        margin-top: 4vw;
+        .soc-icons {
+          display: inline;
+          margin-right: 4.7vw;
+          margin-bottom: 0;
+        }
+      }
+      .soc-phone {
+        margin-left: 10vw;
+        margin-top: -2.5vw;
+        font-size: 2vw;
+      }
+    }
+  }
+
+  //BACKGROUND COLORS//
+
+  .blue-gradient {
+    background-image: @blue-grad;
+  }
+
+  .blue-gradient-dark {
+    background-image: @blue-grad-dark;
+  }
+
+  .blue {
+    background: @blue-bg
+  }
+
+  .blue-dark {
+    background: @blue-bg-dark;
+  }
+
+  .purple {
+    background: @purple-bg;
+  }
+
+  .purple-dark {
+    background: @purple-bg-dark;
+  }
+
+  .underline {
+    text-decoration: underline;
+  }
+
+  .white {
+    background: @white-bg;
+  }
+
+  .white-dark {
+    background: @white-bg-dark;
+  }
+
+  .grey {
+    background: @grey-bg;
+  }
+
+  .grey-dark {
+    background: @grey-bg-dark;
+  }
+
+  //NEWSLETTER//
+  #dNewsletter {
+    color: #fff;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    float: left;
+    z-index: 100000;
+    position: fixed;
+    .closeWrap {
+      width: 100vw;
+      height: 3vh;
+      padding-top: 17vh;
+      .closeButton {
+        margin-left: 77.5vw;
+        text-transform: uppercase;
+        font-family: @akRegular;
+        font-size: 1vw;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+    .newsletterLogo {
+      width: 6vw;
+      height: 6vw;
+      display: block;
+      text-align: justify;
+      margin-left: 45vw;
+    }
+    .newsletterContent {
+
+      .newsletterTitle {
+        margin-left: 38vw;
+        text-transform: uppercase;
+        font-family: @akRegular;
+        font-size: 2.5vw;
+        margin-top: 3vh;
+        position: absolute;
+      }
+      .newsletterText {
+        position: absolute;
+        width: 30vw;
+        font-family: @akRegular;
+        font-size: 1vw;
+        line-height: 3vh;
+        margin-left: 15vw;
+        margin-top: 15vh;
+      }
+      .signupForm {
+        width: 35vw;
+        position: absolute;
+        float: left;
+        margin-top: 15vh;
+        margin-left: 50vw;
+        label {
+          display: block;
+          font-family: @akRegular;
+          font-size: 1.2vw;
+          margin-bottom: 1vh;
+        }
+        input {
+          display: block;
+          width: 30vw;
+          margin-bottom: 3vh;
+          height: 35px;
+        }
+        .nsButton {
+          display: block;
+          position: absolute;
+          margin-top: 27vh;
+          margin-left: 22.5vw;
+          button {
+            width: 8vw;
+            font-family: @akRegular;
+            font-size: 1.2vw;
+            color: #fff;
+            background: #00BCDD;
+            border: 0;
+            border-radius: 3px;
+            height: 5vh;
+          }
+        }
+      }
+    }
+  }
+
+  //SECTIONS//
+  .sec-1 {
+    height: 90vh;
+    width: 100vw;
+    display: block;
+    .sec-1-sidebar {
+      display: none;
+    }
+    .sec-1-bg {
+      width: 100vw;
+      height: 90vh;
+      display: inline-block;
+      float: right;
+      color: #fff;
+      font-family: @akRegular;
+      .sec-1-content {
+        margin: 20vh 0 0 12vw;
+        h1 {
+          font-size: @h1-font-size;
+          margin-bottom: 6vh;
+          width: 40vw;
+        }
+        .p1 {
+          font-size: @p1-font-size;
+          margin-bottom: 3vh;
+          line-height: 3vh;
+          width: 77vw;
+        }
+        .p2 {
+          font-size: @p2-font-size;
+          margin-top: 5vh;
+          width: 70vw;
+          line-height: 3.5vh;
+        }
+        .soc-menu {
+          margin-top: 4vh;
+          .soc-icons {
+            display: inline;
+            margin-right: 4vw;
+            .soc-link {
+              img {
+                height: 3vh;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sec-2 {
+    height: 55vh;
+    width: 100vw;
+    display: block;
+    .sec-2-sidebar {
+      display: none;
+    }
+    .sec-2-bg {
+      width: 100vw;
+      height: 55vh;
+      display: inline-block;
+      float: right;
+      color: #fff;
+      font-family: @akRegular;
+      .sec-2-content {
+        width: 76vw;
+        margin-left: 12vw;
+        margin-top: 8vh;
+        .p2 {
+          display: none;
+        }
+        .p2-t {
+          font-size: @p2-font-size;
+          line-height: 4vh;
+        }
+        .signup-form {
+          margin-top: 5vh;
+          .input-name {
+            display: block;
+            margin-right: 1vw;
+
+            input {
+              width: 76vw;
+              height: 5vh;
+              background: transparent;
+              border: none;
+              border-bottom: 1px solid white;
+              font-family: @akRegular;
+              color: #fff;
+              font-size: 2.4vw;
+            }
+            input::-webkit-input-placeholder {
+              color: #fff;
+              font-size: 2.7vw;
+            }
+            input::-moz-placeholder {
+              color: #fff;
+              font-size: 2.7vw;
+            }
+            input:-moz-placeholder {
+              /* Older versions of Firefox */
+              color: #fff;
+              font-size: 2.7vw;
+            }
+            input:-ms-input-placeholder {
+              color: #fff;
+              font-size: 2.7vw;
+            }
+          }
+          .input-email {
+            display: block;
+            margin-right: 1vw;
+            margin-top: 3vh;
+            input {
+              width: 76vw;
+              height: 5vh;
+              background: transparent;
+              border: none;
+              border-bottom: 1px solid white;
+              font-family: @akRegular;
+              color: #fff;
+              font-size: 2.7vw;
+            }
+            input::-webkit-input-placeholder {
+              color: #fff;
+              font-size: 2.7vw;
+            }
+            input::-moz-placeholder {
+              color: #fff;
+              font-size: 2.7vw;
+            }
+            input:-moz-placeholder {
+              /* Older versions of Firefox */
+              color: #fff;
+              font-size: 2.7vw;
+            }
+            input:-ms-input-placeholder {
+              color: #fff;
+              font-size: 2.7vw;
+            }
+          }
+          .form-button {
+            display: block;
+            margin-top: 5vh;
+            button {
+              width: 76vw;
+              text-align: left;
+              img {
+                display: block;
+                float: right;
+                margin-top: 0.5vh;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sec-3 {
+    height: 116vh;
+    width: 100vw;
+    display: block;
+    .sec-3-sidebar {
+      display: none;
+    }
+    .sec-3-bg {
+      width: 100vw;
+      height: 116vh;
+      display: inline-block;
+      float: right;
+      color: #808285;
+      font-family: @akRegular;
+      .sec-3-content {
+        margin-left: 12vw;
+        margin-top: 10vh;
+        .title {
+          font-size: @h2-font-Size;
+          color: #000;
+          span {
+            color: @purple-bg;
+          }
+        }
+        .p2 {
+          font-size: @p2-font-size;
+          margin-top: 6vh;
+        }
+        .signup-form {
+          margin-top: 4vh;
+          font-size: 3vw;
+          width: 76vw;
+
+          .input-name {
+            label {
+              display: block;
+              margin-bottom: 2vh;
+
+            }
+            #name {
+              display: block;
+              width: 74.5vw;
+              height: 6vh;
+              margin-bottom: 2vh;
+              font-family: @akRegular;
+              color: #808285;
+              font-size: 3vw;
+              padding-left: 1vw;
+            }
+          }
+          .input-email {
+            label {
+              display: block;
+              margin-bottom: 2vh;
+            }
+            #email {
+              display: block;
+              width: 74.5vw;
+              height: 6vh;
+              margin-bottom: 2vh;
+              font-family: @akRegular;
+              color: #808285;
+              font-size: 3vw;
+              padding-left: 1vw;
+            }
+          }
+          .input-company {
+            label {
+              display: block;
+              margin-bottom: 2vh;
+            }
+            #company {
+              display: block;
+              width: 74.5vw;
+              height: 6vh;
+              margin-bottom: 2vh;
+              font-family: @akRegular;
+              color: #808285;
+              font-size: 3vw;
+              padding-left: 1vw;
+            }
+          }
+          .input-message {
+            label {
+              display: block;
+              margin-bottom: 2vh;
+            }
+            #message {
+              display: block;
+              width: 74.5vw;
+              height: 30vh;
+              margin-bottom: 2vh;
+              font-family: @akRegular;
+              color: #808285;
+              font-size: 3vw;
+              padding-left: 1vw;
+            }
+          }
+          .form-button {
+            display: block;
+            float: left;
+            margin-top: 3vh;
+            button {
+              width: 76vw;
+              text-align: left;
+              img {
+                display: block;
+                float: right;
+                margin-top: 0.5vh;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    height: 14vh;
+    width: 100vw;
+    display: block;
+    .footer-sidebar {
+      height: 14vh;
+      width: 16vw;
+      display: inline-block;
+    }
+    .footer-bg {
+      width: 84vw;
+      height: 14vh;
+      display: inline-block;
+      float: right;
+      color: #000;
+      font-family: @akRegular;
+      font-size: 0.9vw;
+      .footer-content {
+        margin-left: 12vw;
+        margin-top: 6vh;
+        p {
+          display: inline;
+          margin-right: 10.7vw;
+        }
+      }
+    }
+  }
+
+  .button {
+    font-family: @akRegular;
+    font-size: @button-font-size;
+    text-transform: uppercase;
+    background: #1B3F45;
+    text-align: center;
+    border-radius: 2px;
+    height: 5vh;
+    border: none;
+    color: #fff;
+    padding: 0 2vw;
+    img {
+      width: 2.5vw;
+      background: #1B3F45;
+    }
+  }
+
+}

@@ -1,4 +1,4 @@
-@media only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait) {
+@media only screen and (min-width: 480px) and (max-width: 767px) and (orientation: portrait) {
   @font-face {
     font-family: "akkuratRegular";
     src: url('../fonts/AkkuratRegular.otf') format('opentype');
