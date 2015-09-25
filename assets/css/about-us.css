@@ -257,6 +257,9 @@ table {
 .nav-bot {
   display: none;
 }
+.br-m {
+  display: none;
+}
 #dNewsletter {
   color: #fff;
   width: 100vw;
