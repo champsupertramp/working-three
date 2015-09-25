@@ -248,6 +248,15 @@ table {
 .green-dark {
   background: #26b8b0;
 }
+.br-t {
+  display: none;
+}
+.nav-side-tablet {
+  display: none;
+}
+.nav-bot {
+  display: none;
+}
 #dNewsletter {
   color: #fff;
   width: 100vw;
