@@ -71,15 +71,25 @@ and (orientation: portrait) {
       margin: 0;
       float: left;
       .soc-menu {
-        margin-left: 10vw;
+        margin-left: 8vw;
         margin-top: 4vw;
+        text-align: justify;
+        -ms-text-justify: distribute-all-lines;
+        text-justify: distribute-all-lines;
+        width: 35vw;
         .soc-icons {
-          display: inline;
-          margin-right: 10vw;
-          margin-bottom: 0;
+          display: inline-block;
+          *display: inline;
           img {
             height: 2.5vh;
+            display: inline-block;
           }
+        }
+        .stretch {
+          width: 100%;
+          display: inline-block;
+          font-size: 0;
+          line-height: 0
         }
       }
       .soc-phone {

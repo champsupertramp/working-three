@@ -40,16 +40,26 @@
     float: left;
   }
   .nav-top .soc-wrap .soc-menu {
-    margin-left: 10vw;
+    margin-left: 8vw;
     margin-top: 4vw;
+    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+    width: 35vw;
   }
   .nav-top .soc-wrap .soc-menu .soc-icons {
-    display: inline;
-    margin-right: 10vw;
-    margin-bottom: 0;
+    display: inline-block;
+    *display: inline;
   }
   .nav-top .soc-wrap .soc-menu .soc-icons img {
     height: 2.5vh;
+    display: inline-block;
+  }
+  .nav-top .soc-wrap .soc-menu .stretch {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
   }
   .nav-top .soc-wrap .soc-phone {
     margin-left: 10vw;
