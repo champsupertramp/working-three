@@ -1,0 +1,452 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet/less" type="text/css" href="styles/home.less"/>
+    <link rel="stylesheet" type="text/css"
+          media="only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)"
+          href="css/home_mobile.css"/>
+    <link rel="stylesheet" type="text/css"
+          media="only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)"
+          href="css/home_tablet.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css"/>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="home-bg">
+<div id="dNewsletter" style="display: none;">
+    <div class="closeWrap"><a class="closeButton" href="#" onclick="toggle_visibility('dNewsletter');">Close</a></div>
+    <img class="newsletterLogo" src="img/placeholder.jpe">
+
+    <div class="newsletterContent">
+        <div class="newsletterTitle">Be in the Know.</div>
+        <div class="newsletterText">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                venenatis feugiat ex, a vestibulum turpis consequat in. Integer
+                mi purus, tincidunt finibus ligula vel, vulputate facilisis tellus. Ut
+                non consequat mauris.</p>
+            <br>
+
+            <p>Sed nec auctor lectus. Nullam quis ex ut magna lacinia placerat.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                erat volutpat.</p>
+        </div>
+        <form class="signupForm" action="" method="post">
+            <div style="float:left;margin-right:20px;">
+                <label for="name">Name*</label>
+                <input id="ns-name" type="text" value="" name="name">
+            </div>
+
+            <div style="float:left;">
+                <label for="email">Email*</label>
+                <input id="ns-email" type="text" value="" name="email">
+            </div>
+            <div class="nsButton">
+                <button type="submit">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+    <div class="nav-side-bg"></div>
+    <nav class="nav-top">
+        <div class="logo-wrap">
+            <img class="logo" src="img/w3logo.png">
+        </div>
+        <div class="menu-wrap">
+            <p class="ns-text"><a class="ns-link" href="#" onclick="toggle_visibility('dNewsletter');">Newsletter Sign
+                Up&nbsp;&nbsp;&nbsp;<img
+                        class="ns-arrow" src="img/newsletter-arrow.png"></a>
+            </p>
+            <ul class="menu-top">
+                <li class="menu-top-item"><a class="menu-top-link" href="">Services</a></li>
+                <li class="menu-top-item"><a class="menu-top-link" href="">Our Work</a></li>
+                <li class="menu-top-item"><a class="menu-top-link" href="">Leadership</a></li>
+                <li class="menu-top-item"><a class="menu-top-link" href="">Insights</a></li>
+                <li class="menu-top-item"><a class="menu-top-link" href="">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="soc-wrap">
+            <ul class="soc-menu">
+                <li class="soc-icons"><a class="soc-link" href=""><img src="img/social-li.png"></a></li>
+                <li class="soc-icons"><a class="soc-link" href=""><img src="img/social-fb.png"></a></li>
+                <li class="soc-icons"><a class="soc-link" href=""><img src="img/social-twitter.png"></a></li>
+            </ul>
+            <p class="soc-phone">+61 3 8060 4700</p>
+        </div>
+    </nav>
+    <div class="home-sections">
+
+        <section class="sec-1">
+            <a name="1"></a>
+            <nav class="nav-side">
+                <ul>
+                    <li><a href="#1">one</a></li>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#2">2</a></span><span class="hover"><a href="#2">two</a></span>
+                    </li>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#3">3</a></span><span class="hover"><a href="#3">three</a></span>
+                    </li>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#4">4</a></span><span class="hover"><a href="#4">four</a></span>
+                    </li>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#5">5</a></span><span class="hover"><a href="#5">five</a></span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sec-1-content-wrap">
+                <div class="sec-1-content">
+                    <h1 class="title">Common sense for the <span class="underline">connected world</span></h1>
+
+
+                    <p class="p1">W3 Digital is a customer and data focused consultancy.</p>
+
+                    <p class="p1">We solve complex problems and deliver success in a customer focused world.</p>
+
+                    <p class="p1">Change the way you interact with your customers.</p>
+
+                    <div class="button">
+                        <a href="">Let's get to work&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-2">
+            <a name="2"></a>
+            <nav class="nav-side">
+                <ul>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#1">1</a></span><span class="hover"><a href="#1">one</a></span>
+                    </li>
+                    <li><a href="#2">two</a></li>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#3">3</a></span><span class="hover"><a href="#3">three</a></span>
+                    </li>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#4">4</a></span><span class="hover"><a href="#4">four</a></span>
+                    </li>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#5">5</a></span><span class="hover"><a href="#5">five</a></span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sec-2-content-wrap">
+                <div class="sec-2-content">
+                    <h1 class="title">Always be <span class="underline">outstandin</span>g</h1>
+
+                    <p class="p2">We invent, design and implement outstanding customer experiences.</p>
+
+                    <div>
+                        <img src="img/placeholder.jpe" class="caseStudy" id="caseStudyOne">
+                        <img src="img/placeholder.jpe" class="caseStudy" id="caseStudyTwo">
+                        <img src="img/placeholder.jpe" class="caseStudy" id="caseStudyThree">
+                    </div>
+                    <div class="button">
+                        <a href="">See our work&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-3">
+            <a name="3"></a>
+            <nav class="nav-side">
+                <ul>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#1">1</a></span><span class="hover"><a href="#1">one</a></span>
+                    </li>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#2">2</a></span><span class="hover"><a href="#2">two</a></span>
+                    </li>
+                    <li><a href="#3">three</a></li>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#4">4</a></span><span class="hover"><a href="#4">four</a></span>
+                    </li>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#5">5</a></span><span class="hover"><a href="#5">five</a></span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sec-3-content-wrap">
+                <div class="sec-3-col-a">
+                    <h1 class="title"><span class="underline">The skills</span> you need, at the pace you need them</h1>
+
+                    <p class="p1">W3 Digital delivers high impact, simply articulated and actionable advice rapidly and
+                        cost
+                        effectively.</p>
+
+                    <div class="button">
+                        <a href="">See how we can help&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                    </div>
+                </div>
+                <div class="sec-3-col-b">
+                    <div class="col-b-item">
+                        <img class="item-img" src="img/insight.png">
+
+                        <div class="item-text">
+                            <h2 class="subtitle">Insight</h2>
+
+                            <p class="p1">Find the answers that matter.</p>
+                        </div>
+                    </div>
+                    <div class="col-b-item">
+                        <img class="item-img" src="img/strategy.png">
+
+                        <div class="item-text">
+                            <h2 class="subtitle">Strategy</h2>
+
+                            <p class="p1">See the path ahead with clarity.</p>
+                        </div>
+                    </div>
+                    <div class="col-b-item">
+                        <img class="item-img" src="img/design.png">
+
+                        <div class="item-text">
+                            <h2 class="subtitle">Design</h2>
+
+                            <p class="p1">Simple, elegant solutions.</p>
+                        </div>
+                    </div>
+                    <div class="col-b-item">
+                        <img class="item-img" src="img/technology.png">
+
+                        <div class="item-text">
+                            <h2 class="subtitle">Technology</h2>
+
+                            <p class="p1">Find your competitive edge.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-4">
+            <a name="4"></a>
+            <nav class="nav-side">
+                <ul>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#1">1</a></span><span class="hover"><a href="#1">one</a></span>
+                    </li>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#2">2</a></span><span class="hover"><a href="#2">two</a></span>
+                    </li>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#3">3</a></span><span class="hover"><a href="#3">three</a></span>
+                    </li>
+                    <li><a href="#4">four</a></li>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#5">5</a></span><span class="hover"><a href="#5">five</a></span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sec-4-content-wrap">
+                <div class="sec-4-col-a">
+                    <h1 class="title"><span class="underline">What we know </span>to be true</h1>
+                    <div class="p-wrap">
+                        <p class="p2">FOCUS ON THE CUSTOMER.</p>
+
+                        <p class="p2-2">Everything else will follow.</p>
+
+                        <p class="p2">MAKE IT SIMPLE.</p>
+
+                        <p class="p2-2">Work hard at making things easy.</p>
+
+                        <p class="p2">BE CURIOUS.</p>
+
+                        <p class="p2-2">The market never stops evolving. Stay interested.</p>
+                    </div>
+                </div>
+                <div class="sec-4-col-b">
+                    <p class="p2">Discover more about what we believe in and who we are.</p>
+                    <div class="button">
+                        <a href="">Discover&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-5">
+            <a name="5"></a>
+            <nav class="nav-side">
+                <ul>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#1">1</a></span><span class="hover"><a href="#1">one</a></span>
+                    </li>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#2">2</a></span><span class="hover"><a href="#2">two</a></span>
+                    </li>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#3">3</a></span><span class="hover"><a href="#3">three</a></span>
+                    </li>
+                    <li class="hoverable">
+                        <span class="normal"><a href="#4">4</a></span><span class="hover"><a href="#4">4</a></span>
+                    </li>
+                    <li><a href="#5">five</a></li>
+                </ul>
+            </nav>
+            <div class="sec-5-content-wrap">
+                <div class="sec-5-content">
+                    <h1 class="title">Thoughts from <span class="underline">the front line</span></h1>
+                    <table>
+                        <tr>
+                            <td>
+                                <p class="blogTitle" id="blogTitle1">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
+
+                                <p class="blogDate" id="blogDate1">25th, Oct 2014 in <span class="blogSection" id="blogSection1">Digital, Innovation</span>
+                                </p>
+
+                                <p class="blogSnip" id="blogSnip1">Innovation can be a tricky beast to tame, especially in the
+                                    digital
+                                    space. It's far too easy to get excited about ideas early on and jump into a project without
+                                    understanding what impact it may have...</p>
+
+                                <div class="button">
+                                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="blogTitle" id="blogTitle2">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
+
+                                <p class="blogDate" id="blogDate2">25th, Oct 2014 in <span class="blogSection" id="blogSection2">Digital, Innovation</span>
+                                </p>
+
+                                <p class="blogSnip" id="blogSnip2">Innovation can be a tricky beast to tame, especially in the
+                                    digital
+                                    space. It's far too easy to get excited about ideas early on and jump into a project without
+                                    understanding what impact it may have...</p>
+
+                                <div class="button">
+                                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="blogTitle" id="blogTitle3">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
+
+                                <p class="blogDate" id="blogDate3">25th, Oct 2014 in <span class="blogSection" id="blogSection3">Digital, Innovation</span>
+                                </p>
+
+                                <p class="blogSnip" id="blogSnip3">Innovation can be a tricky beast to tame, especially in the
+                                    digital
+                                    space. It's far too easy to get excited about ideas early on and jump into a project without
+                                    understanding what impact it may have...</p>
+
+                                <div class="button">
+                                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                                </div>
+                            </td>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="sec-contact">
+            <div class="sec-contact-sidebar black-dark"></div>
+            <div class="sec-contact-bg black">
+                <div class="sec-contact-content">
+                    <p class="sec-contact-text">Create outstanding digital experiences for you and your customers</p>
+                    <a class="button" href="">Contact us&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-sidebar grey-dark"></div>
+            <div class="footer-bg grey">
+                <div class="footer-content">
+                    <p>41 Cubitt Street, <br class="br-m">Cremorne VIC 3121, Australia <br class="br-t">Copyright © Working Three</p>
+
+                    <p>+61 3 8060 4700</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+<script src="js/jquery.colorscroll.min.js" type="text/javascript"></script>
+<script src="js/jquery.snapscroll.js" type="text/javascript"></script>
+<script src="js/jquery.scroll_to.js" type="text/javascript"></script>
+<!--<script src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>-->
+<script>
+    function toggle_visibility(id) {
+        var e = document.getElementById(id);
+        if (e.style.display == 'block')
+            e.style.display = 'none';
+        else
+            e.style.display = 'block';
+    }
+//    $('a').click(function () {
+//        $('html, body').animate({
+//            scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+//        }, 400);
+//        return false;
+//    });
+
+    $('.home-bg, .menu-wrap, .soc-wrap').colorScroll({
+        colors: [
+            {
+                color: '#00BCDD',
+                position: '0%'
+            },
+            {
+                color: '#FFD03E',
+                position: '22%'
+            },
+            {
+                color: '#AA7BC9',
+                position: '44%'
+            },
+            {
+                color: '#60C5BA',
+                position: '66%'
+            },
+            {
+                color: '#EB6852',
+                position: '88%'
+            }
+        ]
+    });
+
+    $('.nav-side-bg, .logo-wrap').colorScroll({
+        colors: [
+            {
+                color: '#00AFD4',
+                position: '0%'
+            },
+            {
+                color: '#FFC627',
+                position: '22%'
+            },
+            {
+                color: '#906FB4',
+                position: '44%'
+            },
+            {
+                color: '#26B8B0',
+                position: '66%'
+            },
+            {
+                color: '#E95944',
+                position: '88%'
+            }
+        ]
+    });
+
+    $('.home-sections').snapscroll();
+
+
+</script>
+</body>
+</html>
