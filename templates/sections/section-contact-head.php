@@ -7,14 +7,7 @@
         <p class="ns-text"><a class="ns-link" href="#" onclick="toggle_visibility('dNewsletter');">Newsletter Sign Up&nbsp;&nbsp;&nbsp;<img
                 class="ns-arrow" src="<?php echo $wd_wt->tpl_url['assets'];?>img/newsletter-arrow.png"></a>
         </p>
-<!--         <ul class="menu-top">
-            <li class="menu-top-item"><a class="menu-top-link" href="">Services</a></li>
-            <li class="menu-top-item"><a class="menu-top-link" href="">Our Work</a></li>
-            <li class="menu-top-item"><a class="menu-top-link" href="">Leadership</a></li>
-            <li class="menu-top-item"><a class="menu-top-link" href="">Insights</a></li>
-            <li class="menu-top-item"><a class="menu-top-link" href="">Contact Us</a></li>
-        </ul>
- -->
+
         <?php
         $defaults = array(
           'theme_location'  => 'primary_navigation',
