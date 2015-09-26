@@ -12,7 +12,7 @@
         $defaults = array(
           'theme_location'  => 'primary_navigation',
           'menu'            => '',
-          'container'       => 'div',
+          'container'       => '',
           'container_class' => '',
           'container_id'    => '',
           'menu_class'      => 'navMenu',

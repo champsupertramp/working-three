@@ -30,7 +30,8 @@ class WD_WorkingThree{
         }else{ // Front-end hooks
 
             add_action("wp_enqueue_scripts"  ,array( $this, "load_assets" ),100);
-
+            add_filter('nav_menu_css_class'  ,array( $this,'add_classes_on_li'),1,3);
+            add_filter('nav_menu_link_attributes', array( $this, 'add_classes_on_menu_anchor'), 10, 3 );
         }
 
         // Set URLs
@@ -54,7 +55,7 @@ class WD_WorkingThree{
      */
     public function theme_setup(){
 
-         // Make theme available for translation
+        // Make theme available for translation
         load_theme_textdomain('workingthree', get_template_directory() . '/lang');
 
         // Enable plugins to manage the document title
@@ -88,8 +89,66 @@ class WD_WorkingThree{
         // Tell the TinyMCE editor to use a custom stylesheet
         add_editor_style( $this->tpl_url['assets'].'css/editor-style.css');
 
+        // Register post types
+        $labels = array(
+          'name'               => _x( 'Case Studies', 'post type general name', 'workingthree' ),
+          'singular_name'      => _x( 'Cast Study', 'post type singular name', 'workingthree' ),
+          'menu_name'          => _x( 'Case Studies', 'admin menu', 'workingthree' ),
+          'name_admin_bar'     => _x( 'Cast Study', 'add new on admin bar', 'workingthree' ),
+          'add_new'            => _x( 'Add New', 'case-study', 'workingthree' ),
+          'add_new_item'       => __( 'Add New Cast Study', 'workingthree' ),
+          'new_item'           => __( 'New Cast Study', 'workingthree' ),
+          'edit_item'          => __( 'Edit Cast Study', 'workingthree' ),
+          'view_item'          => __( 'View Cast Study', 'workingthree' ),
+          'all_items'          => __( 'All Case Studies', 'workingthree' ),
+          'search_items'       => __( 'Search Case Studies', 'workingthree' ),
+          'parent_item_colon'  => __( 'Parent Case Studies:', 'workingthree' ),
+          'not_found'          => __( 'No Case Studies found.', 'workingthree' ),
+          'not_found_in_trash' => __( 'No Case Studies found in Trash.', 'workingthree' )
+        );
 
+        $args = array(
+          'labels'             => $labels,
+          'description'        => __( 'Description.', 'workingthree' ),
+          'public'             => true,
+          'publicly_queryable' => true,
+          'show_ui'            => true,
+          'show_in_menu'       => true,
+          'query_var'          => true,
+          'rewrite'            => array( 'slug' => 'case-study' ),
+          'capability_type'    => 'post',
+          'has_archive'        => true,
+          'hierarchical'       => false,
+          'menu_position'      => null,
+          'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+        );
 
+        register_post_type( 'casestudy', $args );
+    }
+
+    /**
+     * Adds classe to menu li elements
+     *
+     * @param Array $classes
+     * @param Array $item
+     * @param Array $args
+     */
+    public function add_classes_on_li($classes, $item, $args) {
+        $classes[] = 'menu-top-item';
+        return $classes;
+    }
+
+    /**
+     * Add only "a-class-" prefixed classes to the menu link attribute
+     *
+     * @param Array $atts
+     * @param Array $item
+     */
+    public function add_classes_on_menu_anchor($atts, $item, $args){
+
+        $atts['class'] = 'menu-top-link';
+
+        return $atts;
     }
 
     /**
@@ -99,36 +158,48 @@ class WD_WorkingThree{
      */
     public function load_assets(){
 
+        //scripts
+        wp_enqueue_script( 'working-three-scripts', $this->tpl_url['assets'] . '/js/main.js', array(), '1.0.0', true );
+        wp_enqueue_script( 'less', '//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js', array(), '1.0.0', true );
+        wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), '1.0.0', true );
+        wp_enqueue_script( 'jquery-color', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js', array(), '1.0.0', true );
+
         //stylesheets
         wp_enqueue_style( 'jquery-ui', "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" );
 
         if ( is_home() || is_front_page() ) {
-            wp_enqueue_style( 'working-three-landing', $this->tpl_url['assets'].'css/main.css' );
-            wp_enqueue_style( 'working-three-landing-mobile', $this->tpl_url['assets'].'css/mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
-            wp_enqueue_style( 'working-three-landing-table', $this->tpl_url['assets'].'css/tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
+            wp_enqueue_style( 'working-three-landing', $this->tpl_url['assets'].'css/home.css' );
+            wp_enqueue_style( 'working-three-landing-mobile', $this->tpl_url['assets'].'css/home_mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
+            wp_enqueue_style( 'working-three-landing-table', $this->tpl_url['assets'].'css/home_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
+            //script
+            wp_enqueue_script( 'jquery-colorscroll', $this->tpl_url['assets'] . '/js/jquery.colorscroll.min.js', array(), '1.0.0', true );
+            wp_enqueue_script( 'jquery-snapscroll', $this->tpl_url['assets'] . '/js/jquery.snapscroll.js', array(), '1.0.0', true );
+            wp_enqueue_script( 'jquery-scroll_to', $this->tpl_url['assets'] . '/js/jquery.scroll_to.js', array(), '1.0.0', true );
+
         }elseif( is_page_template("template-contact.php") ){
             wp_enqueue_style( 'working-three-contact', $this->tpl_url['assets'].'css/contact.css' );
             wp_enqueue_style( 'working-three-contact-mobile', $this->tpl_url['assets'].'css/contact_mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
             wp_enqueue_style( 'working-three-contact-table', $this->tpl_url['assets'].'css/contact_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
-        }elseif( is_page_template("template-work.php") ){
+        }elseif( is_page_template("template-insights.php") ){
             wp_enqueue_style( 'working-three-howwework', $this->tpl_url['assets'].'css/howwework.css' );
             wp_enqueue_style( 'working-three-howwework-mobile', $this->tpl_url['assets'].'css/howweworkmobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
             wp_enqueue_style( 'working-three-howwework-table', $this->tpl_url['assets'].'css/howweworktablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
+        }elseif( is_page_template("template-work.php") ){
+            wp_enqueue_style( 'working-three-who-we-work-with', $this->tpl_url['assets'].'css/who-we-work-with.css' );
+            wp_enqueue_style( 'working-three-who-we-work-with-mobile', $this->tpl_url['assets'].'css/who-we-work-with_mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
+            wp_enqueue_style( 'working-three-who-we-work-with-table', $this->tpl_url['assets'].'css/who-we-work-with_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
+            wp_enqueue_script( 'mixitup', 'http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js', array(), '1.0.0', true );
+
         }elseif( is_page_template("template-contact.php") ){
             wp_enqueue_style( 'working-three-contact', $this->tpl_url['assets'].'css/contact.css' );
             wp_enqueue_style( 'working-three-contact-mobile', $this->tpl_url['assets'].'css/contact_mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
             wp_enqueue_style( 'working-three-contact-table', $this->tpl_url['assets'].'css/contact_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
         }else{
-            wp_enqueue_style( 'working-three-contact', $this->tpl_url['assets'].'css/contact.css' );
-            wp_enqueue_style( 'working-three-contact-mobile', $this->tpl_url['assets'].'css/contact_mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
-            wp_enqueue_style( 'working-three-contact-table', $this->tpl_url['assets'].'css/contactt_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
+            wp_enqueue_style( 'working-three-inner', $this->tpl_url['assets'].'css/about-us.css' );
+            wp_enqueue_style( 'working-three-inner-mobile', $this->tpl_url['assets'].'css/about-us_mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
+            wp_enqueue_style( 'working-three-inner-table', $this->tpl_url['assets'].'css/about-us_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
         }
 
-        //scripts
-        wp_enqueue_script( 'less', '//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js', array(), '1.0.0', true );
-        wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), '1.0.0', true );
-        wp_enqueue_script( 'jquery-color', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js', array(), '1.0.0', true );
-        wp_enqueue_script( 'working-three-scripts', $this->tpl_url['assets'] . '/js/main.js', array(), '1.0.0', true );
 
     }
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Page
+ * Single post page
  * @since  1.0
  */
  global $wd_wt;
