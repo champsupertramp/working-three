@@ -221,20 +221,33 @@ class WD_WorkingThree{
             wp_enqueue_style( 'working-three-contact', $this->tpl_url['assets'].'css/contact.css' );
             wp_enqueue_style( 'working-three-contact-mobile', $this->tpl_url['assets'].'css/contact_mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
             wp_enqueue_style( 'working-three-contact-table', $this->tpl_url['assets'].'css/contact_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
+
         }elseif( is_page_template("template-insights.php") ){
             wp_enqueue_style( 'working-three-howwework', $this->tpl_url['assets'].'css/howwework.css' );
             wp_enqueue_style( 'working-three-howwework-mobile', $this->tpl_url['assets'].'css/howweworkmobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
             wp_enqueue_style( 'working-three-howwework-table', $this->tpl_url['assets'].'css/howweworktablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
+
         }elseif( is_page_template("template-work.php") ){
             wp_enqueue_style( 'working-three-who-we-work-with', $this->tpl_url['assets'].'css/who-we-work-with.css' );
             wp_enqueue_style( 'working-three-who-we-work-with-mobile', $this->tpl_url['assets'].'css/who-we-work-with_mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
             wp_enqueue_style( 'working-three-who-we-work-with-table', $this->tpl_url['assets'].'css/who-we-work-with_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
             wp_enqueue_script( 'mixitup', 'http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js', array(), '1.0.0', true );
 
+        }elseif( is_page_template("template-blog.php") ){
+            wp_enqueue_style( 'working-three-insights-and-article', $this->tpl_url['assets'].'css/insights-and-article.css' );
+            wp_enqueue_style( 'working-three-insights-and-article-mobile', $this->tpl_url['assets'].'css/insights-and-article-mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
+            wp_enqueue_style( 'working-three-insights-and-article-table', $this->tpl_url['assets'].'css/insights-and-article-tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
+
         }elseif( is_page_template("template-contact.php") ){
             wp_enqueue_style( 'working-three-contact', $this->tpl_url['assets'].'css/contact.css' );
             wp_enqueue_style( 'working-three-contact-mobile', $this->tpl_url['assets'].'css/contact_mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
             wp_enqueue_style( 'working-three-contact-table', $this->tpl_url['assets'].'css/contact_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
+
+        }elseif( is_single() ){
+            wp_enqueue_style( 'working-three-insights-and-article-content', $this->tpl_url['assets'].'css/insights-and-article-content.css' );
+            wp_enqueue_style( 'working-three-insights-and-article-content-mobile', $this->tpl_url['assets'].'css/insights-and-article-content-mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
+            wp_enqueue_style( 'working-three-insights-and-article-content-table', $this->tpl_url['assets'].'css/insights-and-article-content-tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
+
         }else{
             wp_enqueue_style( 'working-three-inner', $this->tpl_url['assets'].'css/about-us.css' );
             wp_enqueue_style( 'working-three-inner-mobile', $this->tpl_url['assets'].'css/about-us_mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
