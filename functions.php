@@ -26,6 +26,8 @@ class WD_WorkingThree{
 
             add_action('after_setup_theme' , array( $this, 'theme_setup' ) ,10 );
             add_action('after_switch_theme', array( $this, 'flush_rewrite_rules') );
+            add_filter( 'user_contactmethods', array($this, 'add_user_contact_methods'), 10, 1 );
+
 
         }else{ // Front-end hooks
 
@@ -33,6 +35,7 @@ class WD_WorkingThree{
             add_filter('nav_menu_css_class'  ,array( $this,'add_classes_on_li'),1,3);
             add_filter('nav_menu_link_attributes', array( $this, 'add_classes_on_menu_anchor'), 10, 3 );
             add_action('init', array( $this,'register_post_types' ),10);
+            add_filter( 'template_include', array( $this, 'single_post_template') , 99 );
         }
 
         // Set URLs
@@ -243,7 +246,7 @@ class WD_WorkingThree{
             wp_enqueue_style( 'working-three-contact-mobile', $this->tpl_url['assets'].'css/contact_mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
             wp_enqueue_style( 'working-three-contact-table', $this->tpl_url['assets'].'css/contact_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
 
-        }elseif( is_single() ){
+        }elseif( is_single() || is_page() ){
             wp_enqueue_style( 'working-three-insights-and-article-content', $this->tpl_url['assets'].'css/insights-and-article-content.css' );
             wp_enqueue_style( 'working-three-insights-and-article-content-mobile', $this->tpl_url['assets'].'css/insights-and-article-content-mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
             wp_enqueue_style( 'working-three-insights-and-article-content-table', $this->tpl_url['assets'].'css/insights-and-article-content-tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
@@ -254,6 +257,37 @@ class WD_WorkingThree{
             wp_enqueue_style( 'working-three-inner-table', $this->tpl_url['assets'].'css/about-us_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
         }
 
+
+    }
+
+    /**
+     * Allow single post/post type template
+     *
+     * @since  1.0
+     */
+    public function single_post_template( $template ){
+
+          if ( is_single() &&  get_post_type(get_the_ID() ) ) {
+            $_template = locate_template( array( 'single-casestudy.php'  ) );
+            $template = ( $_template ) ? $_template : $template;
+          }
+
+          return $template;
+    }
+
+    /**
+     * Adds user contact methods
+     */
+    public function add_user_contact_methods( $contactmethods ){
+
+      if ( !isset( $contactmethods['position'] ) )
+          $contactmethods['position'] = 'Position';
+      if ( !isset( $contactmethods['twitter'] ) )
+          $contactmethods['twitter'] = 'Twitter';
+      if ( !isset( $contactmethods['linkedin'] ) )
+          $contactmethods['linkedin'] = 'Linkedin';
+
+        return $contactmethods;
 
     }
 
