@@ -88,5 +88,6 @@
         </div>
     </div>
 </section>
-<?php get_template_part('templates/sections/section', 'inner-contact-footer'); ?>
+<?php get_template_part('templates/sections/section', 'contact-footer'); ?>
+
 <?php  get_footer(); ?>

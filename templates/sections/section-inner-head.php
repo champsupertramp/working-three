@@ -1,18 +1,22 @@
 <?php global $wd_wt; ?>
 <nav class="nav-top" id="topNav2">
     <div class="logoWrapper">
-        <img src="<?php echo $wd_wt->tpl_url['assets'];?>img/w3logo.png">
+         <?php get_template_part('templates/sections/section', 'head-logo'); ?>
     </div>
     <div class="navWrapper">
-        <p class="newsletter"><a href="#" onclick="toggle_visibility('dNewsletter');">Newsletter Sign Up&nbsp;&nbsp;&nbsp;<img
-                src="<?php echo $wd_wt->tpl_url['assets'];?>img/newsletter-arrow.png"></a>
+        <p class="newsletter">
+        <?php  $has_enabled = cs_get_option( 'wd_enable_newsletter' );?>
+          <?php if( $has_enabled ){ ?>
+          <a href="#" onclick="toggle_visibility('dNewsletter');">Newsletter Sign Up&nbsp;&nbsp;&nbsp;<img
+                  src="<?php echo $wd_wt->tpl_url['assets'];?>img/newsletter-arrow.png"></a>
+          <?php } ?>
         </p>
 
         <?php
         $defaults = array(
           'theme_location'  => 'primary_navigation',
           'menu'            => '',
-          'container'       => 'div',
+          'container'       => '',
           'container_class' => '',
           'container_id'    => '',
           'menu_class'      => 'navMenu',
@@ -49,7 +53,7 @@
                 <li><a href="<?php echo cs_get_option( 'social_icon_twitter' );?>"><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/social-twitter.png"></a></li>
               <?php } ?>
         </ul>
-        <?php $general_contact = cs_get_option( 'wd-contact-number' ); ?>
+        <?php $general_contact = cs_get_option( 'wd_contact_number' ); ?>
         <?php if( ! empty( $general_contact ) ){ ?>
             <p><?php echo $general_contact;?></p>
         <?php } ?>
