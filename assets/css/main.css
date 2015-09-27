@@ -130,6 +130,9 @@ table {
 #tablet {
   display: none;
 }
+.test {
+  display: block;
+}
 @font-face {
   font-family: "akkuratRegular";
   src: url('../fonts/AkkuratRegular.otf') format('opentype');

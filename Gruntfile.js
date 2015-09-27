@@ -54,7 +54,26 @@ module.exports = function(grunt) {
           ],
           'assets/css/mobile.css': [
             'assets/less/mobile.less'
+          ],
+          'assets/css/insights-and-article-content.css': [
+            'assets/less/insights-and-article-content.less'
+          ],
+          'assets/css/insights-and-article-content-mobile.css': [
+            'assets/less/insights-and-article-content-mobile.less'
+          ],
+          'assets/css/insights-and-article-content-tablet.css': [
+            'assets/less/insights-and-article-content-tablet.less'
+          ],
+          'assets/css/insights-and-article.css': [
+            'assets/less/insights-and-article.less'
+          ],
+          'assets/css/insights-and-article-mobile.css': [
+            'assets/less/insights-and-article-mobile.less'
+          ],
+          'assets/css/insights-and-article-tablet.css': [
+            'assets/less/insights-and-article-tablet.less'
           ]
+
         },
         options: {
           compress: false,

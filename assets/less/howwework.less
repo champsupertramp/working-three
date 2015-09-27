@@ -1,0 +1,476 @@
+//CSS RESET//
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#mobile, #tablet {
+  display: none;
+}
+
+//VARIABLES//
+@topNavFontSize: 0.9vw;
+@sideNavFontSize: 1vw;
+@headerFontSize: 4.4vw;
+@h2FontSize: 2.2vw;
+@akRegular: 'akkuratRegular',
+arial,
+sans-serif;
+@akLight: 'akkuratLight',
+arial,
+sans-serif;
+@p1FontSize: 1.15vw;
+@p2FontSize: 1.8vw;
+@buttonFontSize: 1.2vw;
+@purpleBg: #AA7BC9;
+@purpleBgDark: #906FB4;
+
+//FONTS//
+@font-face {
+  font-family: "akkuratRegular";
+  src: url('../fonts/AkkuratRegular.otf') format('opentype');
+}
+@font-face {
+  font-family: "akkuratLight";
+  src: url('../fonts/AkkuratLight.otf') format('opentype');
+}
+
+.bottomNav {
+  display: none;
+}
+
+
+//NEWSLETTER//
+#dNewsletter {
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+  float: left;
+  z-index: 100000;
+  position: fixed;
+  .closeWrap {
+    width: 100vw;
+    height: 3vh;
+    padding-top: 17vh;
+    .closeButton {
+      margin-left: 80vw;
+      text-transform: uppercase;
+      font-family: @akRegular;
+      font-size: 1vw;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  .newsletterLogo {
+    width: 6vw;
+    height: 6vw;
+    display: block;
+    text-align: justify;
+    margin-left: 45vw;
+  }
+  .newsletterContent {
+
+    .newsletterTitle {
+      margin-left: 38vw;
+      text-transform: uppercase;
+      font-family: @akRegular;
+      font-size: 2.5vw;
+      margin-top: 3vh;
+      position: absolute;
+    }
+    .newsletterText {
+      position: absolute;
+      width: 30vw;
+      font-family: @akRegular;
+      font-size: 1vw;
+      line-height: 3vh;
+      margin-left: 15vw;
+      margin-top: 6vh;
+    }
+    .signupForm {
+      width: 35vw;
+      position: absolute;
+      float: right;
+      margin-top: -24.5vh;
+      margin-right: 15vw;
+      label {
+        display: block;
+        font-family: @akRegular;
+        font-size: 1.2vw;
+        margin-bottom: 1vh;
+      }
+      input {
+        display: block;
+        width: 30vw;
+        margin-bottom: 3vh;
+        height: 35px;
+      }
+      .nsButton {
+        display: block;
+        position: absolute;
+        margin-top: 27vh;
+        margin-left: 22.5vw;
+        button {
+          width: 8vw;
+          font-family: @akRegular;
+          font-size: 1.2vw;
+          color: #fff;
+          background: #00BCDD;
+          border: 0;
+          border-radius: 3px;
+          height: 5vh;
+        }
+      }
+    }
+  }
+}
+
+//DESKTOP//
+.tSpace, .mSpace, .footerT {
+  display: none;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100vh;
+}
+.logoWrapper,
+.navWrapper,
+.socialWrapper {
+  display: inline-block;
+  float: left;
+  height: 20vh;
+}
+
+//TOP NAVIGATION//
+.nav-top {
+  position: fixed;
+  width: 100vw;
+  font-family: @akRegular;
+  font-size: @topNavFontSize;
+  color: #fff;
+  .logoWrapper{
+    background-image: linear-gradient( rgba(144, 111, 180, 1) 60%, rgba(144, 111, 180, 0));
+    width: 16vw;
+    img {
+      margin: 6.5vh 0 0 2vw;
+      width: 9vw;
+    }
+  }
+  .navWrapper{
+    background-image: linear-gradient( rgba(170, 123, 201, 1) 60%, rgba(170, 123, 201, 0));
+    width: 60vw;
+    text-transform: uppercase;
+    p {
+      margin-left: 12vw;
+      margin-top: 4vh;
+      a {
+        color: inherit;
+        text-decoration: none;
+        img {
+          height: 1.2vh;
+        }
+      }
+    }
+    ul{
+      margin-left: 12vw;
+      margin-top: 6vh;
+      li {
+        display: inline;
+        margin-right: 3vw;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+  .socialWrapper{
+    background-image: linear-gradient( rgba(170, 123, 201, 1) 60%, rgba(170, 123, 201, 0));
+    width: 24vw;
+    p {
+      margin-left: 3vw
+    }
+    ul {
+      margin: 3vh 0 5vh 3vw;
+      li {
+        display: inline;
+        margin-right: 1.9vw;
+      }
+    }
+  }
+}
+
+//SECTION 1//
+.section1 {
+  color: #fff;
+  width: 100vw;
+  .sideBar {
+    width: 16vw;
+    height: 80vh;
+    float: left;
+    display: inline-block;
+    background: @purpleBgDark;
+  }
+  .s1Content {
+    width: 84vw;
+    height: 80vh;
+    display: inline-block;
+    float: right;
+    background: @purpleBg;
+    .s1Title {
+      margin-top: 25vh;
+      margin-left: 12vw;
+      font-family: @akRegular;
+      font-size: @headerFontSize;
+      width: 45vw;
+      line-height: 10vh;
+      span {
+        text-decoration: underline;
+      }
+    }
+    .s1Text {
+      font-family: @akRegular;
+      font-size: @p1FontSize;
+      line-height: 4vh;
+      margin-top: 6vh;
+      margin-left: 12vw;
+      width: 45vw;
+      p {
+        margin-bottom: 2.5vh;
+      }
+    }
+  }
+}
+
+.section2 {
+  font-family: @akRegular;
+  height: 300vh;
+  .sideBar {
+    width: 16vw;
+    height: 220vh;
+    float: left;
+    display: inline-block;
+    background: #F2F2F2;
+  }
+  .wrapper {
+    width: 60vw;
+    margin-left: 12vw;
+    float: left;
+    margin-top: 12vh;
+    .title {
+      font-size: @headerFontSize;
+      color: #000;
+      position: relative;
+      margin-bottom: 3vh;
+
+      z-index: -1;
+    }
+    img {
+      display: inline-block;
+      vertical-align: top;
+      width: 9.5vw;
+      margin-top: 3vh;
+    }
+    .contentWrapper {
+      display: inline-block;
+      margin-top: 3vh;
+      margin-left: 1.5vw;
+      .text {
+        font-size: @p2FontSize;
+        color: #5C6E7B;
+        width: 47vw;
+        margin-bottom: 4vh;
+        line-height: 4vh;
+      }
+      .subText {
+        font-size: @p1FontSize;
+        color: #5C6E7B;
+        width: 47vw;
+        line-height: 3vh;
+      }
+    }
+  }
+}
+
+.section3 {
+  color: #fff;
+  width: 100vw;
+  background: @purpleBg;
+  .sideBar {
+    width: 16vw;
+    height: 80vh;
+    float: left;
+    display: inline-block;
+    background: @purpleBgDark;
+  }
+  .content {
+    height: 80vh;
+    .wrapper {
+      margin-left: 28vw;
+      padding-top: 12vh;
+      width: 48vw;
+      .title {
+        font-family: @akRegular;
+        font-size: @headerFontSize;
+        margin-bottom: 5vh;
+        span {
+          text-decoration: underline;
+        }
+      }
+      .text {
+        font-size: @p1FontSize;
+        font-family: @akRegular;
+        margin-bottom: 3vh;
+        line-height: 3vh;
+      }
+      .subText {
+        font-size: @p2FontSize;
+        font-family: @akRegular;
+      }
+      .button {
+        font-family: @akRegular;
+        font-size: @buttonFontSize;
+        text-transform: uppercase;
+        background: #1B3F45;
+        text-align: center;
+        border-radius: 2px;
+        height: 6vh;
+        margin-top: 5vh;
+        width: 16vw;
+        a {
+          text-decoration: none;
+          color: inherit;
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding-top: 1.8vh;
+          img {
+            width: 1.2vw;
+            background: #1B3F45;
+          }
+        }
+      }
+    }
+  }
+}
+
+//CONTACT//
+.contact {
+  display: table;
+  height: 20vh;
+  color: #fff;
+  font-family: @akRegular;
+  font-size: @p1FontSize;
+  .contactDark {
+    display: table-cell;
+    width: 16.3vw;
+    background: #262626;
+  }
+  .contactContent {
+    display: table-cell;
+    width: 84vw;
+    background: #333333;
+    p {
+      margin-right: 3vw;
+      margin-left: 15vw;
+      display: inline-block;
+      margin-top: 9vh;
+    }
+    .contactButton {
+      display: inline-block;
+      text-transform: uppercase;
+      padding: 1.5vh 2.5vh;
+      border-radius: 2px;
+      background: @purpleBg;
+      a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        width: 100%;
+        height: 100%;
+        img {
+          width: 1.2vw;
+        }
+      }
+    }
+  }
+}
+
+//FOOTER//
+footer {
+  display: table;
+  height: 20vh;
+  color: #000;
+  font-family: @akRegular;
+  font-size: 0.9vw;
+  .footerDark {
+    background: #DEDFDF;
+    width: 16vw;
+    display: table-cell;
+    margin-top: 9vh;
+  }
+  .footerContent {
+    display: table-cell;
+    background: #E9EAEA;
+    width: 84vw;
+    p {
+      margin-top: 5vw;
+      margin-left: 17vw;
+    }
+  }
+}
+
+.scrolled2 .navWrapper, .scrolled2 .socialWrapper{
+  background: @purpleBg;
+}
+.scrolled2 .logoWrapper {
+  background: @purpleBgDark;
+}
