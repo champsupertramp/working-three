@@ -32,6 +32,7 @@ class WD_WorkingThree{
             add_action("wp_enqueue_scripts"  ,array( $this, "load_assets" ),100);
             add_filter('nav_menu_css_class'  ,array( $this,'add_classes_on_li'),1,3);
             add_filter('nav_menu_link_attributes', array( $this, 'add_classes_on_menu_anchor'), 10, 3 );
+            add_action('init', array( $this,'register_post_types' ),10);
         }
 
         // Set URLs
@@ -90,7 +91,16 @@ class WD_WorkingThree{
         // Tell the TinyMCE editor to use a custom stylesheet
         add_editor_style( $this->tpl_url['assets'].'css/editor-style.css');
 
-        // Register post types
+        $this->register_post_types();
+    }
+
+    /**
+     * Registers post types & taxonomies
+     * @since 1.0
+     */
+    public function register_post_types(){
+
+                // Register post types
         $labels = array(
           'name'               => _x( 'Case Studies', 'post type general name', 'workingthree' ),
           'singular_name'      => _x( 'Cast Study', 'post type singular name', 'workingthree' ),
@@ -125,7 +135,6 @@ class WD_WorkingThree{
         );
 
         register_post_type( 'casestudy', $args );
-
         $labels = array(
           'name'                       => _x( 'Categories', 'taxonomy general name' ),
           'singular_name'              => _x( 'Category', 'taxonomy singular name' ),

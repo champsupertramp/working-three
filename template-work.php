@@ -14,144 +14,57 @@
     <div class="sec-1-sidebar blue-dark"></div>
     <div class="sec-1-bg blue">
         <div class="sec-1-content">
-            <h1>Who we <span class="underline">work with</span></h1>
+        <?php
+        if( have_posts() ){
+          while( have_posts() ){ the_post(); ?>
+            <h1><?php the_title(); ?></h1>
 
-            <p class="p1">We work with brands that know the value of developing relationships with their
-                customers.</p>
-
+            <p class="p1"><?php the_content(); ?></p>
+        <?php
+          }
+        }
+        ?>
         </div>
     </div>
 </section>
 <section class="sec-2">
     <div class="sec-2-sidebar white-dark"></div>
     <div id="Container" class="container">
-        <div class="controls">
 
+        <div class="controls">
             <button class="filter" data-filter="all">All</button>
-            <button class="filter" data-filter=".sport">Sport</button>
-            <button class="filter" data-filter=".retail">Retail</button>
-            <button class="filter" data-filter=".consultation">Consultation</button>
-            <button class="filter" data-filter=".agriculture">Agriculture</button>
-            <button class="filter" data-filter=".education">Education</button>
-            <button class="filter" data-filter=".government">Government</button>
-            <button class="filter" data-filter=".not-for-profit">Not-for-profit</button>
-            <button class="filter" data-filter=".technology">Technology</button>
+
+            <?php $case_study_terms = get_terms('casestudy_categories', array( 'hide_empty' => 0 )); ?>
+            <?php foreach( $case_study_terms  as $term ){ ?>
+            <button class="filter" data-filter=".<?php echo $term->slug;?>"><?php echo $term->name;?></button>
+            <?php } ?>
 
         </div>
         <div class="mix-container">
-        <div class="mix sport">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix retail">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study off">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix consultation">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix agriculture">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><p class="mix-study on">VIEW CASE STUDY</p></div>
-        </div>
-        <div class="mix education">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><p class="mix-study on">VIEW CASE STUDY</p></div>
-        </div>
-        <div class="mix government">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><p class="mix-study on">VIEW CASE STUDY</p></div>
-        </div>
-        <div class="mix not-for-profit">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix technology">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix sport">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix retail">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix consultation">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix agriculture">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix education">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix government">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix not-for-profit">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix technology">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix sport">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study off">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix retail">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix consultation">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix agriculture">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study off">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix education">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix government">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix not-for-profit">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix technology">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study off">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix government">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix not-for-profit">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix technology">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study on">VIEW CASE STUDY</a></div>
-        </div>
-        <div class="mix technology">
-            <img class="client-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/square_logo.png">
-            <div class="mix-study-wrap"><a class="mix-study off">VIEW CASE STUDY</a></div>
-        </div>
+        <?php
+        $args = array(
+          'post_type' => 'casestudy',
+          'post_status' => 'public',
+          'posts_per_page' => -1,
+        );
+        ?>
+        <?php $case_studies = new WP_Query(  $args ); ?>
+        <?php while( $case_studies->have_posts() ){ $case_studies->the_post(); ?>
+        <?php
+          $categories = get_the_terms(get_the_ID(),'casestudy_categories');
 
+          $arr_category = array();
+          if( ! empty( $categories ) ){
+             foreach ($categories as $category) {
+                  array_push( $arr_category , strtolower($category->name));
+              }
+          }
+        ?>
+        <div class="mix <?php echo implode(" ",$arr_category); ?>">
+            <?php echo get_the_post_thumbnail( get_the_ID(), 'image_174x174', array( 'class' => 'client-logo' ) ); ?>
+            <div class="mix-study-wrap"><a href="<?php the_permalink(); ?>" class="mix-study on">VIEW CASE STUDY</a></div>
+        </div>
+        <?php } ?>
         <div class="gap"></div>
         <div class="gap"></div>
             </div>
