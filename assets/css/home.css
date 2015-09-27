@@ -456,20 +456,21 @@ table {
   margin-bottom: 3vw;
 }
 .sec-2-content-wrap .sec-2-content div img {
-  width: 17vw;
-  height: 17vw;
+  width: 16vw;
+  height: 16vw;
   margin-right: 1vw;
 }
 .sec-2-content-wrap .sec-2-content .button {
   margin-top: 5vh;
-  margin-right: 1.5vw;
+  margin-right: 4.5vw;
   float: right;
   padding: 1vw 1vw;
   width: 14vw;
 }
 .sec-2-content-wrap .sec-2-content .button img {
+  margin-right: 0;
   width: 1.2vw;
-  height: 1.2vw;
+  height: 1vw;
 }
 .sec-3-content-wrap {
   display: inline-block;
@@ -503,9 +504,6 @@ table {
   float: left;
   padding: 1vw 1vw;
   width: 16vw;
-}
-.sec-3-content-wrap .sec-3-col-a .button img {
-  width: 1.2vw;
 }
 .sec-3-content-wrap .sec-3-col-b {
   margin-top: 25vh;
@@ -575,9 +573,6 @@ table {
   padding: 1vw 1vw;
   width: 8vw;
 }
-.sec-4-content-wrap .sec-4-col-b .button img {
-  width: 1.2vw;
-}
 .sec-5-content-wrap {
   display: inline-block;
   width: 84vw;
@@ -623,9 +618,6 @@ table {
   float: left;
   padding: 0.8vw 0.8vw;
   width: 10vw;
-}
-.sec-5-content-wrap .sec-5-content table tr td .button img {
-  width: 1.2vw;
 }
 .sec-contact {
   height: 14vh;

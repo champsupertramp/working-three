@@ -473,7 +473,7 @@
   }
   .sec-2-content-wrap .sec-2-content .button img {
     width: 2.5vw;
-    height: 2.5vw;
+    height: 2vw;
   }
   .sec-3-content-wrap {
     display: inline-block;
@@ -508,9 +508,6 @@
     float: left;
     padding: 2vw;
     width: 33vw;
-  }
-  .sec-3-content-wrap .sec-3-col-a .button img {
-    width: 2.5vw;
   }
   .sec-3-content-wrap .sec-3-col-b {
     margin-top: 5vh;
@@ -580,9 +577,6 @@
     padding: 2vw;
     width: 20vw;
   }
-  .sec-4-content-wrap .sec-4-col-b .button img {
-    width: 2.5vw;
-  }
   .sec-5-content-wrap {
     display: inline-block;
     width: 84vw;
@@ -629,9 +623,6 @@
     padding: 2vw;
     width: 20vw;
   }
-  .sec-5-content-wrap .sec-5-content table tr td .button img {
-    width: 2.5vw;
-  }
   .sec-5-content-wrap .sec-5-content table tr td:nth-child(3) {
     display: none;
   }
@@ -676,7 +667,6 @@
   }
   .sec-contact .sec-contact-bg .sec-contact-content .button img {
     background: transparent;
-    width: 2.5vw;
   }
   footer {
     height: 19vh;
