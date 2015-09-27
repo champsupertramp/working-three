@@ -62,7 +62,8 @@
         ?>
         <div class="mix <?php echo implode(" ",$arr_category); ?>">
             <?php echo get_the_post_thumbnail( get_the_ID(), 'image_174x174', array( 'class' => 'client-logo' ) ); ?>
-            <div class="mix-study-wrap"><a href="<?php the_permalink(); ?>" class="mix-study on">VIEW CASE STUDY</a></div>
+            <?php  $meta_data = get_post_meta( get_the_ID(), '_custom_meta_options', true );?>
+            <div class="mix-study-wrap"><a href="<?php the_permalink(); ?>" class="mix-study <?php echo ! empty( $meta_data['show_casestudy_link'] ) && $meta_data['show_casestudy_link'] == true?'on':'off'?>">VIEW CASE STUDY</a></div>
         </div>
         <?php } ?>
         <div class="gap"></div>
