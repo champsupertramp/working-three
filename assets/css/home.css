@@ -127,7 +127,8 @@ table {
   border-spacing: 0;
 }
 #mobile,
-#tablet {
+#tablet,
+.nav-bot {
   display: none;
 }
 .blue-gradient {
@@ -163,6 +164,7 @@ table {
   src: url('../fonts/AkkuratLight.otf') format('opentype');
 }
 .nav-top {
+  top: 0;
   font-family: 'akkuratRegular', arial, sans-serif;
   width: 100vw;
   height: 20vh;
@@ -284,6 +286,12 @@ table {
 }
 .br-t,
 .br-m {
+  display: none;
+}
+.logo-wrap-t {
+  display: none;
+}
+.nav-side-tablet {
   display: none;
 }
 #dNewsletter {
@@ -449,6 +457,7 @@ table {
 }
 .sec-2-content-wrap .sec-2-content div img {
   width: 17vw;
+  height: 17vw;
   margin-right: 1vw;
 }
 .sec-2-content-wrap .sec-2-content .button {
@@ -460,6 +469,7 @@ table {
 }
 .sec-2-content-wrap .sec-2-content .button img {
   width: 1.2vw;
+  height: 1.2vw;
 }
 .sec-3-content-wrap {
   display: inline-block;

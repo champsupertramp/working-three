@@ -55,7 +55,7 @@ table {
   border-spacing: 0;
 }
 
-#mobile, #tablet {
+#mobile, #tablet, .nav-bot, {
   display: none;
 }
 
@@ -141,6 +141,7 @@ sans-serif;
 //TOP-NAV//
 
 .nav-top {
+  top: 0;
   font-family: @akRegular;
   width: 100vw;
   height: 20vh;
@@ -272,6 +273,14 @@ sans-serif;
 }
 
 .br-t, .br-m {
+  display: none;
+}
+
+.logo-wrap-t {
+  display: none;
+}
+
+.nav-side-tablet {
   display: none;
 }
 
@@ -446,6 +455,7 @@ sans-serif;
     div {
       img {
         width: 17vw;
+        height: 17vw;
         margin-right: 1vw;
       }
     }
@@ -457,6 +467,7 @@ sans-serif;
       width: 14vw;
       img {
         width: 1.2vw;
+        height: 1.2vw;
       }
     }
   }
