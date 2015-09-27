@@ -1,10 +1,9 @@
 <footer>
     <div class="footerDark"></div>
     <div class="footerContent">
-        <p class="footerD">41 Cubitt Street, Cremorne VIC 3121, Australia Copyright © Working Three&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+61
-            3 8060 4700</p>
-        <p class="footerT">41 Cubitt Street, Cremorne VIC 3121, Australia <br>Copyright © Working Three</p>
-        <p class="footerT">+61 3 8060 4700</p>
+        <p class="footerD"><?php echo cs_get_option("wd_copyright");?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo cs_get_option("wd_contact_number");?></p>
+        <p class="footerT"><?php echo cs_get_option("wd_copyright");?></p>
+        <p class="footerT"><?php echo cs_get_option("wd_contact_number");?></p>
     </div>
 </footer>
 <div class="mSpace">asd</div>

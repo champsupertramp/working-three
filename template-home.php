@@ -325,7 +325,7 @@
             <div class="sec-contact-bg black">
                 <div class="sec-contact-content">
                     <p class="sec-contact-text">Create outstanding digital experiences for you and your customers</p>
-                    <a class="button" href="">Contact us&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
+                    <a class="button" href="/contact-us/">Contact us&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
                 </div>
             </div>
         </section>
@@ -333,9 +333,11 @@
             <div class="footer-sidebar grey-dark"></div>
             <div class="footer-bg grey">
                 <div class="footer-content">
-                    <p>41 Cubitt Street, <br class="br-m">Cremorne VIC 3121, Australia <br class="br-t">Copyright © Working Three</p>
+                    <!-- <p>41 Cubitt Street, <br class="br-m">Cremorne VIC 3121, Australia <br class="br-t">Copyright © Working Three</p>
+                     -->
+                     <p><?php echo cs_get_option("wd_copyright");?></p>
+                     <p><?php echo cs_get_option("wd_contact_number");?></p>
 
-                    <p>+61 3 8060 4700</p>
                 </div>
             </div>
         </footer>

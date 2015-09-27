@@ -1,9 +1,9 @@
 <?php
 /**
- * Single post page
+ * Single post for casestudy post type
  * @since  1.0
  */
- global $wd_wt;
+global $wd_wt;
 ?>
 <?php get_header();?>
 <?php get_template_part('templates/sections/section', 'newsletter'); ?>

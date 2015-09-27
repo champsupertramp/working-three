@@ -47,37 +47,15 @@
     <div class="sideBar"></div>
     <!--<div class="navBlock"></div>-->
     <div class="s1Content">
-        <div class="s1Title"><span>We think</span> about<br /> people and data <span>a lot</span></div>
+      <?php while( have_posts() ): the_post(); ?>
+        <div class="s1Title"><?php the_title();?></div>
         <div class="s1Text">
-            <p>Read our blog to find insights into the changing ways customers and businesses are <br />engaging, and how we can use data to keep up.</p>
+          <?php the_content(); ?>
         </div>
+      <?php endwhile; ?>
     </div>
 </section>
-<nav class="nav-top" id="topNav2">
-    <div class="logoWrapper">
-        <img src="<?php echo $wd_wt->tpl_url['assets'];?>img/w3logo.png">
-    </div>
-    <div class="navWrapper">
-        <p class="newsletter"><a href="#" onclick="toggle_visibility('dNewsletter');">Newsletter Sign Up&nbsp;&nbsp;&nbsp;<img
-                src="<?php echo $wd_wt->tpl_url['assets'];?>img/newsletter-arrow.png"></a>
-        </p>
-        <ul class="navMenu">
-            <li><a href=""><span>Services</span></a></li>
-            <li><a href=""><span>Our Work</span></a></li>
-            <li><a href=""><span>Leadership</span></a></li>
-            <li><a href=""><span>Insights</span></a></li>
-            <li><a href=""><span>Contact Us</span></a></li>
-        </ul>
-    </div>
-    <div class="socialWrapper">
-        <ul>
-            <li><a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/social-li.png"></a></li>
-            <li><a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/social-fb.png"></a></li>
-            <li><a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/social-twitter.png"></a></li>
-        </ul>
-        <p>+61 3 8060 4700</p>
-    </div>
-</nav>
+
 <section class="section2">
     <div class="sideBar">
         <nav class="nav-side nav-side-grey">
@@ -95,156 +73,56 @@
         </nav>
     </div>
     <div class="s2content">
-        <div class="wrapper">
-                    <table>
-                        <tr>
-                            <td>
-                                <p class="blogTitle" id="blogTitle1">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
+        <?php
+            $case_study_category_id = 0;
+            $arr = array(
+                'post_type' => 'post',
+                'posts_per_page' => 9,
+            );
 
-                                <p class="blogDate" id="blogDate1">25th, Oct 2014 in <span class="blogSection" id="blogSection1"><a href="#">Digital</a>, <a href="#">Innovation</a></span>
-                                </p>
+            if( $case_study_category_id ){
+                 $arr['category'] = $case_study_category_id;
+            }
 
-                                <p class="blogSnip" id="blogSnip1">Innovation can be a tricky beast to tame, especially in the
-                                    digital
-                                    space. It's far too easy to get excited about ideas early on and jump into a project without
-                                    understanding what impact it may have...</p>
+            $the_query = new WP_Query( $arr );
 
-                                <div class="button">
-                                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="blogTitle" id="blogTitle2">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
+        $i = 1 ;
+        while(  $the_query->have_posts() ){
+          $the_query->the_post();
+          $categories = get_the_category();
+          $arr_category = array();
+            if( ! empty( $categories ) ){
+                foreach ($categories as $category) {
+                  array_push( $arr_category , '<a href="'.esc_url( get_category_link( $category->term_id ) ).'" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'workingthree' ), $category->name ) ) . '">'.$category->name.'</a>');
+                }
+            }
+        ?>
+            <?php if(  $i%3 == 1){ ?>
+            <div class="wrapper">
+                <table>
+                    <tr>
+            <?php } ?>
+                      <td>
+                                    <p class="blogTitle" id="blogTitle1"><?php echo strtoupper(get_the_title()); ?></p>
 
-                                <p class="blogDate" id="blogDate2">25th, Oct 2014 in <span class="blogSection" id="blogSection2"><a href="#">Thinking</a></span>
-                                </p>
+                                    <p class="blogDate" id="blogDate1"><?php the_time('jS, M Y') ?> in <span class="blogSection" id="blogSection1"><?php echo implode(", ",$arr_category);?></span>
+                                    </p>
 
-                                <p class="blogSnip" id="blogSnip2">Innovation can be a tricky beast to tame, especially in the
-                                    digital
-                                    space. It's far too easy to get excited about ideas early on and jump into a project without
-                                    understanding what impact it may have...</p>
+                                    <p class="blogSnip" id="blogSnip1">
+                                    <?php echo substr(get_the_excerpt(), 0,120); ?>
+                                    </p>
 
-                                <div class="button">
-                                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="blogTitle" id="blogTitle3">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
+                                    <div class="button">
+                                        <a href="<?php the_permalink(); ?>">Read More&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
+                                    </div>
+                      </td>
+            <?php if(  $i%3 == 0){ ?>
+                  </tr>
+              </table>
+            </div><?php } ?>
+        <?php $i++; ?>
+        <?php }  ?>
 
-                                <p class="blogDate" id="blogDate3">25th, Oct 2014 in <span class="blogSection" id="blogSection3"><a href="#">Digital</a>, <a href="#">Innovation</a></span>
-                                </p>
-
-                                <p class="blogSnip" id="blogSnip3">Innovation can be a tricky beast to tame, especially in the
-                                    digital
-                                    space. It's far too easy to get excited about ideas early on and jump into a project without
-                                    understanding what impact it may have...</p>
-
-                                <div class="button">
-                                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
-                                </div>
-                            </td>
-                    </table>
-        </div>
-        <div class="wrapper">
-                    <table>
-                        <tr>
-                            <td>
-                                <p class="blogTitle" id="blogTitle1">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
-
-                                <p class="blogDate" id="blogDate1">25th, Oct 2014 in <span class="blogSection" id="blogSection1"><a href="#">Digital</a>, <a href="#">Innovation</a></span>
-                                </p>
-
-                                <p class="blogSnip" id="blogSnip1">Innovation can be a tricky beast to tame, especially in the
-                                    digital
-                                    space. It's far too easy to get excited about ideas early on and jump into a project without
-                                    understanding what impact it may have...</p>
-
-                                <div class="button">
-                                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="blogTitle" id="blogTitle2">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
-
-                                <p class="blogDate" id="blogDate2">25th, Oct 2014 in <span class="blogSection" id="blogSection2"><a href="#">Thinking</a></span>
-                                </p>
-
-                                <p class="blogSnip" id="blogSnip2">Innovation can be a tricky beast to tame, especially in the
-                                    digital
-                                    space. It's far too easy to get excited about ideas early on and jump into a project without
-                                    understanding what impact it may have...</p>
-
-                                <div class="button">
-                                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="blogTitle" id="blogTitle3">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
-
-                                <p class="blogDate" id="blogDate3">25th, Oct 2014 in <span class="blogSection" id="blogSection3"><a href="#">Digital</a>, <a href="#">Innovation</a></span>
-                                </p>
-
-                                <p class="blogSnip" id="blogSnip3">Innovation can be a tricky beast to tame, especially in the
-                                    digital
-                                    space. It's far too easy to get excited about ideas early on and jump into a project without
-                                    understanding what impact it may have...</p>
-
-                                <div class="button">
-                                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
-                                </div>
-                            </td>
-                    </table>
-        </div>
-        <div class="wrapper">
-                    <table>
-                        <tr>
-                            <td>
-                                <p class="blogTitle" id="blogTitle1">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
-
-                                <p class="blogDate" id="blogDate1">25th, Oct 2014 in <span class="blogSection" id="blogSection1"><a href="#">Digital</a>, <a href="#">Innovation</a></span>
-                                </p>
-
-                                <p class="blogSnip" id="blogSnip1">Innovation can be a tricky beast to tame, especially in the
-                                    digital
-                                    space. It's far too easy to get excited about ideas early on and jump into a project without
-                                    understanding what impact it may have...</p>
-
-                                <div class="button">
-                                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="blogTitle" id="blogTitle2">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
-
-                                <p class="blogDate" id="blogDate2">25th, Oct 2014 in <span class="blogSection" id="blogSection2"><a href="#">Thinking</a></span>
-                                </p>
-
-                                <p class="blogSnip" id="blogSnip2">Innovation can be a tricky beast to tame, especially in the
-                                    digital
-                                    space. It's far too easy to get excited about ideas early on and jump into a project without
-                                    understanding what impact it may have...</p>
-
-                                <div class="button">
-                                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="blogTitle" id="blogTitle3">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
-
-                                <p class="blogDate" id="blogDate3">25th, Oct 2014 in <span class="blogSection" id="blogSection3"><a href="#">Digital</a>, <a href="#">Innovation</a></span>
-                                </p>
-
-                                <p class="blogSnip" id="blogSnip3">Innovation can be a tricky beast to tame, especially in the
-                                    digital
-                                    space. It's far too easy to get excited about ideas early on and jump into a project without
-                                    understanding what impact it may have...</p>
-
-                                <div class="button">
-                                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
-                                </div>
-                            </td>
-                    </table>
-        </div>
         <div class="wrapper">
           <p class="blog_pagination">
             <a href="#1">&#8592;</a>
@@ -306,21 +184,13 @@
         </div>
     </div>
 </section>
-<section class="contact">
-    <div class="contactDark"></div>
-    <div class="contactContent">
-        <p>Create outstanding digital experiences for you and your customers</p>
-
-        <div class="contactButton"><a href="">Contact Us&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a></div>
-    </div>
-</section>
+<?php get_template_part('templates/sections/section', 'footer-contact'); ?>
 <footer>
     <div class="footerDark"></div>
     <div class="footerContent">
-        <p class="footerD">41 Cubitt Street, Cremorne VIC 3121, Australia Copyright © Working Three&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+61
-            3 8060 4700</p>
-        <p class="footerT">41 Cubitt Street, Cremorne VIC 3121, Australia <br>Copyright © Working Three</p>
-        <p class="footerT">+61 3 8060 4700</p>
+        <p class="footerD"><?php echo cs_get_option("wd_copyright");?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo cs_get_option("wd_contact_number");?></p>
+        <p class="footerT"><?php echo cs_get_option("wd_copyright");?></p>
+        <p class="footerT"><?php echo cs_get_option("wd_contact_number");?></p>
     </div>
 </footer>
 <div class="mSpace">asd</div>

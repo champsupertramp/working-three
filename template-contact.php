@@ -10,13 +10,16 @@
 <?php get_template_part('templates/sections/section', 'newsletter'); ?>
 <?php get_template_part('templates/sections/section', 'contact-head'); ?>
 
+<?php
+if( have_posts() ):
+   while( have_posts() ): the_post(); ?>
 <section class="sec-1">
     <div class="sec-1-sidebar blue-dark"></div>
     <div class="sec-1-bg blue">
         <div class="sec-1-content">
-            <h1><span class="underline">Let's talk</span> numbers</h1>
-
-            <p class="p1">We love talking about customers, the data they create, and the
+            <h1><?php the_title();?></h1>
+            <?php the_content(); ?>
+<!--             <p class="p1">We love talking about customers, the data they create, and the
                 opportunities it contains.</p>
 
             <p class="p1">A quick chat with us can help discover where your business has the
@@ -27,10 +30,11 @@
                 <li class="soc-icons"><a class="soc-link" href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/social-li.png"></a></li>
                 <li class="soc-icons"><a class="soc-link" href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/social-fb.png"></a></li>
                 <li class="soc-icons"><a class="soc-link" href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/social-twitter.png"></a></li>
-            </ul>
+            </ul> -->
         </div>
     </div>
 </section>
+<?php endwhile; endif; ?>
 <section class="sec-2">
     <div class="sec-2-sidebar purple-dark"></div>
     <div class="sec-2-bg purple">
