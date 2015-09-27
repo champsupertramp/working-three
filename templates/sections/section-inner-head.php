@@ -53,7 +53,7 @@
                 <li><a href="<?php echo cs_get_option( 'social_icon_twitter' );?>"><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/social-twitter.png"></a></li>
               <?php } ?>
         </ul>
-        <?php $general_contact = cs_get_option( 'wd-contact-number' ); ?>
+        <?php $general_contact = cs_get_option( 'wd_contact_number' ); ?>
         <?php if( ! empty( $general_contact ) ){ ?>
             <p><?php echo $general_contact;?></p>
         <?php } ?>

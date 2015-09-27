@@ -66,7 +66,7 @@
                   <li class="stretch"></li>
 
             </ul>
-            <?php $general_contact = cs_get_option( 'wd-contact-number' ); ?>
+            <?php $general_contact = cs_get_option( 'wd_contact_number' ); ?>
             <?php if( ! empty( $general_contact ) ){ ?>
                 <p class="soc-phone"><?php echo $general_contact;?></p>
             <?php } ?>
