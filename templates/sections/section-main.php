@@ -5,7 +5,11 @@
         <img src="<?php echo $wd_wt->tpl_url['img']; ?>/w3logo.png">
     </div>
     <div class="navWrapper">
-        <p class="newsletter"><a href="#" onclick="toggle_visibility('dNewsletter');">Newsletter Sign Up&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['img']; ?>/newsletter-arrow.png"></a>
+        <p class="newsletter">
+        <?php  $has_enabled = cs_get_option( 'wd_enable_newsletter' );?>
+        <?php if( $has_enabled ){ ?>
+        <a href="#" onclick="toggle_visibility('dNewsletter');">Newsletter Sign Up&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['img']; ?>/newsletter-arrow.png"></a>
+        <?php } ?>
         </p>
 
         <?php

@@ -13,11 +13,15 @@
     <div class="nav-side-bg"></div>
     <nav class="nav-top">
         <div class="logo-wrap">
-            <img class="logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/w3logo.png">
+         <?php get_template_part('templates/sections/section', 'head-logo'); ?>
         </div>
         <div class="menu-wrap">
-            <p class="ns-text"><a class="ns-link" href="#" onclick="toggle_visibility('dNewsletter');">Newsletter Sign Up&nbsp;&nbsp;&nbsp;<img
+            <p class="ns-text">
+            <?php  $has_enabled = cs_get_option( 'wd_enable_newsletter' );?>
+            <?php if( $has_enabled ){ ?>
+              <a class="ns-link" href="#" onclick="toggle_visibility('dNewsletter');">Newsletter Sign Up&nbsp;&nbsp;&nbsp;<img
                     class="ns-arrow" src="<?php echo $wd_wt->tpl_url['assets'];?>img/newsletter-arrow.png"></a>
+            <?php } ?>
             </p>
             <?php
             $defaults = array(
@@ -91,17 +95,12 @@
             </nav>
             <div class="sec-1-content-wrap">
                 <div class="sec-1-content">
-                    <h1 class="title">Common sense for the <span class="underline">connected world</span></h1>
+                    <h1 class="title"><?php _e( cs_get_option( 'wd_s1_title' ), "workingthree" ); ?></h1>
 
-
-                    <p class="p1">W3 Digital is a customer and data focused consultancy.</p>
-
-                    <p class="p1">We solve complex problems and deliver success in a customer focused world.</p>
-
-                    <p class="p1">Change the way you interact with your customers.</p>
+                    <?php _e( cs_get_option( 'wd_s1_description' ), "workingthree" ); ?>
 
                     <div class="button">
-                        <a href="">Let's get to work&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
+                        <a href="<?php echo cs_get_option( 'wd_s1_button_link' ); ?>"><?php _e( cs_get_option( 'wd_s1_button_text' ), "workingthree" ); ?>&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
                     </div>
                 </div>
             </div>
@@ -128,17 +127,38 @@
             </nav>
             <div class="sec-2-content-wrap">
                 <div class="sec-2-content">
-                    <h1 class="title">Always be <span class="underline">outstandin</span>g</h1>
+                    <h1 class="title"><?php _e( cs_get_option( 'wd_s2_title' ), "workingthree" ); ?></h1>
 
-                    <p class="p2">We invent, design and implement outstanding customer experiences.</p>
-
+                    <?php _e( cs_get_option( 'wd_s2_description' ), "workingthree" ); ?>
                     <div>
-                        <img src="<?php echo $wd_wt->tpl_url['assets'];?>img/placeholder.jpe" class="caseStudy" id="caseStudyOne">
-                        <img src="<?php echo $wd_wt->tpl_url['assets'];?>img/placeholder.jpe" class="caseStudy" id="caseStudyTwo">
-                        <img src="<?php echo $wd_wt->tpl_url['assets'];?>img/placeholder.jpe" class="caseStudy" id="caseStudyThree">
+                    <?php
+                    $case_study_category_id = cs_get_option('wd_s2_add_posts');
+
+                    $arr = array(
+                          'post_type' => 'casestudy',
+                          'posts_per_page' => 3,
+                     );
+
+                    if( $case_study_category_id ){
+                        $arr['tax_query'] = array(
+                                'taxonomy' => 'casestudy_categories',
+                                'field' => 'term_id',
+                                'terms' => array($case_study_category_id),
+                                'operator' => 'IN',
+                        );
+                    }
+
+                    $the_query = new WP_Query( $arr );
+
+                    while(  $the_query->have_posts() ){
+                      $the_query->the_post();
+                      echo get_the_post_thumbnail( get_the_ID(), 'image_174x174', array( 'class' => 'caseStudy' ) );
+                    }
+                    $the_query->wp_reset_query();
+                    ?>
                     </div>
                     <div class="button">
-                        <a href="">See our work&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
+                        <a href="<?php echo cs_get_option( 'wd_s2_button_link' ); ?>"><?php _e( cs_get_option( 'wd_s2_button_text' ), "workingthree" ); ?>&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
                     </div>
                 </div>
             </div>
@@ -165,53 +185,28 @@
             </nav>
             <div class="sec-3-content-wrap">
                 <div class="sec-3-col-a">
-                    <h1 class="title"><span class="underline">The skills</span> you need, at the pace you need them</h1>
+                    <h1 class="title"><?php _e( cs_get_option( 'wd_s3_title' ), "workingthree" ); ?></h1>
 
-                    <p class="p1">W3 Digital delivers high impact, simply articulated and actionable advice rapidly and
-                        cost
-                        effectively.</p>
+                    <p class="p1"><?php _e( cs_get_option( 'wd_s3_description' ), "workingthree" ); ?></p>
 
                     <div class="button">
-                        <a href="">See how we can help&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
+                        <a href="<?php echo cs_get_option( 'wd_s3_button_link' ); ?>"><?php echo cs_get_option( 'wd_s3_button_text' ); ?>&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
                     </div>
                 </div>
+
+                <?php $skills = cs_get_option("wd_s3_skills_section"); ?>
                 <div class="sec-3-col-b">
+                    <?php foreach( $skills as $skill ){?>
                     <div class="col-b-item">
-                        <img class="item-img" src="<?php echo $wd_wt->tpl_url['assets'];?>img/insight.png">
+                        <img class="item-img" src="<?php echo $skill["wd_s3_skills_logo"];?>">
 
                         <div class="item-text">
-                            <h2 class="subtitle">Insight</h2>
+                            <h2 class="subtitle"><?php echo $skill["wd_s3_skills_title"];?></h2>
 
-                            <p class="p1">Find the answers that matter.</p>
+                            <p class="p1"><?php echo $skill["wd_s3_skills_short_description"];?></p>
                         </div>
                     </div>
-                    <div class="col-b-item">
-                        <img class="item-img" src="<?php echo $wd_wt->tpl_url['assets'];?>img/strategy.png">
-
-                        <div class="item-text">
-                            <h2 class="subtitle">Strategy</h2>
-
-                            <p class="p1">See the path ahead with clarity.</p>
-                        </div>
-                    </div>
-                    <div class="col-b-item">
-                        <img class="item-img" src="<?php echo $wd_wt->tpl_url['assets'];?>img/design.png">
-
-                        <div class="item-text">
-                            <h2 class="subtitle">Design</h2>
-
-                            <p class="p1">Simple, elegant solutions.</p>
-                        </div>
-                    </div>
-                    <div class="col-b-item">
-                        <img class="item-img" src="<?php echo $wd_wt->tpl_url['assets'];?>img/technology.png">
-
-                        <div class="item-text">
-                            <h2 class="subtitle">Technology</h2>
-
-                            <p class="p1">Find your competitive edge.</p>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </section>
@@ -237,25 +232,17 @@
             </nav>
             <div class="sec-4-content-wrap">
                 <div class="sec-4-col-a">
-                    <h1 class="title"><span class="underline">What we know </span>to be true</h1>
+                    <h1 class="title"><?php _e( cs_get_option( 'wd_s4_title' ), "workingthree"); ?></h1>
                     <div class="p-wrap">
-                        <p class="p2">FOCUS ON THE CUSTOMER.</p>
-
-                        <p class="p2-2">Everything else will follow.</p>
-
-                        <p class="p2">MAKE IT SIMPLE.</p>
-
-                        <p class="p2-2">Work hard at making things easy.</p>
-
-                        <p class="p2">BE CURIOUS.</p>
-
-                        <p class="p2-2">The market never stops evolving. Stay interested.</p>
+                    <?php _e( cs_get_option( 'wd_s4_description' ), "workingthree"); ?>
                     </div>
                 </div>
                 <div class="sec-4-col-b">
-                    <p class="p2">Discover more about what we believe in and who we are.</p>
+                    <p class="p2">
+                      <?php _e( cs_get_option( 'wd_s4_short_description' ), "workingthree"); ?>
+                    </p>
                     <div class="button">
-                        <a href="">Discover&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
+                        <a href="<?php echo cs_get_option( 'wd_s4_button_link' );?>"><?php _e( cs_get_option( 'wd_s4_button_text' ), "workingthree"); ?>&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
                     </div>
                 </div>
             </div>
@@ -282,54 +269,53 @@
             </nav>
             <div class="sec-5-content-wrap">
                 <div class="sec-5-content">
-                    <h1 class="title">Thoughts from <span class="underline">the front line</span></h1>
+                    <h1 class="title"><?php _e( cs_get_option( 'wd_s5_title' ), "workingthree"); ?></h1>
+                     <?php
+                        $case_study_category_id = cs_get_option('wd_s5_add_posts');
+
+                        $arr = array(
+                              'post_type' => 'post',
+                              'posts_per_page' => 3,
+                         );
+
+                        if( $case_study_category_id ){
+                              $arr['category'] = $case_study_category_id;
+                        }
+
+                        $the_query = new WP_Query( $arr );
+                    ?>
                     <table>
                         <tr>
+                        <?php
+                        while(  $the_query->have_posts() ){
+                              $the_query->the_post();
+                              $categories = get_the_category();
+                              $arr_category = array();
+                              if( ! empty( $categories ) ){
+                                foreach ($categories as $category) {
+                                  array_push( $arr_category , $category->name);
+                                }
+                              }
+                        ?>
                             <td>
-                                <p class="blogTitle" id="blogTitle1">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
+                                <p class="blogTitle" id="blogTitle1"><?php _e( strtoupper(get_the_title()),"workingthree"); ?></p>
 
-                                <p class="blogDate" id="blogDate1">25th, Oct 2014 in <span class="blogSection" id="blogSection1">Digital, Innovation</span>
+                                <p class="blogDate" id="blogDate1"> <?php the_time('jS, M Y') ?> in <span class="blogSection" id="blogSection1"><?php echo implode(", ",$arr_category);?></span>
                                 </p>
 
-                                <p class="blogSnip" id="blogSnip1">Innovation can be a tricky beast to tame, especially in the
-                                    digital
-                                    space. It's far too easy to get excited about ideas early on and jump into a project without
-                                    understanding what impact it may have...</p>
-
-                                <div class="button">
-                                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="blogTitle" id="blogTitle2">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
-
-                                <p class="blogDate" id="blogDate2">25th, Oct 2014 in <span class="blogSection" id="blogSection2">Digital, Innovation</span>
+                                <p class="blogSnip" id="blogSnip1">
+                                  <?php echo substr(get_the_excerpt(),0,130); ?>...
                                 </p>
 
-                                <p class="blogSnip" id="blogSnip2">Innovation can be a tricky beast to tame, especially in the
-                                    digital
-                                    space. It's far too easy to get excited about ideas early on and jump into a project without
-                                    understanding what impact it may have...</p>
-
                                 <div class="button">
-                                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
+                                    <a href="<?php the_permalink(); ?>">Read More&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
                                 </div>
                             </td>
-                            <td>
-                                <p class="blogTitle" id="blogTitle3">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
-
-                                <p class="blogDate" id="blogDate3">25th, Oct 2014 in <span class="blogSection" id="blogSection3">Digital, Innovation</span>
-                                </p>
-
-                                <p class="blogSnip" id="blogSnip3">Innovation can be a tricky beast to tame, especially in the
-                                    digital
-                                    space. It's far too easy to get excited about ideas early on and jump into a project without
-                                    understanding what impact it may have...</p>
-
-                                <div class="button">
-                                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
-                                </div>
-                            </td>
+                        <?php
+                        }
+                        $the_query->wp_reset_query();
+                        ?>
+                        </tr>
                     </table>
                 </div>
             </div>

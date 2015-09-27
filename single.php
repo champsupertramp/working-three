@@ -8,7 +8,7 @@
 <?php get_header();?>
 
 <?php get_template_part('templates/sections/section', 'newsletter'); ?>
-<?php get_template_part('templates/sections/section', 'inner-page-head'); ?>
+<?php get_template_part('templates/sections/section', 'inner-head'); ?>
 
 <!-- Start the Loop. -->
  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -91,6 +91,6 @@
   <!-- REALLY stop The Loop. -->
  <?php endif; ?>
 
-<?php get_template_part('templates/sections/section', 'inner-page-footer'); ?>
+<?php get_template_part('templates/sections/section', 'inner-footer'); ?>
 
 <?php get_footer();?>

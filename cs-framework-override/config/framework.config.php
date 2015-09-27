@@ -8,7 +8,7 @@ $settings      = array(
   'menu_title' => 'W3 Theme',
   'menu_type'  => 'add_menu_page',
   'menu_slug'  => 'w3-theme-settings',
-  'ajax_save'  => true,
+  //'ajax_save'  => true,
 );
 
 /**
@@ -20,34 +20,34 @@ $options        = array();
  * General settings
  */
 $options[]      = array(
-    'name'        => 'wd-general-settings',
+    'name'        => 'wd_general_settings',
     'title'       => 'General',
-    'icon'        => 'fa fa-cog',
+    'icon'        => 'fa fa_cog',
     'fields'      => array(
 
         array(
-            'id'      => 'wd-contact-number',
+            'id'      => 'wd_contact_number',
             'type'    => 'text',
             'title'   => 'Contact Number',
             'default' => '+639 999 1999',
         ),
 
         array(
-            'id'      => 'wd-copyright',
+            'id'      => 'wd_copyright',
             'type'    => 'text',
             'title'   => 'Copyright',
             'default' => '123 Street, Wordpress Village',
         ),
 
         array(
-            'id'      => 'wd-enable-newsletter',
+            'id'      => 'wd_enable_newsletter',
             'type'    => 'switcher',
             'title'   => 'Enable Newsletter',
             'default' => true,
         ),
 
         array(
-            'id'      => 'wd-custom-css',
+            'id'      => 'wd_custom_css',
             'type'    => 'textarea',
             'title'   => 'Custom CSS',
             'attributes' => array(
@@ -57,7 +57,7 @@ $options[]      = array(
         ),
 
         array(
-            'id'      => 'wd-custom-scripts',
+            'id'      => 'wd_custom_scripts',
             'type'    => 'textarea',
             'title'   => 'Custom Scripts',
             'attributes' => array(
@@ -72,41 +72,43 @@ $options[]      = array(
  * Homepage Sections
  */
 $options[]      = array(
-    'name'        => 'wd-general-settings',
+    'name'        => 'wd_home_settings',
     'title'       => 'Landing Page Sections',
-    'icon'        => 'fa fa-bars',
+    'icon'        => 'fa fa_bars',
     'sections'      => array(
 
         array(
-            'title' => 'First',
-            'name'  => 'wd-section-first',
+            'title' => 'First Section',
+            'name'  => 'wd_section_first',
             'fields' => array(
 
                 array(
                     'title' => 'Title',
-                    'name' => 'wd-s1-title',
+                    'id' => 'wd_s1_title',
                     'type' => 'text',
                     'default' => 'This is a sample title',
-                    'info'  => 'You can use &lt;span&gt; &lt;/span&gt; to underline a word and &lt;br/&gt; to break a line'
+                    'info'  => 'You can use &lt;span&gt; &lt;/span&gt; to underline a word and &lt;br/&gt; to break a line',
+                    'sanitize' => false,
                 ),
 
                 array(
                     'title' => 'Description',
-                    'name'  => 'wd-s1-description',
+                    'id'    => 'wd_s1_description',
                     'type'  => 'wysiwyg',
                     'default' => 'Lorem ipsum',
                 ),
 
                 array(
                     'title' => 'Button Text',
-                    'name'  => 'wd-s1-button-text',
+                    'id'  => 'wd_s1_button_text',
                     'type'  => 'text',
-                    'default' => 'Let\'s Get To Work',
+                    'default' => "Let's Get To Work",
+                    'sanitize' => false,
                 ),
 
                 array(
                     'title' => 'Button Link',
-                    'name'  => 'wd-s1-button-link',
+                    'id'  => 'wd_s1_button_link',
                     'type'  => 'text',
                     'default' => '#',
                 ),
@@ -117,109 +119,158 @@ $options[]      = array(
         ),
 
         array(
-            'title' => 'Second',
-            'name'  => 'wd-section-second',
+            'title' => 'Second Section',
+            'name'  => 'wd_section_second',
             'fields' => array(
                 array(
                     'title' => 'Title',
-                    'name' => 'wd-s2-title',
+                    'id' => 'wd_s2_title',
                     'type' => 'text',
                     'default' => 'This is a sample title',
+                    'sanitize'  => false,
                 ),
                 array(
                     'title' => 'Description',
-                    'name'  => 'wd-s2-description',
+                    'id'  => 'wd_s2_description',
                     'type'  => 'wysiwyg',
                     'default' => 'Lorem ipsum',
                 ),
                 array(
-                    'id'             => 'wd-s2-add-posts',
+                    'id'             => 'wd_s2_add_posts',
                     'type'           => 'select',
                     'title'          => 'Select Post Categories to Show',
                     'options'        => 'categories',
-                    'default_option' => '- Select -',
-                    'info'           => 'Only 3 posts with thumbnails will be display'
+                    'query_args'     => array(
+                      'post_type'    => 'casestudy',
+                      'taxonomy'     => 'casestudy_categories',
+                      'orderby'      => 'post_title',
+                      'order'        => 'ASC',
+                    ),
+                    'default_option' => '- All Case Study Categories -',
+                    'info'           => 'Only 3 case study posts with thumbnails will be display'
                 ),
                 array(
                     'title' => 'Button Text',
-                    'name'  => 'wd-s2-button-text',
+                    'id'  => 'wd_s2_button_text',
                     'type'  => 'text',
                     'default' => 'See Our Work',
+                    'sanitize'  => false,
                 ),
 
                 array(
                     'title' => 'Button Link',
-                    'name'  => 'wd-s2-button-link',
+                    'id'  => 'wd_s2_button_link',
                     'type'  => 'text',
-                    'default' => '#/',
+                    'default' => '#',
                 ),
 
             ),
         ),
 
         array(
-            'title' => 'Third',
-            'name'  => 'wd-section-third',
+            'title' => 'Third Section',
+            'name'  => 'wd_section_third',
             'fields' => array(
                 array(
                     'title' => 'Title',
-                    'name' => 'wd-s3-title',
+                    'id' => 'wd_s3_title',
                     'type' => 'text',
                     'default' => 'This is a sample title',
+                    'sanitize'  => false,
                 ),
 
                 array(
                     'title' => 'Description',
-                    'name'  => 'wd-s3-description',
+                    'id'  => 'wd_s3_description',
                     'type'  => 'wysiwyg',
                     'default' => 'Lorem ipsum',
                 ),
 
                 array(
                     'title' => 'Button Text',
-                    'name'  => 'wd-s3-button-text',
+                    'id'  => 'wd_s3_button_text',
                     'type'  => 'text',
                     'default' => 'See How We Can Help',
+                    'sanitize'  => false,
                 ),
 
                 array(
                     'title' => 'Button Link',
-                    'name'  => 'wd-s3-button-link',
+                    'id'  => 'wd_s3_button_link',
                     'type'  => 'text',
                     'default' => '#',
                 ),
+                array(
+                  'id'              => 'wd_s3_skills_section',
+                  'type'            => 'group',
+                  'title'           => 'Skills',
+                  'button_title'    => 'Add New',
+                  'accordion_title' => 'Add New Skill',
+                  'fields'          => array(
+
+                      array(
+                        'id'          => 'wd_s3_skills_title',
+                        'type'        => 'text',
+                        'title'       => 'Title',
+                      ),
+
+                      array(
+                        'id'          => 'wd_s3_skills_short_description',
+                        'type'        => 'textarea',
+                        'title'       => 'Short description',
+                      ),
+
+                      array(
+                          'id'      => 'wd_s3_skills_logo',
+                          'type'    => 'upload',
+                          'title'   => 'Logo',
+                          'default' => '',
+                          'info'  => 'Minimum logo size: 61x61'
+                      ),
+
+                  )
+                ),
+
 
             ),
         ),
 
         array(
-            'title' => 'Fourth',
-            'name'  => 'wd-section-fourth',
+            'title' => 'Fourth Section',
+            'name'  => 'wd_section_fourth',
             'fields' => array(
                 array(
-                    'title' => 'Title',
-                    'name' => 'wd-s4-title',
-                    'type' => 'text',
+                    'title'   => 'Title',
+                    'id'    => 'wd_s4_title',
+                    'type'    => 'text',
                     'default' => 'This is a sample title',
+                    'sanitize'  => false,
                 ),
                  array(
-                    'title' => 'Description',
-                    'name'  => 'wd-s4-description',
-                    'type'  => 'wysiwyg',
+                    'title'   => 'Description',
+                    'id'      => 'wd_s4_description',
+                    'type'    => 'wysiwyg',
                     'default' => 'Lorem ipsum',
                 ),
-
                 array(
-                    'title' => 'Button Text',
-                    'name'  => 'wd-s4-button-text',
-                    'type'  => 'text',
+                    'title'   => 'Short Description',
+                    'id'      => 'wd_s4_short_description',
+                    'type'    => 'wysiwyg',
+                    'default' => 'Lorem ipsum',
+                    'info'    => 'this shows above the button text at the right side of the section'
+                ),
+                array(
+                    'title'   => 'Button Text',
+                    'id'    => 'wd_s4_button_text',
+                    'type'    => 'text',
                     'default' => 'Discover',
+                    'sanitize'  => false,
                 ),
 
                 array(
-                    'title' => 'Button Link',
-                    'name'  => 'wd-s4-button-link',
-                    'type'  => 'text',
+                    'title'   => 'Button Link',
+                    'id'    => 'wd_s4_button_link',
+                    'type'    => 'text',
                     'default' => '#',
                 ),
 
@@ -227,22 +278,23 @@ $options[]      = array(
         ),
 
         array(
-            'title' => 'Fifth',
-            'name'  => 'wd-section-fifth',
+            'title' => 'Fifth Section',
+            'name'  => 'wd_section_fifth',
             'fields' => array(
                 array(
                     'title' => 'Title',
-                    'name' => 'wd-s5-title',
+                    'id' => 'wd_s5_title',
                     'type' => 'text',
                     'default' => 'This is a sample title',
+                    'sanitize'  => false,
                 ),
                 array(
-                    'id'             => 'wd-s5-add-posts',
+                    'id'             => 'wd_s5_add_posts',
                     'type'           => 'select',
-                    'title'          => 'Select Post Categories to Show',
+                    'title'          => 'Select Blog Post Categories to Show',
                     'options'        => 'categories',
                     'default_option' => '- Select -',
-                    'info'           => 'Only 3 posts with thumbnails will be displayed'
+                    'info'           => 'Only 3 blog posts will be displayed'
                 ),
             ),
         ),
@@ -283,29 +335,29 @@ $options[]      = array(
  * Newsletter section
  */
 $options[]      = array(
-    'name'        => 'wd-newsletter',
+    'name'        => 'wd_newsletter',
     'title'       => 'Newsletter',
     'icon'        => 'fa fa-envelope-square',
     'fields'      => array(
 
         array(
-            'id'      => 'wd-newsletter-title',
+            'id'      => 'wd_newsletter_title',
             'type'    => 'text',
             'title'   => 'Title',
             'default' => '',
         ),
 
         array(
-            'id'      => 'wd-newsletter-logo',
+            'id'      => 'wd_newsletter_logo',
             'type'    => 'upload',
             'title'   => 'Logo',
             'default' => '',
-            'info'  => 'Miniumin logo size: 64x64'
+            'info'  => 'Minimum logo size: 64x64'
         ),
 
         array(
-            'id'      => 'wd-newsletter-content',
-            'type'    => 'textarea',
+            'id'      => 'wd_newsletter_content',
+            'type'    => 'wysiwyg',
             'title'   => 'Description',
             'default' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis feugiat ex, a vestibulum turpis consequat in. Integer mi purus, tincidunt finibus ligula vel, vulputate facilisis tellus. Ut non consequat mauris.',
         ),
