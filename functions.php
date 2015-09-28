@@ -79,6 +79,7 @@ class WD_WorkingThree{
         add_theme_support('post-thumbnails');
         add_image_size( 'image_740x490', 740, 490, true );
         add_image_size( 'image_174x174', 174, 174, true );
+		add_image_size( 'image_580x400', 580, 400, true );
 
         // Add post formats
         // http://codex.wordpress.org/Post_Formats
@@ -235,6 +236,11 @@ class WD_WorkingThree{
             wp_enqueue_style( 'working-three-who-we-work-with-mobile', $this->tpl_url['assets'].'css/who-we-work-with_mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
             wp_enqueue_style( 'working-three-who-we-work-with-table', $this->tpl_url['assets'].'css/who-we-work-with_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
             wp_enqueue_script( 'mixitup', 'http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js', array(), '1.0.0', true );
+
+		}elseif( is_page_template("template-case-studies.php") ){
+            wp_enqueue_style( 'working-three-case-studies-overview', $this->tpl_url['assets'].'css/case-studies-overview.css' );
+            wp_enqueue_style( 'working-three-case-studies-overview-mobile', $this->tpl_url['assets'].'css/case-studies-overview-mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
+            wp_enqueue_style( 'working-three-case-studies-overview-table', $this->tpl_url['assets'].'css/case-studies-overview-tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
 
         }elseif( is_page_template("template-blog.php") ){
             wp_enqueue_style( 'working-three-insights-and-article', $this->tpl_url['assets'].'css/insights-and-article.css' );
