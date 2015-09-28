@@ -72,7 +72,13 @@
         </p>
         <ul class="menu-top">
             <li class="menu-top-item"><a class="menu-top-link" href="">Services</a></li>
-            <li class="menu-top-item"><a class="menu-top-link" href="">Our Work</a></li>
+            <li id="dd" class="menu-top-item" tabindex="1">
+                <p class="menu-top-link" onclick="toggle_visibility('Dropdown');">Our Work</p>
+                <ul id="Dropdown" class="dropdown" style="display: none;">
+                    <li><a href="#">Case studies</a></li>
+                    <li><a href="#">Who we work with</a></li>
+                </ul>
+            </li>
             <li class="menu-top-item"><a class="menu-top-link" href="">Leadership</a></li>
             <li class="menu-top-item"><a class="menu-top-link" href="">Insights</a></li>
             <li class="menu-top-item"><a class="menu-top-link" href="">Contact Us</a></li>
@@ -87,6 +93,16 @@
         <p class="soc-phone">+61 3 8060 4700</p>
     </div>
 </nav>
+<div id="#more-m" class="more-menu" style="display: none;">
+    <div class="more-close" onclick="toggle_visibility('#more-m');">Close</div>
+    <img class="more-logo" src="img/w3logo.png">
+    <menu class="more-menu-items">
+        <a class="more-menu-item">Leadership</a>
+        <a class="more-menu-item">Who we work for</a>
+        <a class="more-menu-item">Insights</a>
+        <a class="more-menu-item">Newsletter sign up</a>
+    </menu>
+</div>
 <nav class="nav-bot">
     <div id="our-work-menu" style="display: none;">
         <a class="menu-case" href="">Case studies</a>
@@ -118,10 +134,10 @@
 
             <p><a href="">Contact<span class="tablet"> Us</span></a></p>
         </div>
-        <div class="nav-bot-link">
-            <a href=""><img src="img/icn-more.svg"></a>
+        <div class="nav-bot-link" onclick="toggle_visibility('#more-m');">
+            <div><img src="img/icn-more.svg"></div>
 
-            <p><a href="">More</a></p>
+            <p>More</p>
         </div>
     </div>
 </nav>
@@ -480,7 +496,7 @@
             e.style.display = 'block';
     }
 
-    $('.home-bg, .menu-wrap, .soc-wrap, .logo-wrap-t').colorScroll({
+    $('.home-bg, .menu-wrap, .soc-wrap, .logo-wrap-t, .more-menu').colorScroll({
         colors: [
             {
                 color: '#00BCDD',
@@ -505,7 +521,7 @@
         ]
     });
 
-    $('.nav-side-bg, .logo-wrap, .nav-bot, #our-work-menu').colorScroll({
+    $('.nav-side-bg, .logo-wrap, .nav-bot, #our-work-menu, .dropdown').colorScroll({
         colors: [
             {
                 color: '#00AFD4',
@@ -532,6 +548,38 @@
 
     $('.home-sections').snapscroll();
 
+//    Our work drop down
+//    function DropDown(el) {
+//        this.dd = el;
+//        this.placeholder = this.dd.children('span');
+//        this.opts = this.dd.find('ul.dropdown > li');
+//        this.val = '';
+//        this.index = -1;
+//        this.initEvents();
+//    }
+//    DropDown.prototype = {
+//        initEvents : function() {
+//            var obj = this;
+//
+//            obj.dd.on('click', function(event){
+//                $(this).toggleClass('active');
+//                return false;
+//            });
+//
+//            obj.opts.on('click',function(){
+//                var opt = $(this);
+//                obj.val = opt.text();
+//                obj.index = opt.index();
+//                obj.placeholder.text(obj.val);
+//            });
+//        },
+//        getValue : function() {
+//            return this.val;
+//        },
+//        getIndex : function() {
+//            return this.index;
+//        }
+//    }
 
 </script>
 </body>

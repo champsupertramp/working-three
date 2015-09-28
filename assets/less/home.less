@@ -183,6 +183,7 @@ sans-serif;
         display: inline;
         margin-right: 3vw;
         .menu-top-link {
+          display: inline;
           color: inherit;
           text-decoration: none;
         }
@@ -200,12 +201,44 @@ sans-serif;
       .soc-icons {
         display: inline;
         margin-right: 1.9vw;
+        .soc-link img {
+          height: 2.2vh;
+        }
       }
     }
     .soc-phone {
       margin-left: 0;
     }
   }
+}
+
+#dd {
+  position: relative;
+  width: 200px;
+  padding: 10px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+}
+
+
+#dd .dropdown {
+  position: absolute;
+  top: 140%;
+  left: 0;
+  right: 0;
+  width: 11.5vw;
+  font-weight: normal;
+  list-style: none;
+  pointer-events: none;
+}
+
+#dd .dropdown li a {
+  display: block;
+  padding: 2vh;
+  text-decoration: none;
+  color: #fff;
 }
 
 //SIDE NAV//
