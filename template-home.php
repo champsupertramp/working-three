@@ -196,6 +196,7 @@
 
                 <?php $skills = cs_get_option("wd_s3_skills_section"); ?>
                 <div class="sec-3-col-b">
+                <?php if( isset( $skills ) && ! empty( $skills ) ){ ?>
                     <?php foreach( $skills as $skill ){?>
                     <div class="col-b-item">
                         <img class="item-img" src="<?php echo $skill["wd_s3_skills_logo"];?>">
@@ -207,6 +208,7 @@
                         </div>
                     </div>
                     <?php } ?>
+                <?php } ?>
                 </div>
             </div>
         </section>
