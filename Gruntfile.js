@@ -72,6 +72,16 @@ module.exports = function(grunt) {
           ],
           'assets/css/insights-and-article-tablet.css': [
             'assets/less/insights-and-article-tablet.less'
+          ],
+          // home
+          'assets/css/home.css': [
+            'assets/less/home.less'
+          ],
+          'assets/css/home_mobile.css': [
+            'assets/less/home_mobile.less'
+          ],
+          'assets/css/home_tablet.css': [
+            'assets/less/home_tablet.less'
           ]
 
         },
