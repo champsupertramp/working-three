@@ -546,8 +546,9 @@
         ]
     });
 
-    $('.home-sections').snapscroll();
-
+    if ( $(window).width() > 767) {
+        $('.home-sections').snapscroll();
+    }
 
 </script>
 </body>
