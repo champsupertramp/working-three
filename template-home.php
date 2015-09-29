@@ -23,29 +23,29 @@
                     class="ns-arrow" src="<?php echo $wd_wt->tpl_url['assets'];?>img/newsletter-arrow.png"></a>
             <?php } ?>
             </p>
-            <?php
-            $defaults = array(
-              'theme_location'  => 'primary_navigation',
-              'menu'            => '',
-              'container'       => '',
-              'container_class' => '',
-              'container_id'    => '',
-              'menu_class'      => 'menu-top',
-              'menu_id'         => '',
-              'echo'            => true,
-              'fallback_cb'     => 'wp_page_menu',
-              'before'          => '',
-              'after'           => '',
-              'link_before'     => '',
-              'link_after'      => '',
-              'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-              'depth'           => 0,
-              'walker'          => ''
-            );
+	        <?php
+	        $defaults = array(
+	          'theme_location'  => 'primary_navigation',
+	          'menu'            => '',
+	          'container'       => '',
+	          'container_class' => '',
+	          'container_id'    => '',
+	          'menu_class'      => 'menu-top',
+	          'menu_id'         => '',
+	          'echo'            => true,
+	          'fallback_cb'     => 'wp_page_menu',
+	          'before'          => '',
+	          'after'           => '',
+	          'link_before'     => '',
+	          'link_after'      => '',
+	          'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+	          'depth'           => 0,
+	          'walker'            => new w3_Walker(),
+	        );
 
 
-              wp_nav_menu( $defaults );
-            ?>
+	          wp_nav_menu( $defaults );
+	        ?>
         </div>
         <div class="soc-wrap green-gradient">
             <ul class="soc-menu">

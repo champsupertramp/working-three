@@ -326,7 +326,12 @@ class WD_WorkingThree{
             wp_enqueue_style( 'working-three-contact-mobile', $this->tpl_url['assets'].'css/contact_mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
             wp_enqueue_style( 'working-three-contact-table', $this->tpl_url['assets'].'css/contact_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
 
-        }elseif( is_single() || is_page() ){
+        }elseif ( is_singular( 'casestudy' ) ) {
+            wp_enqueue_style( 'working-three-case-study', $this->tpl_url['assets'].'css/case-study.css' );
+            wp_enqueue_style( 'working-three-case-study-mobile', $this->tpl_url['assets'].'css/case-study_mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
+            wp_enqueue_style( 'working-three-case-study-table', $this->tpl_url['assets'].'css/case-study_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
+
+		}elseif( is_single() || is_page() ){
             wp_enqueue_style( 'working-three-insights-and-article-content', $this->tpl_url['assets'].'css/insights-and-article-content.css' );
             wp_enqueue_style( 'working-three-insights-and-article-content-mobile', $this->tpl_url['assets'].'css/insights-and-article-content-mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
             wp_enqueue_style( 'working-three-insights-and-article-content-table', $this->tpl_url['assets'].'css/insights-and-article-content-tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
