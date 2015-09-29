@@ -36,7 +36,7 @@
                 non consequat mauris.</p>
             <br>
 
-            <p>Sed nec auctor lectus. Nullam quis ex ut magna lacinia placerat.
+            <p class="ns-hide">Sed nec auctor lectus. Nullam quis ex ut magna lacinia placerat.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
                 erat volutpat.</p>
         </div>
@@ -100,7 +100,7 @@
         <a class="more-menu-item">Leadership</a>
         <a class="more-menu-item">Who we work for</a>
         <a class="more-menu-item">Insights</a>
-        <a class="more-menu-item">Newsletter sign up</a>
+        <p class="more-menu-item" onclick="toggle_visibility('dNewsletter');">Newsletter sign up</p>
     </menu>
 </div>
 <nav class="nav-bot">
@@ -548,38 +548,6 @@
 
     $('.home-sections').snapscroll();
 
-//    Our work drop down
-//    function DropDown(el) {
-//        this.dd = el;
-//        this.placeholder = this.dd.children('span');
-//        this.opts = this.dd.find('ul.dropdown > li');
-//        this.val = '';
-//        this.index = -1;
-//        this.initEvents();
-//    }
-//    DropDown.prototype = {
-//        initEvents : function() {
-//            var obj = this;
-//
-//            obj.dd.on('click', function(event){
-//                $(this).toggleClass('active');
-//                return false;
-//            });
-//
-//            obj.opts.on('click',function(){
-//                var opt = $(this);
-//                obj.val = opt.text();
-//                obj.index = opt.index();
-//                obj.placeholder.text(obj.val);
-//            });
-//        },
-//        getValue : function() {
-//            return this.val;
-//        },
-//        getIndex : function() {
-//            return this.index;
-//        }
-//    }
 
 </script>
 </body>

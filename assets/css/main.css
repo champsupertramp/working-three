@@ -130,9 +130,6 @@ table {
 #tablet {
   display: none;
 }
-.test {
-  display: block;
-}
 @font-face {
   font-family: "akkuratRegular";
   src: url('../fonts/AkkuratRegular.otf') format('opentype');
@@ -242,9 +239,6 @@ body {
   color: #fff;
 }
 .nav-top .logoWrapper {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #00afd4), to(rgba(0, 175, 212, 0)));
-  background-image: -webkit-linear-gradient(#00afd4 60%, rgba(0, 175, 212, 0));
-  background-image: -o-linear-gradient(#00afd4 60%, rgba(0, 175, 212, 0));
   background-image: linear-gradient(#00afd4 60%, rgba(0, 175, 212, 0));
   width: 16vw;
 }
@@ -253,9 +247,6 @@ body {
   width: 9vw;
 }
 .nav-top .navWrapper {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #00bcdd), to(rgba(0, 188, 221, 0)));
-  background-image: -webkit-linear-gradient(#00bcdd 60%, rgba(0, 188, 221, 0));
-  background-image: -o-linear-gradient(#00bcdd 60%, rgba(0, 188, 221, 0));
   background-image: linear-gradient(#00bcdd 60%, rgba(0, 188, 221, 0));
   width: 60vw;
   text-transform: uppercase;
@@ -290,9 +281,6 @@ body {
   display: none;
 }
 .nav-top .socialWrapper {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #00bcdd), to(rgba(0, 188, 221, 0)));
-  background-image: -webkit-linear-gradient(#00bcdd 60%, rgba(0, 188, 221, 0));
-  background-image: -o-linear-gradient(#00bcdd 60%, rgba(0, 188, 221, 0));
   background-image: linear-gradient(#00bcdd 60%, rgba(0, 188, 221, 0));
   width: 24vw;
 }
@@ -308,54 +296,30 @@ body {
 }
 .scrolled2 .navWrapper,
 .scrolled2 .socialWrapper {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #ffd03e), to(rgba(255, 208, 62, 0)));
-  background-image: -webkit-linear-gradient(#ffd03e 60%, rgba(255, 208, 62, 0));
-  background-image: -o-linear-gradient(#ffd03e 60%, rgba(255, 208, 62, 0));
   background-image: linear-gradient(#ffd03e 60%, rgba(255, 208, 62, 0));
 }
 .scrolled2 .logoWrapper {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #ffc627), to(rgba(255, 198, 39, 0)));
-  background-image: -webkit-linear-gradient(#ffc627 60%, rgba(255, 198, 39, 0));
-  background-image: -o-linear-gradient(#ffc627 60%, rgba(255, 198, 39, 0));
   background-image: linear-gradient(#ffc627 60%, rgba(255, 198, 39, 0));
 }
 .scrolled3 .navWrapper,
 .scrolled3 .socialWrapper {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #aa7bc9), to(rgba(170, 123, 201, 0)));
-  background-image: -webkit-linear-gradient(#aa7bc9 60%, rgba(170, 123, 201, 0));
-  background-image: -o-linear-gradient(#aa7bc9 60%, rgba(170, 123, 201, 0));
   background-image: linear-gradient(#aa7bc9 60%, rgba(170, 123, 201, 0));
 }
 .scrolled3 .logoWrapper {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #906fb4), to(rgba(144, 111, 180, 0)));
-  background-image: -webkit-linear-gradient(#906fb4 60%, rgba(144, 111, 180, 0));
-  background-image: -o-linear-gradient(#906fb4 60%, rgba(144, 111, 180, 0));
   background-image: linear-gradient(#906fb4 60%, rgba(144, 111, 180, 0));
 }
 .scrolled4 .navWrapper,
 .scrolled4 .socialWrapper {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #48c3b1), to(rgba(72, 195, 177, 0)));
-  background-image: -webkit-linear-gradient(#48c3b1 60%, rgba(72, 195, 177, 0));
-  background-image: -o-linear-gradient(#48c3b1 60%, rgba(72, 195, 177, 0));
   background-image: linear-gradient(#48c3b1 60%, rgba(72, 195, 177, 0));
 }
 .scrolled4 .logoWrapper {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #24b9ad), to(rgba(36, 185, 173, 0)));
-  background-image: -webkit-linear-gradient(#24b9ad 60%, rgba(36, 185, 173, 0));
-  background-image: -o-linear-gradient(#24b9ad 60%, rgba(36, 185, 173, 0));
   background-image: linear-gradient(#24b9ad 60%, rgba(36, 185, 173, 0));
 }
 .scrolled5 .navWrapper,
 .scrolled5 .socialWrapper {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #eb6851), to(rgba(235, 104, 81, 0)));
-  background-image: -webkit-linear-gradient(#eb6851 60%, rgba(235, 104, 81, 0));
-  background-image: -o-linear-gradient(#eb6851 60%, rgba(235, 104, 81, 0));
   background-image: linear-gradient(#eb6851 60%, rgba(235, 104, 81, 0));
 }
 .scrolled5 .logoWrapper {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #e95944), to(rgba(233, 89, 68, 0)));
-  background-image: -webkit-linear-gradient(#e95944 60%, rgba(233, 89, 68, 0));
-  background-image: -o-linear-gradient(#e95944 60%, rgba(233, 89, 68, 0));
   background-image: linear-gradient(#e95944 60%, rgba(233, 89, 68, 0));
 }
 .sectionOne,
@@ -793,4 +757,3 @@ footer .footerContent p {
   margin-top: 5vw;
   margin-left: 17vw;
 }
-/*# sourceMappingURL=main.css.map */

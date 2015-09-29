@@ -6,14 +6,29 @@ and (orientation: portrait) {
   @topNavFontSize: 0.9vw;
   @sideNavFontSize: 1vw;
   @headerFontSize: 9vw;
-  @h2FontSize: 2.2vw;
+  @h2FontSize: 6.5vw;
   @akRegular: 'akkuratRegular', arial, sans-serif;
   @akLight: 'akkuratLight', arial, sans-serif;
-  @p1FontSize: 1.15vw;
-  @p2FontSize: 1.8vw;
-  @buttonFontSize: 1.2vw;
+  @p1FontSize: 2.5vw;
+  @p2FontSize: 3vw;
+  @buttonFontSize: 2.5vw;
   @purpleBg: #AA7BC9;
   @purpleBgDark: #906FB4;
+  @purple-bg-dark: #906FB4;
+
+  @menu-font-size: 0.9vw;
+  @side-nav-font-size: 1vw;
+  @h1-font-size: 9vw;
+  @h2-font-Size: 6.5vw;
+  @akRegular: 'akkuratRegular',
+  arial,
+  sans-serif;
+  @akLight: 'akkuratLight',
+  arial,
+  sans-serif;
+  @p1-font-size: 2.5vw;
+  @p2-font-size: 3vw;
+  @button-font-size: 2.5vw;
 
   //FONTS//
   @font-face {
@@ -39,74 +54,93 @@ and (orientation: portrait) {
   }
 
   .nav-top {
-    height: 10vh;
+    font-family: @akRegular;
+    width: 100vw;
+    height: 20vh;
+    display: block;
     position: absolute;
-    .logoWrapper {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: @menu-font-size;
+    z-index: 10;
+    .logo-wrap {
+      display: none;
+    }
+    .logo-wrap-t {
       width: 33vw;
-      background: @purpleBg;
-      img {
-        width: 17vw;
-        margin-top: 6vw;
-        margin-left: 6vw;
+      display: inline-block;
+      height: 20vh;
+      margin: 0;
+      float: left;
+      background: transparent;
+      .logo {
+        margin: 6vw 0px 0px 4vw;
+        width: 18vw;
       }
     }
-    .navWrapper {
+    .menu-wrap {
       width: 33vw;
-      .newsletter {
-        margin-left: 5.5vw;
-        margin-top: 8.3vh;
-        a {
-          font-size: 2vw;
+      display: inline-block;
+      height: 20vh;
+      margin: 0;
+      float: left;
+      .ns-text {
+        display: block;
+        text-align: center;
+        margin: 11vw auto 0 auto;
+        font-size: 1.7vw;
+        .ns-link {
+          color: inherit;
+          text-decoration: none;
         }
       }
-      .navMenu {
+      .menu-top {
         display: none;
       }
     }
-    .socialWrapper {
-      width: 33vw;
-      ul {
-        margin-left: 9vw;
-        margin-top: 3vh;
-        display: flex;
-        width: 16vw;
-        justify-content: space-between;
-        li {
-          img {
-            height: 1.7vh;
-            margin-right: 3.5vw;
+    .soc-wrap {
+      width: 34vw;
+      display: inline-block;
+      height: 20vh;
+      margin: 0;
+      float: left;
+      .soc-menu {
+        margin-left: 10vw;
+        margin-top: 4vw;
+        .soc-icons {
+          display: inline;
+          margin-right: 4.7vw;
+          margin-bottom: 0;
+          .soc-link img {
+            height: 1.8vh;
           }
         }
       }
-      p {
-        display: block;
-        margin-left: 8vw;
-        margin-top: -1.8vh;
-        font-family: @akRegular;
-        color: #fff;
-        font-size: 2.3vw;
-        width: 18vw;
+      .soc-phone {
+        margin-left: 10vw;
+        margin-top: -2.5vw;
+        font-size: 2vw;
       }
     }
   }
 
-  .bottomNav {
+  .nav-bot {
+    background: @purple-bg-dark;
     display: block;
     width: 100vw;
     height: 9vh;
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: @purpleBgDark;
     color: #fff;
     z-index: 1;
-    .mNavWrapper {
+    .nav-bot-wrap {
       margin-top: 1.7vw;
       display: flex;
       justify-content: space-between;
       width: 92vw;
       padding: 0 4vw;
-      .mNavLink {
+      .nav-bot-link {
         display: inline-block;
         a {
           img {
@@ -126,37 +160,45 @@ and (orientation: portrait) {
           }
         }
       }
-      .mNavLink:nth-child(1) {
+      .nav-bot-link:nth-child(1) {
         img {
           margin-bottom: 0;
           //          margin-left: 4vw;
         }
       }
-      .mNavLink:nth-child(2) {
+      .nav-bot-link:nth-child(2) {
         img {
           margin-bottom: 0;
           margin-left: 2.2vw;
         }
       }
-      .mNavLink:nth-child(3) {
+      .nav-bot-link:nth-child(3) {
         img {
           margin-bottom: 0;
           margin-left: 3vw;
         }
       }
-      .mNavLink:nth-child(4) {
+      .nav-bot-link:nth-child(4) {
         img {
           margin-bottom: 0;
           margin-left: 1.2vw;
         }
       }
-      .mNavLink:nth-child(5) {
+      .nav-bot-link:nth-child(5) {
+        img {
+          margin-bottom: 0;
+          margin-left: 2.7vw;
+        }
+      }
+      .nav-bot-link:nth-child(6) {
+        display: none;
         img {
           margin-bottom: 0;
           margin-left: 2.7vw;
         }
       }
     }
+
   }
 
   .section1 {
@@ -266,6 +308,7 @@ and (orientation: portrait) {
     }
   }
 
+  //NEWSLETTER//
   #dNewsletter {
     color: #fff;
     width: 100vw;
@@ -309,13 +352,13 @@ and (orientation: portrait) {
         font-size: 2vw;
         line-height: 2vh;
         margin-left: 21vw;
-        margin-top: 6vh;
+        margin-top: 12vh;
         margin-bottom: 5vh;
       }
       .signupForm {
         width: 35vw;
         position: absolute;
-        margin-top: 0;
+        margin-top: 32vh;
         margin-left: 21vw;
         label {
           display: block;

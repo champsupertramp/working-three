@@ -34,7 +34,7 @@
                 non consequat mauris.</p>
             <br>
 
-            <p>Sed nec auctor lectus. Nullam quis ex ut magna lacinia placerat.
+            <p class="ns-hide">Sed nec auctor lectus. Nullam quis ex ut magna lacinia placerat.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
                 erat volutpat.</p>
         </div>
@@ -65,7 +65,13 @@
         </p>
         <ul class="menu-top">
             <li class="menu-top-item"><a class="menu-top-link" href="">Services</a></li>
-            <li class="menu-top-item"><a class="menu-top-link" href="">Our Work</a></li>
+            <li id="dd" class="menu-top-item" tabindex="1">
+                <p class="menu-top-link" onclick="toggle_visibility('Dropdown');">Our Work</p>
+                <ul id="Dropdown" class="dropdown" style="display: none;">
+                    <li><a href="#">Case studies</a></li>
+                    <li><a href="#">Who we work with</a></li>
+                </ul>
+            </li>
             <li class="menu-top-item"><a class="menu-top-link" href="">Leadership</a></li>
             <li class="menu-top-item"><a class="menu-top-link" href="">Insights</a></li>
             <li class="menu-top-item"><a class="menu-top-link" href="">Contact Us</a></li>
@@ -81,17 +87,31 @@
         <p class="soc-phone">+61 3 8060 4700</p>
     </div>
 </nav>
-<nav class="nav-bot blue-dark">
+<div id="#more-m" class="more-menu" style="display: none;">
+    <div class="more-close" onclick="toggle_visibility('#more-m');">Close</div>
+    <img class="more-logo" src="img/w3logo.png">
+    <menu class="more-menu-items">
+        <a class="more-menu-item">Leadership</a>
+        <a class="more-menu-item">Who we work for</a>
+        <a class="more-menu-item">Insights</a>
+        <p class="more-menu-item" onclick="toggle_visibility('dNewsletter');">Newsletter sign up</p>
+    </menu>
+</div>
+<nav class="nav-bot">
+    <div id="our-work-menu" style="display: none;">
+        <a class="menu-case" href="">Case studies</a>
+        <a class="menu-who" href="">Who we work with</a>
+    </div>
     <div class="nav-bot-wrap">
         <div class="nav-bot-link">
             <a href=""><img src="img/icn-services.svg"></a>
 
             <p><a href="">Services</a></p>
         </div>
-        <div class="nav-bot-link">
-            <a href=""><img src="img/icn-work.svg"></a>
+        <div class="nav-bot-link" onclick="toggle_visibility('our-work-menu');">
+            <img src="img/icn-work.svg">
 
-            <p><a href=""><span class="tablet">Our </span>Work</a></p>
+            <p><span class="tablet">Our </span>Work</p>
         </div>
         <div class="nav-bot-link">
             <a href=""><img src="img/icn-leadership.svg"></a>
@@ -108,10 +128,10 @@
 
             <p><a href="">Contact<span class="tablet"> Us</span></a></p>
         </div>
-        <div class="nav-bot-link">
-            <a href=""><img src="img/icn-more.svg"></a>
+        <div class="nav-bot-link" onclick="toggle_visibility('#more-m');">
+            <div><img src="img/icn-more.svg"></div>
 
-            <p><a href="">More</a></p>
+            <p>More</p>
         </div>
     </div>
 </nav>

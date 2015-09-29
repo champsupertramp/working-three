@@ -141,6 +141,63 @@ table {
 .bottomNav {
   display: none;
 }
+.blue-gradient {
+  background-image: linear-gradient(#00bcdd 60%, rgba(0, 188, 221, 0));
+}
+.blue-gradient-dark {
+  background-image: linear-gradient(#00afd4 60%, rgba(0, 175, 212, 0));
+}
+.blue {
+  background: #00bcdd;
+}
+.blue-dark {
+  background: #00afd4;
+}
+.underline {
+  text-decoration: underline;
+}
+.white {
+  background: #ffffff;
+}
+.white-dark {
+  background: #f2f2f3;
+}
+.grey {
+  background: #f2f2f3;
+}
+.grey-dark {
+  background: #e2e3e4;
+}
+.black {
+  background: #333333;
+}
+.black-dark {
+  background: #262626;
+}
+.green-gradient {
+  background: linear-gradient(#60c5ba 60%, rgba(96, 197, 186, 0));
+}
+.green-gradient-dark {
+  background: linear-gradient(#26b8b0 60%, rgba(38, 184, 176, 0));
+}
+.green {
+  background: #60c5ba;
+}
+.green-dark {
+  background: #26b8b0;
+}
+.br-t {
+  display: none;
+}
+.nav-side-tablet {
+  display: none;
+}
+.nav-bot {
+  display: none;
+}
+.br-m {
+  display: none;
+}
 #dNewsletter {
   color: #fff;
   width: 100vw;
@@ -156,7 +213,7 @@ table {
   padding-top: 17vh;
 }
 #dNewsletter .closeWrap .closeButton {
-  margin-left: 80vw;
+  margin-left: 77.5vw;
   text-transform: uppercase;
   font-family: 'akkuratRegular', arial, sans-serif;
   font-size: 1vw;
@@ -185,14 +242,14 @@ table {
   font-size: 1vw;
   line-height: 3vh;
   margin-left: 15vw;
-  margin-top: 6vh;
+  margin-top: 15vh;
 }
 #dNewsletter .newsletterContent .signupForm {
   width: 35vw;
   position: absolute;
-  float: right;
-  margin-top: -24.5vh;
-  margin-right: 15vw;
+  float: left;
+  margin-top: 15vh;
+  margin-left: 50vw;
 }
 #dNewsletter .newsletterContent .signupForm label {
   display: block;
@@ -240,61 +297,104 @@ body {
   height: 20vh;
 }
 .nav-top {
-  position: fixed;
-  width: 100vw;
+  top: 0;
   font-family: 'akkuratRegular', arial, sans-serif;
-  font-size: 0.9vw;
+  width: 100vw;
+  height: 20vh;
+  display: block;
+  position: absolute;
+  text-transform: uppercase;
   color: #fff;
+  font-size: 0.9vw;
+  z-index: 10;
 }
-.nav-top .logoWrapper {
-  background-image: linear-gradient(#906fb4 60%, rgba(144, 111, 180, 0));
+.nav-top .logo-wrap {
   width: 16vw;
+  display: inline-block;
+  height: 20vh;
+  margin: 0;
+  float: left;
 }
-.nav-top .logoWrapper img {
+.nav-top .logo-wrap .logo {
   margin: 6.5vh 0 0 2vw;
   width: 9vw;
 }
-.nav-top .navWrapper {
-  background-image: linear-gradient(#aa7bc9 60%, rgba(170, 123, 201, 0));
-  width: 60vw;
-  text-transform: uppercase;
+.nav-top .logo-wrap-t {
+  display: none;
 }
-.nav-top .navWrapper p {
+.nav-top .menu-wrap {
+  width: 68vw;
+  display: inline-block;
+  height: 20vh;
+  margin: 0;
+  float: left;
+}
+.nav-top .menu-wrap .ns-text {
   margin-left: 12vw;
   margin-top: 4vh;
 }
-.nav-top .navWrapper p a {
+.nav-top .menu-wrap .ns-text .ns-link {
   color: inherit;
   text-decoration: none;
 }
-.nav-top .navWrapper p a img {
-  height: 1.2vh;
-}
-.nav-top .navWrapper ul {
+.nav-top .menu-wrap .menu-top {
   margin-left: 12vw;
   margin-top: 6vh;
 }
-.nav-top .navWrapper ul li {
+.nav-top .menu-wrap .menu-top .menu-top-item {
   display: inline;
   margin-right: 3vw;
 }
-.nav-top .navWrapper ul a {
+.nav-top .menu-wrap .menu-top .menu-top-item .menu-top-link {
+  display: inline;
   color: inherit;
   text-decoration: none;
 }
-.nav-top .socialWrapper {
-  background-image: linear-gradient(#aa7bc9 60%, rgba(170, 123, 201, 0));
-  width: 24vw;
+.nav-top .soc-wrap {
+  width: 16vw;
+  display: inline-block;
+  height: 20vh;
+  margin: 0;
+  float: left;
 }
-.nav-top .socialWrapper p {
-  margin-left: 3vw;
+.nav-top .soc-wrap .soc-menu {
+  margin: 3.7vh 0 5vh 0;
 }
-.nav-top .socialWrapper ul {
-  margin: 3vh 0 5vh 3vw;
-}
-.nav-top .socialWrapper ul li {
+.nav-top .soc-wrap .soc-menu .soc-icons {
   display: inline;
   margin-right: 1.9vw;
+}
+.nav-top .soc-wrap .soc-menu .soc-icons .soc-link img {
+  height: 2.2vh;
+}
+.nav-top .soc-wrap .soc-phone {
+  margin-left: 0;
+}
+#dd {
+  position: relative;
+  width: 200px;
+  padding: 10px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+}
+#dd .dropdown {
+  position: absolute;
+  top: 140%;
+  left: 0;
+  right: 0;
+  width: 11.5vw;
+  font-weight: normal;
+  list-style: none;
+  pointer-events: none;
+  background: #906fb4;
+}
+#dd .dropdown li a {
+  display: block;
+  padding: 2vh;
+  text-decoration: none;
+  color: #fff;
 }
 .section1 {
   color: #fff;
@@ -318,7 +418,7 @@ body {
   margin-top: 25vh;
   margin-left: 12vw;
   font-family: 'akkuratRegular', arial, sans-serif;
-  font-size: 4.4vw;
+  font-size: 5vw;
   width: 45vw;
   line-height: 10vh;
 }
@@ -354,7 +454,7 @@ body {
   margin-top: 12vh;
 }
 .section2 .wrapper .title {
-  font-size: 4.4vw;
+  font-size: 5vw;
   color: #000;
   position: relative;
   margin-bottom: 3vh;
@@ -372,7 +472,7 @@ body {
   margin-left: 1.5vw;
 }
 .section2 .wrapper .contentWrapper .text {
-  font-size: 1.8vw;
+  font-size: 1.6vw;
   color: #5C6E7B;
   width: 47vw;
   margin-bottom: 4vh;
@@ -406,7 +506,7 @@ body {
 }
 .section3 .content .wrapper .title {
   font-family: 'akkuratRegular', arial, sans-serif;
-  font-size: 4.4vw;
+  font-size: 5vw;
   margin-bottom: 5vh;
 }
 .section3 .content .wrapper .title span {
@@ -419,7 +519,7 @@ body {
   line-height: 3vh;
 }
 .section3 .content .wrapper .subText {
-  font-size: 1.8vw;
+  font-size: 1.6vw;
   font-family: 'akkuratRegular', arial, sans-serif;
 }
 .section3 .content .wrapper .button {

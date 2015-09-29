@@ -48,9 +48,10 @@
     width: 40vw;
     margin-left: 0;
   }
-  .nav-top .soc-wrap .soc-menu .soc-icons img {
+  .nav-top .soc-wrap .soc-menu .soc-icons .soc-link img {
     margin-right: 6vw;
     display: inline-block;
+    height: 2.5vh;
   }
   .nav-top .soc-wrap .soc-menu .stretch {
     width: 100%;
@@ -72,6 +73,7 @@
     left: 0;
     color: #fff;
     z-index: 1;
+    background: #00afd4;
   }
   .nav-bot .nav-bot-wrap {
     margin-top: 2vh;
@@ -130,6 +132,41 @@
     margin-bottom: 0.6vh;
     margin-left: 0.7vw;
   }
+  .more-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 86vh;
+    display: block;
+    z-index: 100;
+    font-family: 'akkuratRegular', arial, sans-serif;
+    background: #00bcdd;
+    color: #fff;
+  }
+  .more-menu .more-close {
+    display: block;
+    margin-top: 2vh;
+    float: right;
+    margin-right: 2vh;
+    text-transform: uppercase;
+  }
+  .more-menu .more-logo {
+    display: block;
+    width: 30vw;
+    margin: 15vh auto 0 auto;
+  }
+  .more-menu .more-menu-items {
+    display: block;
+    margin-top: 10vh;
+  }
+  .more-menu .more-menu-items .more-menu-item {
+    display: block;
+    font-size: 5vw;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 5vh;
+  }
   .blue-gradient {
     background-image: linear-gradient(#00bcdd 60%, rgba(0, 188, 221, 0));
   }
@@ -178,74 +215,77 @@
   #dNewsletter .closeWrap {
     width: 100vw;
     height: 3vh;
-    padding-top: 17vh;
+    padding-top: 2vh;
   }
   #dNewsletter .closeWrap .closeButton {
-    margin-left: 77.5vw;
+    margin-left: 80vw;
     text-transform: uppercase;
-    font-family: 'akkuratRegular', arial, sans-serif;
-    font-size: 1vw;
+    font-size: 5vw;
     color: #fff;
     text-decoration: none;
   }
   #dNewsletter .newsletterLogo {
-    width: 6vw;
-    height: 6vw;
+    width: 24vw;
+    height: 24vw;
     display: block;
     text-align: justify;
-    margin-left: 45vw;
+    margin-left: 39vw;
+    margin-top: 3vh;
   }
   #dNewsletter .newsletterContent .newsletterTitle {
-    margin-left: 38vw;
+    margin-left: 17vw;
     text-transform: uppercase;
-    font-family: 'akkuratRegular', arial, sans-serif;
-    font-size: 2.5vw;
-    margin-top: 3vh;
+    font-size: 8vw;
+    margin-top: 5vh;
     position: absolute;
   }
   #dNewsletter .newsletterContent .newsletterText {
-    position: absolute;
-    width: 30vw;
-    font-family: 'akkuratRegular', arial, sans-serif;
-    font-size: 1vw;
-    line-height: 3vh;
-    margin-left: 15vw;
-    margin-top: 15vh;
+    position: abslute;
+    width: 90vw;
+    font-size: 4vw;
+    line-height: 4vh;
+    margin-left: 5vw;
+    margin-top: 12vh;
+    margin-bottom: 5vh;
+  }
+  #dNewsletter .newsletterContent .newsletterText p {
+    text-align: center;
+  }
+  #dNewsletter .newsletterContent .newsletterText .ns-hide {
+    display: none;
   }
   #dNewsletter .newsletterContent .signupForm {
-    width: 35vw;
+    width: 90vw;
     position: absolute;
-    float: left;
-    margin-top: 15vh;
-    margin-left: 50vw;
+    margin-top: 35vh;
+    margin-left: 5vw;
   }
   #dNewsletter .newsletterContent .signupForm label {
     display: block;
-    font-family: 'akkuratRegular', arial, sans-serif;
-    font-size: 1.2vw;
+    font-size: 5vw;
     margin-bottom: 1vh;
   }
   #dNewsletter .newsletterContent .signupForm input {
     display: block;
-    width: 30vw;
-    margin-bottom: 3vh;
+    width: 88vw;
+    margin-bottom: 2vh;
     height: 35px;
   }
   #dNewsletter .newsletterContent .signupForm .nsButton {
     display: block;
     position: absolute;
     margin-top: 27vh;
-    margin-left: 22.5vw;
+    margin-left: 0;
   }
   #dNewsletter .newsletterContent .signupForm .nsButton button {
-    width: 8vw;
-    font-family: 'akkuratRegular', arial, sans-serif;
-    font-size: 1.2vw;
+    width: 89vw;
+    font-size: 5vw;
     color: #fff;
     background: #00BCDD;
     border: 0;
     border-radius: 3px;
-    height: 5vh;
+    padding: 0;
+    height: 6vh;
   }
   .sec-1 {
     height: 70vh;

@@ -139,6 +139,7 @@ table {
   src: url('../fonts/AkkuratLight.otf') format('opentype');
 }
 .nav-top {
+  top: 0;
   font-family: 'akkuratRegular', arial, sans-serif;
   width: 100vw;
   height: 20vh;
@@ -147,6 +148,7 @@ table {
   text-transform: uppercase;
   color: #fff;
   font-size: 0.9vw;
+  z-index: 10;
 }
 .nav-top .logo-wrap {
   width: 16vw;
@@ -158,6 +160,9 @@ table {
 .nav-top .logo-wrap .logo {
   margin: 6.5vh 0 0 2vw;
   width: 9vw;
+}
+.nav-top .logo-wrap-t {
+  display: none;
 }
 .nav-top .menu-wrap {
   width: 68vw;
@@ -183,6 +188,7 @@ table {
   margin-right: 3vw;
 }
 .nav-top .menu-wrap .menu-top .menu-top-item .menu-top-link {
+  display: inline;
   color: inherit;
   text-decoration: none;
 }
@@ -200,8 +206,37 @@ table {
   display: inline;
   margin-right: 1.9vw;
 }
+.nav-top .soc-wrap .soc-menu .soc-icons .soc-link img {
+  height: 2.2vh;
+}
 .nav-top .soc-wrap .soc-phone {
   margin-left: 0;
+}
+#dd {
+  position: relative;
+  width: 200px;
+  padding: 10px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+}
+#dd .dropdown {
+  position: absolute;
+  top: 140%;
+  left: 0;
+  right: 0;
+  width: 11.5vw;
+  font-weight: normal;
+  list-style: none;
+  pointer-events: none;
+  background: #00afd4;
+}
+#dd .dropdown li a {
+  display: block;
+  padding: 2vh;
+  text-decoration: none;
+  color: #fff;
 }
 .blue-gradient {
   background-image: linear-gradient(#00bcdd 60%, rgba(0, 188, 221, 0));

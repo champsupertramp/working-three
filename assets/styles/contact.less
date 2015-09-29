@@ -97,6 +97,7 @@ sans-serif;
 }
 
 .nav-top {
+  top: 0;
   font-family: @akRegular;
   width: 100vw;
   height: 20vh;
@@ -105,6 +106,7 @@ sans-serif;
   text-transform: uppercase;
   color: #fff;
   font-size: @menu-font-size;
+  z-index: 10;
   .logo-wrap {
     width: 16vw;
     display: inline-block;
@@ -115,6 +117,9 @@ sans-serif;
       margin: 6.5vh 0 0 2vw;
       width: 9vw;
     }
+  }
+  .logo-wrap-t {
+    display: none;
   }
   .menu-wrap {
     width: 68vw;
@@ -137,6 +142,7 @@ sans-serif;
         display: inline;
         margin-right: 3vw;
         .menu-top-link {
+          display: inline;
           color: inherit;
           text-decoration: none;
         }
@@ -154,12 +160,45 @@ sans-serif;
       .soc-icons {
         display: inline;
         margin-right: 1.9vw;
+        .soc-link img {
+          height: 2.2vh;
+        }
       }
     }
     .soc-phone {
       margin-left: 0;
     }
   }
+}
+
+#dd {
+  position: relative;
+  width: 200px;
+  padding: 10px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+}
+
+
+#dd .dropdown {
+  position: absolute;
+  top: 140%;
+  left: 0;
+  right: 0;
+  width: 11.5vw;
+  font-weight: normal;
+  list-style: none;
+  pointer-events: none;
+  background: @blue-bg-dark;
+}
+
+#dd .dropdown li a {
+  display: block;
+  padding: 2vh;
+  text-decoration: none;
+  color: #fff;
 }
 
 //BACKGROUND COLORS//

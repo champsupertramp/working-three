@@ -141,6 +141,9 @@ and (orientation: portrait) {
           display: inline;
           margin-right: 4.7vw;
           margin-bottom: 0;
+          .soc-link img {
+            height: 1.8vh;
+          }
         }
       }
       .soc-phone {
@@ -149,6 +152,26 @@ and (orientation: portrait) {
         font-size: 2vw;
       }
     }
+  }
+
+  .wrapper-dropdown-3 {
+    /* Size and position */
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+
+    /* Styles */
+    background: #fff;
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+    cursor: pointer;
+    outline: none;
+
+    /* Font settings */
+    font-weight: bold;
+    color: #8AA8BD;
   }
 
   //SIDE NAV//
@@ -389,74 +412,70 @@ and (orientation: portrait) {
     .closeWrap {
       width: 100vw;
       height: 3vh;
-      padding-top: 17vh;
+      padding-top: 4vh;
       .closeButton {
-        margin-left: 77.5vw;
+        margin-left: 85vw;
         text-transform: uppercase;
-        font-family: @akRegular;
-        font-size: 1vw;
+        font-size: 2vw;
         color: #fff;
         text-decoration: none;
       }
     }
     .newsletterLogo {
-      width: 6vw;
-      height: 6vw;
+      width: 12vw;
+      height: 12vw;
       display: block;
       text-align: justify;
       margin-left: 45vw;
+      margin-top: 5vh;
     }
     .newsletterContent {
 
       .newsletterTitle {
-        margin-left: 38vw;
+        margin-left: 31vw;
         text-transform: uppercase;
-        font-family: @akRegular;
-        font-size: 2.5vw;
+        font-size: 5vw;
         margin-top: 3vh;
         position: absolute;
       }
       .newsletterText {
-        position: absolute;
-        width: 30vw;
-        font-family: @akRegular;
-        font-size: 1vw;
-        line-height: 3vh;
-        margin-left: 15vw;
-        margin-top: 15vh;
+        position: abslute;
+        width: 60vw;
+        font-size: 2vw;
+        line-height: 2vh;
+        margin-left: 21vw;
+        margin-top: 12vh;
+        margin-bottom: 5vh;
       }
       .signupForm {
         width: 35vw;
         position: absolute;
-        float: left;
-        margin-top: 15vh;
-        margin-left: 50vw;
+        margin-top: 32vh;
+        margin-left: 21vw;
         label {
           display: block;
-          font-family: @akRegular;
-          font-size: 1.2vw;
+          font-size: 2.5vw;
           margin-bottom: 1vh;
         }
         input {
           display: block;
-          width: 30vw;
-          margin-bottom: 3vh;
+          width: 60vw;
+          margin-bottom: 2vh;
           height: 35px;
         }
         .nsButton {
           display: block;
           position: absolute;
-          margin-top: 27vh;
-          margin-left: 22.5vw;
+          margin-top: 18vh;
+          margin-left: 45vw;
           button {
-            width: 8vw;
-            font-family: @akRegular;
-            font-size: 1.2vw;
+            width: 16vw;
+            font-size: 2.5vw;
             color: #fff;
             background: #00BCDD;
             border: 0;
             border-radius: 3px;
-            height: 5vh;
+            height: 3vh;
           }
         }
       }

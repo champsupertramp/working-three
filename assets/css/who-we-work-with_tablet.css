@@ -65,12 +65,16 @@
     margin-right: 4.7vw;
     margin-bottom: 0;
   }
+  .nav-top .soc-wrap .soc-menu .soc-icons .soc-link img {
+    height: 1.8vh;
+  }
   .nav-top .soc-wrap .soc-phone {
     margin-left: 10vw;
     margin-top: -2.5vw;
     font-size: 2vw;
   }
   .nav-bot {
+    background: #00afd4;
     display: block;
     width: 100vw;
     height: 9vh;
@@ -176,74 +180,70 @@
   #dNewsletter .closeWrap {
     width: 100vw;
     height: 3vh;
-    padding-top: 17vh;
+    padding-top: 4vh;
   }
   #dNewsletter .closeWrap .closeButton {
-    margin-left: 77.5vw;
+    margin-left: 85vw;
     text-transform: uppercase;
-    font-family: 'akkuratRegular', arial, sans-serif;
-    font-size: 1vw;
+    font-size: 2vw;
     color: #fff;
     text-decoration: none;
   }
   #dNewsletter .newsletterLogo {
-    width: 6vw;
-    height: 6vw;
+    width: 12vw;
+    height: 12vw;
     display: block;
     text-align: justify;
     margin-left: 45vw;
+    margin-top: 5vh;
   }
   #dNewsletter .newsletterContent .newsletterTitle {
-    margin-left: 38vw;
+    margin-left: 31vw;
     text-transform: uppercase;
-    font-family: 'akkuratRegular', arial, sans-serif;
-    font-size: 2.5vw;
+    font-size: 5vw;
     margin-top: 3vh;
     position: absolute;
   }
   #dNewsletter .newsletterContent .newsletterText {
-    position: absolute;
-    width: 30vw;
-    font-family: 'akkuratRegular', arial, sans-serif;
-    font-size: 1vw;
-    line-height: 3vh;
-    margin-left: 15vw;
-    margin-top: 15vh;
+    position: abslute;
+    width: 60vw;
+    font-size: 2vw;
+    line-height: 2vh;
+    margin-left: 21vw;
+    margin-top: 12vh;
+    margin-bottom: 5vh;
   }
   #dNewsletter .newsletterContent .signupForm {
     width: 35vw;
     position: absolute;
-    float: left;
-    margin-top: 15vh;
-    margin-left: 50vw;
+    margin-top: 32vh;
+    margin-left: 21vw;
   }
   #dNewsletter .newsletterContent .signupForm label {
     display: block;
-    font-family: 'akkuratRegular', arial, sans-serif;
-    font-size: 1.2vw;
+    font-size: 2.5vw;
     margin-bottom: 1vh;
   }
   #dNewsletter .newsletterContent .signupForm input {
     display: block;
-    width: 30vw;
-    margin-bottom: 3vh;
+    width: 60vw;
+    margin-bottom: 2vh;
     height: 35px;
   }
   #dNewsletter .newsletterContent .signupForm .nsButton {
     display: block;
     position: absolute;
-    margin-top: 27vh;
-    margin-left: 22.5vw;
+    margin-top: 18vh;
+    margin-left: 45vw;
   }
   #dNewsletter .newsletterContent .signupForm .nsButton button {
-    width: 8vw;
-    font-family: 'akkuratRegular', arial, sans-serif;
-    font-size: 1.2vw;
+    width: 16vw;
+    font-size: 2.5vw;
     color: #fff;
     background: #00BCDD;
     border: 0;
     border-radius: 3px;
-    height: 5vh;
+    height: 3vh;
   }
   .sec-1 {
     height: 70vh;

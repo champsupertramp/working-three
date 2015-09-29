@@ -210,6 +210,7 @@ table {
   margin-right: 3vw;
 }
 .nav-top .menu-wrap .menu-top .menu-top-item .menu-top-link {
+  display: inline;
   color: inherit;
   text-decoration: none;
 }
@@ -229,6 +230,31 @@ table {
 }
 .nav-top .soc-wrap .soc-phone {
   margin-left: 0;
+}
+#dd {
+  position: relative;
+  width: 200px;
+  padding: 10px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+}
+#dd .dropdown {
+  position: absolute;
+  top: 140%;
+  left: 0;
+  right: 0;
+  width: 11.5vw;
+  font-weight: normal;
+  list-style: none;
+  pointer-events: none;
+}
+#dd .dropdown li a {
+  display: block;
+  padding: 2vh;
+  text-decoration: none;
+  color: #fff;
 }
 .nav-side {
   display: inline-block;
