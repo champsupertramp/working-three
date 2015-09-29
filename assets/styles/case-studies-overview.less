@@ -56,7 +56,6 @@ table {
 //VARIABLES//
 @topNavFontSize: 0.9vw;
 @sideNavFontSize: 1vw;
-@headerFontSize: 4.4vw;
 @h2FontSize: 2.2vw;
 @akRegular: 'akkuratRegular',
 arial,
@@ -78,6 +77,7 @@ sans-serif;
 @link-green: #60C5BA;
 @link-visited: #9C8DC3;
 @dark-grey: #231F20;
+@headerFontSize: 4.4vw;
 //FONTS//
 @font-face {
   font-family: "akkuratRegular";
@@ -98,7 +98,7 @@ sans-serif;
   color: #fff;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   float: left;
   z-index: 100000;
   position: fixed;
@@ -107,7 +107,7 @@ sans-serif;
     height: 3vh;
     padding-top: 17vh;
     .closeButton {
-      margin-left: 80vw;
+      margin-left: 77.5vw;
       text-transform: uppercase;
       font-family: @akRegular;
       font-size: 1vw;
@@ -139,14 +139,14 @@ sans-serif;
       font-size: 1vw;
       line-height: 3vh;
       margin-left: 15vw;
-      margin-top: 6vh;
+      margin-top: 15vh;
     }
     .signupForm {
       width: 35vw;
       position: absolute;
-      float: right;
-      margin-top: -24.5vh;
-      margin-right: 15vw;
+      float: left;
+      margin-top: 15vh;
+      margin-left: 50vw;
       label {
         display: block;
         font-family: @akRegular;
@@ -319,13 +319,22 @@ body {
 }
 .section2 {
   font-family: @akRegular;
-  height: 250vh;
+  height: auto;
+  display: flex;
+    float: left;
+    width: 100%;
   .sideBar {
     width: 16vw;
-    height: 170vh;
+    height: auto;
     float: left;
-    display: inline-block;
+    display: flex;
     background: #F2F2F2;
+
+
+  }
+  .s2content{
+    display: flex;
+    float: left;
   }
   .wrapper {
  float: left;
@@ -641,7 +650,11 @@ p{
   float: left;
   margin: 1%;
   position: relative;
-  img{max-width: 100%;width: 100%;}
+  img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
 
 
 }

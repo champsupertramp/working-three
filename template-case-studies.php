@@ -62,36 +62,28 @@
     </div>
     <div class="s2content">
         <div class="wrapper">
-<?php
-$args = array(
-	'post_type' => 'casestudy',
-);
-$the_query = new WP_Query( $args );
-if ( $the_query->have_posts() ) {
-	while ( $the_query->have_posts() ) {
-		$the_query->the_post();?>
-			<div class="case-study">
-				<?php if ( has_post_thumbnail() ) {
-					the_post_thumbnail('image_580x400');
-				} ?>
-				<div class="hover-info">
-					<h2><?php the_title();?></h2>
-					<p><?php echo substr(get_the_excerpt(),0,230); ?>...</p>
-					<a class="button" href="<?php the_permalink(); ?>">View Case Study</a>
-				</div>
-			</div>
-	<?php }
-} else {}
-wp_reset_postdata();?>
-
-
-
-
-
-
+			<?php
+			$args = array(
+				'post_type' => 'casestudy',
+			);
+			$the_query = new WP_Query( $args );
+			if ( $the_query->have_posts() ) {
+				while ( $the_query->have_posts() ) {
+					$the_query->the_post();?>
+						<div class="case-study">
+							<?php if ( has_post_thumbnail() ) {
+								the_post_thumbnail('image_580x400');
+							} ?>
+							<div class="hover-info">
+								<h2><?php the_title();?></h2>
+								<p><?php echo substr(get_the_excerpt(),0,230); ?>...</p>
+								<a class="button" href="<?php the_permalink(); ?>">View Case Study</a>
+							</div>
+						</div>
+				<?php }
+			} else {}
+			wp_reset_postdata();?>
         </div>
-
-
     </div>
 </section>
 <nav class="nav-top">

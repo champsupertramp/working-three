@@ -80,7 +80,7 @@ class WD_WorkingThree{
         add_image_size( 'image_740x490', 740, 490, true );
         add_image_size( 'image_174x174', 174, 174, true );
 		add_image_size( 'image_580x400', 580, 400, true );
-
+		add_image_size( 'image_400x400', 400, 400, true );
         // Add post formats
         // http://codex.wordpress.org/Post_Formats
         add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'));
@@ -169,6 +169,75 @@ class WD_WorkingThree{
         );
 
         register_taxonomy( 'casestudy_categories', 'casestudy', $args );
+
+
+
+
+                // Register post types
+        $labelstm = array(
+          'name'               => _x( 'Team Members', 'post type general name', 'workingthree' ),
+          'singular_name'      => _x( 'Team Member', 'post type singular name', 'workingthree' ),
+          'menu_name'          => _x( 'Team Members', 'admin menu', 'workingthree' ),
+          'name_admin_bar'     => _x( 'Team Member', 'add new on admin bar', 'workingthree' ),
+          'add_new'            => _x( 'Add New', 'team-member', 'workingthree' ),
+          'add_new_item'       => __( 'Add New Team Member', 'workingthree' ),
+          'new_item'           => __( 'New Team Member', 'workingthree' ),
+          'edit_item'          => __( 'Edit Team Member', 'workingthree' ),
+          'view_item'          => __( 'View Team Member', 'workingthree' ),
+          'all_items'          => __( 'All Team Members', 'workingthree' ),
+          'search_items'       => __( 'Search Team Members', 'workingthree' ),
+          'parent_item_colon'  => __( 'Parent Team Member:', 'workingthree' ),
+          'not_found'          => __( 'No Team Members found.', 'workingthree' ),
+          'not_found_in_trash' => __( 'No Team Members found in Trash.', 'workingthree' )
+        );
+
+        $argstm = array(
+          'labels'             => $labelstm,
+          'description'        => __( 'Description.', 'workingthree' ),
+          'public'             => true,
+          'publicly_queryable' => true,
+          'show_ui'            => true,
+          'show_in_menu'       => true,
+          'query_var'          => true,
+          'rewrite'            => array( 'slug' => 'team-member' ),
+          'capability_type'    => 'post',
+          'has_archive'        => true,
+          'hierarchical'       => false,
+          'menu_position'      => null,
+          'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+        );
+
+        register_post_type( 'teammember', $argstm );
+        $labelstm = array(
+          'name'                       => _x( 'Categories', 'taxonomy general name' ),
+          'singular_name'              => _x( 'Category', 'taxonomy singular name' ),
+          'search_items'               => __( 'Search Categories' ),
+          'popular_items'              => __( 'Popular Categories' ),
+          'all_items'                  => __( 'All Categories' ),
+          'parent_item'                => null,
+          'parent_item_colon'          => null,
+          'edit_item'                  => __( 'Edit Category' ),
+          'update_item'                => __( 'Update Category' ),
+          'add_new_item'               => __( 'Add New Category' ),
+          'new_item_name'              => __( 'New Category Name' ),
+          'separate_items_with_commas' => __( 'Separate categories with commas' ),
+          'add_or_remove_items'        => __( 'Add or remove categories' ),
+          'choose_from_most_used'      => __( 'Choose from the most used categories' ),
+          'not_found'                  => __( 'No categories found.' ),
+          'menu_name'                  => __( 'Categories' ),
+        );
+
+        $argstm = array(
+          'hierarchical'          => true,
+          'labels'                => $labelstm,
+          'show_ui'               => true,
+          'show_admin_column'     => true,
+          'update_count_callback' => '_update_post_term_count',
+          'query_var'             => true,
+          'rewrite'               => array( 'slug' => 'team-member-categories' ),
+        );
+
+        register_taxonomy( 'teammember_categories', 'teammember', $argstm );
     }
 
     /**
@@ -220,6 +289,11 @@ class WD_WorkingThree{
             wp_enqueue_script( 'jquery-colorscroll', $this->tpl_url['assets'] . '/js/jquery.colorscroll.min.js', array(), '1.0.0', true );
             wp_enqueue_script( 'jquery-snapscroll', $this->tpl_url['assets'] . '/js/jquery.snapscroll.js', array(), '1.0.0', true );
             wp_enqueue_script( 'jquery-scroll_to', $this->tpl_url['assets'] . '/js/jquery.scroll_to.js', array(), '1.0.0', true );
+
+        }elseif( is_page_template("template-about-us.php") ){
+            wp_enqueue_style( 'working-three-about-us', $this->tpl_url['assets'].'css/about-us.css' );
+            wp_enqueue_style( 'working-three-about-us-mobile', $this->tpl_url['assets'].'css/about-us_mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
+            wp_enqueue_style( 'working-three-about-us-table', $this->tpl_url['assets'].'css/about-us_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
 
         }elseif( is_page_template("template-contact.php") ){
             wp_enqueue_style( 'working-three-contact', $this->tpl_url['assets'].'css/contact.css' );
@@ -311,3 +385,79 @@ class WD_WorkingThree{
 
 $wd_wt = new WD_WorkingThree;
 global $wd_wt;
+class w3_Walker extends Walker_Nav_Menu {
+
+	public function start_lvl( &$output, $depth = 0, $args = array() ) {
+		$indent = str_repeat("\t", $depth);
+		$output .= "\n$indent<ul class=\"sub-menu dropdown\" id=\"Dropdown\" style=\"display: none;\">\n";
+	}
+
+
+	public function end_lvl( &$output, $depth = 0, $args = array() ) {
+		$indent = str_repeat("\t", $depth);
+		$output .= "$indent</ul>\n";
+	}
+
+
+	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+
+		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
+		$classes[] = 'menu-item-' . $item->ID;
+
+
+		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
+		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+
+
+		$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args, $depth );
+		$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
+
+		if (in_array("menu-item-has-children", $item->classes)) {
+		    $id = ' id="dd" tabindex="1"' ;
+		}
+
+		$output .= $indent . '<li' . $id . $class_names .'>';
+
+		$atts = array();
+		$atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
+		$atts['target'] = ! empty( $item->target )     ? $item->target     : '';
+		$atts['rel']    = ! empty( $item->xfn )        ? $item->xfn        : '';
+		$atts['href']   = ! empty( $item->url )        ? $item->url        : '';
+
+
+		$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
+
+		$attributes = '';
+		foreach ( $atts as $attr => $value ) {
+			if ( ! empty( $value ) ) {
+				$value = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
+				$attributes .= ' ' . $attr . '="' . $value . '"';
+			}
+		}
+		if (in_array("menu-item-has-children", $item->classes)) {
+			$item_output = $args->before;
+			$item_output .= '<p class="menu-top-link" onclick="toggle_visibility(\'Dropdown\');">';
+			$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+			$item_output .= '</p>';
+			$item_output .= $args->after;
+		}else{
+			$item_output = $args->before;
+			$item_output .= '<a'. $attributes .'>';
+			$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+			$item_output .= '</a>';
+			$item_output .= $args->after;
+		}
+
+		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+
+	}
+
+
+	public function end_el( &$output, $item, $depth = 0, $args = array() ) {
+		$output .= "</li>\n";
+	}
+
+
+
+}
