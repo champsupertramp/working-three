@@ -237,7 +237,7 @@ class WD_WorkingThree{
             wp_enqueue_style( 'working-three-who-we-work-with-table', $this->tpl_url['assets'].'css/who-we-work-with_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
             wp_enqueue_script( 'mixitup', 'http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js', array(), '1.0.0', true );
 
-		}elseif( is_page_template("template-case-studies.php") ){
+		    }elseif( is_page_template("template-case-studies.php") ){
             wp_enqueue_style( 'working-three-case-studies-overview', $this->tpl_url['assets'].'css/case-studies-overview.css' );
             wp_enqueue_style( 'working-three-case-studies-overview-mobile', $this->tpl_url['assets'].'css/case-studies-overview-mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
             wp_enqueue_style( 'working-three-case-studies-overview-table', $this->tpl_url['assets'].'css/case-studies-overview-tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
