@@ -8,7 +8,7 @@
 ?>
 <?php get_header();?>
 <?php get_template_part('templates/sections/section', 'newsletter'); ?>
-<?php get_template_part('templates/sections/section', 'contact-head'); ?>
+<?php get_template_part('templates/sections/header/section', 'contact-head'); ?>
 
 <?php
 if( have_posts() ):
@@ -19,18 +19,6 @@ if( have_posts() ):
         <div class="sec-1-content">
             <h1><?php the_title();?></h1>
             <?php the_content(); ?>
-<!--             <p class="p1">We love talking about customers, the data they create, and the
-                opportunities it contains.</p>
-
-            <p class="p1">A quick chat with us can help discover where your business has the
-                most to gain, and how we can realise that potential together.</p>
-
-            <p class="p2">Follow our journey as we change the way businesses engage</p>
-            <ul class="soc-menu">
-                <li class="soc-icons"><a class="soc-link" href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/social-li.png"></a></li>
-                <li class="soc-icons"><a class="soc-link" href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/social-fb.png"></a></li>
-                <li class="soc-icons"><a class="soc-link" href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/social-twitter.png"></a></li>
-            </ul> -->
         </div>
     </div>
 </section>
