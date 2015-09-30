@@ -290,11 +290,20 @@ body {
   margin-left: 3vw;
 }
 .nav-top .socialWrapper ul {
-  margin: 3vh 0 5vh 3vw;
+  position: fixed;
+  display: block;
+  margin: 9.5vh 0 5vh 18vw;
 }
 .nav-top .socialWrapper ul li {
-  display: inline;
+  background: #eb6852;
+  padding: 1vh;
+  border-radius: 2px;
+  display: block;
   margin-right: 1.9vw;
+  margin-bottom: 3vh;
+}
+.nav-top .socialWrapper p {
+  margin-top: 11vh;
 }
 .section1 {
   color: #fff;
