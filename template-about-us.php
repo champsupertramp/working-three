@@ -9,6 +9,7 @@
 <?php get_header();?>
 <?php get_template_part('templates/sections/header/section', 'newsletter'); ?>
 <?php get_template_part('templates/sections/header/section', 'inner-head'); ?>
+
 <div id="#more-m" class="more-menu" style="display: none;">
     <div class="more-close" onclick="toggle_visibility('#more-m');">Close</div>
     <img class="more-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/w3logo.png">
