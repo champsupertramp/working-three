@@ -301,6 +301,161 @@ $options[]      = array(
     )
 );
 
+
+
+
+/**
+ * About Us Sections
+ */
+$options[]      = array(
+    'name'        => 'wd_aboutus_settings',
+    'title'       => 'About Us Sections',
+    'icon'        => 'fa fa_bars',
+    'sections'      => array(
+
+        array(
+            'title' => 'First Section',
+            'name'  => 'wd_about_section_first',
+            'fields' => array(
+
+                array(
+                    'title' => 'Title',
+                    'id' => 'wd_about_s1_title',
+                    'type' => 'text',
+                    'default' => 'This is a sample title',
+                    'info'  => 'You can use &lt;span&gt; &lt;/span&gt; to underline a word and &lt;br/&gt; to break a line',
+                    'sanitize' => false,
+                ),
+
+                array(
+                    'title' => 'Description',
+                    'id'    => 'wd_about_s1_description',
+                    'type'  => 'wysiwyg',
+                    'default' => 'Lorem ipsum',
+                ),
+
+            ),
+        ),
+
+        array(
+            'title' => 'Second Section',
+            'name'  => 'wd_aboutus_section_second',
+            'fields' => array(
+                array(
+                    'title' => 'Left Column',
+                    'id'  => 'wd_about_s2_left_column',
+                    'type'  => 'wysiwyg',
+                    'default' => 'Lorem ipsum',
+                ),
+                array(
+                    'title' => 'Right Column',
+                    'id'  => 'wd_about_s2_right_column',
+                    'type'  => 'wysiwyg',
+                    'default' => 'Lorem ipsum',
+                ),
+                array(
+                  'id'              => 'wd_about_s2_values_section',
+                  'type'            => 'group',
+                  'title'           => 'Values',
+                  'button_title'    => 'Add New',
+                  'accordion_title' => 'Add New Value',
+                  'fields'          => array(
+
+                      array(
+                        'id'          => 'wd_about_s2_values_title',
+                        'type'        => 'text',
+                        'title'       => 'Title',
+                      ),
+
+                      array(
+                        'id'          => 'wd_about_s2_values_short_description',
+                        'type'        => 'textarea',
+                        'title'       => 'Short description',
+                      ),
+                  )
+                ),
+
+
+            ),
+        ),
+
+        array(
+            'title' => 'Third Section',
+            'name'  => 'wd_aboutus_section_third',
+            'fields' => array(
+                array(
+                    'title' => 'Title',
+                    'id' => 'wd_about_s3_title',
+                    'type' => 'text',
+                    'default' => 'This is a sample title',
+                    'sanitize'  => false,
+                ),
+
+                array(
+                    'title' => 'Description',
+                    'id'  => 'wd_about_s3_description',
+                    'type'  => 'wysiwyg',
+                    'default' => 'Lorem ipsum',
+                ),
+
+            ),
+        ),
+
+        array(
+            'title' => 'Fourth Section',
+            'name'  => 'wd_aboutus_section_fourth',
+            'fields' => array(
+                array(
+                    'title'   => 'Title',
+                    'id'    => 'wd_about_s4_title',
+                    'type'    => 'text',
+                    'default' => 'This is a sample title',
+                    'sanitize'  => false,
+                ),
+                 array(
+                    'title'   => 'Description',
+                    'id'      => 'wd_about_s4_description',
+                    'type'    => 'wysiwyg',
+                    'default' => 'Lorem ipsum',
+                ),
+
+            ),
+        ),
+
+        array(
+            'title' => 'Fifth Section',
+            'name'  => 'wd_aboutus_section_fifth',
+            'fields' => array(
+                array(
+                    'title' => 'Title',
+                    'id' => 'wd_about_s5_title',
+                    'type' => 'text',
+                    'default' => 'This is a sample title',
+                    'sanitize'  => false,
+                ),
+                array(
+                    'title'   => 'Description',
+                    'id'      => 'wd_about_s5_description',
+                    'type'    => 'wysiwyg',
+                    'default' => 'Lorem ipsum',
+                ),
+
+                array(
+                    'id'             => 'wd_s5_add_posts',
+                    'type'           => 'select',
+                    'title'          => 'Select Blog Post Categories to Show',
+                    'options'        => 'categories',
+                    'default_option' => '- Select -',
+                    'info'           => 'Only 3 blog posts will be displayed'
+                ),
+            ),
+        ),
+    )
+);
+
+
+
+
 /**
  * Social Links section
  */

@@ -289,6 +289,7 @@ class WD_WorkingThree{
             wp_enqueue_script( 'jquery-colorscroll', $this->tpl_url['assets'] . '/js/jquery.colorscroll.min.js', array(), '1.0.0', true );
             wp_enqueue_script( 'jquery-snapscroll', $this->tpl_url['assets'] . '/js/jquery.snapscroll.js', array(), '1.0.0', true );
             wp_enqueue_script( 'jquery-scroll_to', $this->tpl_url['assets'] . '/js/jquery.scroll_to.js', array(), '1.0.0', true );
+			wp_enqueue_script( 'working-three-homepage-scripts', $this->tpl_url['assets'] . '/js/homepage.js', array(), '1.0.0', true );
 
         }elseif( is_page_template("template-about-us.php") ){
             wp_enqueue_style( 'working-three-about-us', $this->tpl_url['assets'].'css/about-us.css' );
