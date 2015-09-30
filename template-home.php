@@ -39,7 +39,7 @@
 	          'link_after'      => '',
 	          'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 	          'depth'           => 0,
-	          'walker'            => new w3_Walker(),
+	          'walker'            => new WorkingThree_Walker(),
 	        );
 	          wp_nav_menu( $defaults );
 	        ?>
