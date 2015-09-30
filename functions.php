@@ -11,7 +11,7 @@ class WD_WorkingThree{
 
 
     /**
-     * Theme URLs
+     * Theme assets URLs
      * @var array
      */
     public $tpl_url = array();
@@ -72,7 +72,8 @@ class WD_WorkingThree{
         // Register wp_nav_menu() menus
         // http://codex.wordpress.org/Function_Reference/register_nav_menus
         register_nav_menus(array(
-          'primary_navigation' => __('Primary Navigation', 'workingthree')
+          'primary_navigation' => __('Primary Navigation', 'workingthree'),
+          'leadership_navigation' =>  __('Leadership Template Navigation', 'workingthree'),
         ));
 
         // Add post thumbnails
