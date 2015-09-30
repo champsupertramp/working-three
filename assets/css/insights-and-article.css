@@ -240,7 +240,7 @@ body {
   height: 20vh;
 }
 .nav-top {
-  position: fixed;
+  position: absolute;
   width: 100vw;
   font-family: 'akkuratRegular', arial, sans-serif;
   font-size: 0.9vw;
@@ -357,13 +357,16 @@ body {
 }
 .section2 {
   font-family: 'akkuratRegular', arial, sans-serif;
-  height: 252vh;
+  height: auto;
+  float: left;
+  width: 100%;
+  display: flex;
 }
 .section2 .sideBar {
   width: 16vw;
-  height: 172vh;
+  height: auto;
+  display: flex;
   float: left;
-  display: inline-block;
   background: #F2F2F2;
 }
 .section2 .wrapper {
@@ -451,7 +454,7 @@ body {
   text-align: center;
   font-family: 'akkuratRegular', arial, sans-serif;
   font-size: 1.2vw;
-  margin: 1vh;
+  margin: 1vh 1vh 8vh 1vh;
 }
 .section2 .blog_pagination a {
   color: #42C4DD;
@@ -757,4 +760,3 @@ footer .footerContent p {
 .scrolled2 .logoWrapper {
   background: #e95944;
 }
-/*# sourceMappingURL=E:/wamp/www/templates/working-three/assets/css/main.css.map */
