@@ -240,7 +240,7 @@ body {
   height: 20vh;
 }
 .nav-top {
-  position: fixed;
+  position: absolute;
   width: 100vw;
   font-family: 'akkuratRegular', arial, sans-serif;
   font-size: 0.9vw;
@@ -784,7 +784,7 @@ body {
 }
 footer {
   display: table;
-  height: 20vh;
+  height: 14vh;
   color: #000;
   font-family: 'akkuratRegular', arial, sans-serif;
   font-size: 0.9vw;
@@ -801,7 +801,7 @@ footer .footerContent {
   width: 84vw;
 }
 footer .footerContent p {
-  margin-top: 5vw;
+  margin-top: 3vw;
   margin-left: 17vw;
 }
 .scrolled2 .navWrapper,
@@ -810,4 +810,50 @@ footer .footerContent p {
 }
 .scrolled2 .logoWrapper {
   background: #ffc425;
+}
+.sec-contact {
+  height: 14vh;
+  width: 100vw;
+  display: block;
+}
+.sec-contact .sec-contact-sidebar {
+  height: 14vh;
+  width: 16vw;
+  display: inline-block;
+}
+.sec-contact .sec-contact-bg {
+  height: 14vh;
+  width: 84vw;
+  display: inline-block;
+  float: right;
+}
+.sec-contact .sec-contact-bg .sec-contact-content {
+  display: inline-block;
+  float: left;
+}
+.sec-contact .sec-contact-bg .sec-contact-content .sec-contact-text {
+  width: 47vw;
+  color: #fff;
+  font-family: 'akkuratRegular', arial, sans-serif;
+  font-size: 1.1vw;
+  margin-left: 12vw;
+  margin-top: 5vh;
+}
+.sec-contact .sec-contact-bg .sec-contact-content .button {
+  vertical-align: top;
+  display: inline-block;
+  float: right;
+  background: #ffd24f;
+  padding: 0.6vw;
+  margin-top: -3.5vh;
+  text-decoration: none;
+}
+.sec-contact .sec-contact-bg .sec-contact-content .button img {
+  background: transparent;
+}
+.black {
+  background: #333333;
+}
+.black-dark {
+  background: #262626;
 }
