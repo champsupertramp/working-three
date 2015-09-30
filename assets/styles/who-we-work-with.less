@@ -608,3 +608,58 @@ footer {
   display: none;
 }
 
+#No-case-study {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  float: left;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  .ncs-wrap {
+    width: 100vh;
+    background: #fff;
+//    box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw #000;
+    height: 58vh;
+    padding-top: 5vh;
+    margin: 18vh auto 0 auto;
+    .ncs-logo {
+      display: block;
+      width: 25vh;
+      margin-left: 37.5vh;
+      margin-bottom: 3vh;
+    }
+    .p2 {
+      display: block;
+      text-align: center;
+      font-family: @akRegular;
+      text-transform: uppercase;
+      font-size: @p2-font-size;
+      margin-bottom: 2vh;
+    }
+    .p1 {
+      display: block;
+      text-align: center;
+      font-family: @akRegular;
+      font-size: @p1-font-size;
+      width: 60vh;
+      margin-left: 20vh;
+    }
+    .button {
+      display: block;
+      background: @blue-bg;
+      padding: 0.6vw;
+      margin-top: 3vh;
+      width: 10vw;
+      margin-left: 37.5vh;
+      text-decoration: none;
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+}
+

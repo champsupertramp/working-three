@@ -598,3 +598,56 @@ footer .footer-bg .footer-content p {
 .nav-bot {
   display: none;
 }
+#No-case-study {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  float: left;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+#No-case-study .ncs-wrap {
+  width: 100vh;
+  background: #fff;
+  height: 58vh;
+  padding-top: 5vh;
+  margin: 18vh auto 0 auto;
+}
+#No-case-study .ncs-wrap .ncs-logo {
+  display: block;
+  width: 25vh;
+  margin-left: 37.5vh;
+  margin-bottom: 3vh;
+}
+#No-case-study .ncs-wrap .p2 {
+  display: block;
+  text-align: center;
+  font-family: 'akkuratRegular', arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.8vw;
+  margin-bottom: 2vh;
+}
+#No-case-study .ncs-wrap .p1 {
+  display: block;
+  text-align: center;
+  font-family: 'akkuratRegular', arial, sans-serif;
+  font-size: 1.15vw;
+  width: 60vh;
+  margin-left: 20vh;
+}
+#No-case-study .ncs-wrap .button {
+  display: block;
+  background: #00bcdd;
+  padding: 0.6vw;
+  margin-top: 3vh;
+  width: 10vw;
+  margin-left: 37.5vh;
+  text-decoration: none;
+}
+#No-case-study .ncs-wrap .button a {
+  color: inherit;
+  text-decoration: none;
+}
