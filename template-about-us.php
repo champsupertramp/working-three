@@ -15,57 +15,8 @@
 <?php get_header();?>
 <?php get_template_part('templates/sections/header/section', 'newsletter'); ?>
 <?php get_template_part('templates/sections/header/section', 'inner-head'); ?>
-
-<div id="#more-m" class="more-menu" style="display: none;">
-    <div class="more-close" onclick="toggle_visibility('#more-m');">Close</div>
-    <img class="more-logo" src="<?php echo $wd_wt->tpl_url['assets'];?>img/w3logo.png">
-    <menu class="more-menu-items">
-        <a class="more-menu-item">Leadership</a>
-        <a class="more-menu-item">Who we work for</a>
-        <a class="more-menu-item">Insights</a>
-        <p class="more-menu-item" onclick="toggle_visibility('dNewsletter');">Newsletter sign up</p>
-    </menu>
-</div>
-
-<nav class="nav-bot">
-    <div id="our-work-menu" style="display: none;">
-        <a class="menu-case" href="">Case studies</a>
-        <a class="menu-who" href="">Who we work with</a>
-    </div>
-    <div class="nav-bot-wrap">
-        <div class="nav-bot-link">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-services.svg"></a>
-
-            <p><a href="">Services</a></p>
-        </div>
-        <div class="nav-bot-link" onclick="toggle_visibility('our-work-menu');">
-            <img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-work.svg">
-
-            <p><span class="tablet">Our </span>Work</p>
-        </div>
-        <div class="nav-bot-link">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-leadership.svg"></a>
-
-            <p><a href="">Leadership</a></p>
-        </div>
-        <div class="nav-bot-link">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-insights.svg"></a>
-
-            <p><a href="">Insights</a></p>
-        </div>
-        <div class="nav-bot-link">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-contact.svg"></a>
-
-            <p><a href="">Contact<span class="tablet"> Us</span></a></p>
-        </div>
-        <div class="nav-bot-link" onclick="toggle_visibility('#more-m');">
-            <div><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-more.svg"></div>
-
-            <p>More</p>
-        </div>
-    </div>
-</nav>
-
+<?php get_template_part('templates/sections/header/section', 'more-menu'); ?>
+<?php get_template_part('templates/sections/header/section', 'nav-bottom'); ?>
 <a class="anchor" name="1"></a>
 <section class="sec-1">
     <div class="sec-1-sidebar green-dark">

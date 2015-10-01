@@ -7,9 +7,10 @@
  global $wd_wt;
 ?>
 <?php get_header();?>
-<?php get_template_part('templates/sections/section', 'newsletter'); ?>
+<?php get_template_part('templates/sections/header/section', 'newsletter'); ?>
 <?php get_template_part('templates/sections/header/section', 'contact-head'); ?>
-
+<?php get_template_part('templates/sections/header/section', 'more-menu'); ?>
+<?php get_template_part('templates/sections/header/section', 'nav-bottom'); ?>
 <?php
 if( have_posts() ):
    while( have_posts() ): the_post(); ?>

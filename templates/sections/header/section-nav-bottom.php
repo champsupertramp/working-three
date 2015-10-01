@@ -5,35 +5,22 @@
         <a class="menu-who" href="">Who we work with</a>
     </div>
     <div class="nav-bot-wrap">
-        <div class="nav-bot-link">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-services.svg"></a>
+                <?php $menuitems = cs_get_option("wd_mobile_menu_items"); ?>
 
-            <p><a href="">Services</a></p>
-        </div>
-        <div class="nav-bot-link" onclick="toggle_visibility('our-work-menu');">
-            <img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-work.svg">
+                <?php if( isset( $menuitems ) && ! empty( $menuitems ) ){ ?>
+                    <?php foreach( $menuitems as $menuitem ){?>
+			        <div class="nav-bot-link">
+			            <a href="<?php echo get_page_link($menuitem["wd_mobile_menu_item_link"]); ?>"><img src="<?php echo $menuitem["wd_mobile_menu_item_icon"];?>"></a>
 
-            <p><span class="tablet">Our </span>Work</p>
-        </div>
-        <div class="nav-bot-link">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-leadership.svg"></a>
+			            <p><a href="<?php echo get_page_link($menuitem["wd_mobile_menu_item_link"]); ?>"><?php echo $menuitem["wd_mobile_menu_item_title"];?></a></p>
+			        </div>
+                    <?php } ?>
+                <?php } ?>
 
-            <p><a href="">Leadership</a></p>
-        </div>
-        <div class="nav-bot-link">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-insights.svg"></a>
+		        <div class="nav-bot-link" onclick="toggle_visibility('#more-m');">
+		            <div><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-more.svg"></div>
 
-            <p><a href="">Insights</a></p>
-        </div>
-        <div class="nav-bot-link">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-contact.svg"></a>
-
-            <p><a href="">Contact<span class="tablet"> Us</span></a></p>
-        </div>
-        <div class="nav-bot-link" onclick="toggle_visibility('#more-m');">
-            <div><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-more.svg"></div>
-
-            <p>More</p>
-        </div>
+		            <p>More</p>
+		        </div>
     </div>
 </nav>

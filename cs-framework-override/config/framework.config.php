@@ -67,7 +67,80 @@ $options[]      = array(
 
     )
 );
+/**
+ * Mobile devices menus section
+ */
+$options[]      = array(
+    'name'        => 'wd-mobile-menu-links',
+    'title'       => 'Mobile devices menu',
+    'icon'        => 'fa fa-external-link',
+    'fields'      => array(
 
+			array(
+                  'id'              => 'wd_mobile_menu_items',
+                  'type'            => 'group',
+                  'title'           => 'Menu Items',
+                  'button_title'    => 'Add New',
+                  'accordion_title' => 'Add New Menu Item',
+                  'fields'          => array(
+
+                    array(
+                        'id'          => 'wd_mobile_menu_item_title',
+                        'type'        => 'text',
+                        'title'       => 'Title',
+                    ),
+
+					array(
+						  'id'            => 'wd_mobile_menu_item_link',
+						  'type'          => 'select',
+						  'title'         => 'Select Field for Pages',
+						  'options'       => 'pages',
+						  'query_args'    => array(
+						    'sort_order'  => 'ASC',
+						    'sort_column' => 'post_title',
+						  ),
+					),
+
+					array(
+                          'id'      => 'wd_mobile_menu_item_icon',
+                          'type'    => 'upload',
+                          'title'   => 'Logo',
+                          'default' => '',
+                      ),
+
+                  )
+                ),
+
+			array(
+                  'id'              => 'wd_mobile_menu_more_items',
+                  'type'            => 'group',
+                  'title'           => 'More Menu Items',
+                  'button_title'    => 'Add New',
+                  'accordion_title' => 'Add New More Menu Item',
+                  'fields'          => array(
+
+                    array(
+                        'id'          => 'wd_mobile_more_menu_item_title',
+                        'type'        => 'text',
+                        'title'       => 'Title',
+                    ),
+
+					array(
+						  'id'            => 'wd_mobile_more_menu_item_link',
+						  'type'          => 'select',
+						  'title'         => 'Select Field for Pages',
+						  'options'       => 'pages',
+						  'query_args'    => array(
+						    'sort_order'  => 'ASC',
+						    'sort_column' => 'post_title',
+						  ),
+					),
+
+
+                  )
+                ),
+    )
+);
 /**
  * Homepage Sections
  */

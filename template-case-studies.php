@@ -15,41 +15,8 @@
 <?php get_header();?>
 <?php get_template_part('templates/sections/header/section', 'newsletter'); ?>
 <?php get_template_part('templates/sections/header/section', 'inner-head'); ?>
-
-<nav class="bottomNav">
-    <div class="mNavWrapper">
-        <div class="mNavLink">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-services.svg"></a>
-
-            <p><a href="">Services</a></p>
-        </div>
-        <div class="mNavLink">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-work.svg"></a>
-
-            <p><a href=""><span class="tablet">Our </span>Work</a></p>
-        </div>
-        <div class="mNavLink">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-leadership.svg"></a>
-
-            <p><a href="">Leadership</a></p>
-        </div>
-        <div class="mNavLink">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-insights.svg"></a>
-
-            <p><a href="">Insights</a></p>
-        </div>
-        <div class="mNavLink">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-contact.svg"></a>
-
-            <p><a href="">Contact<span class="tablet"> Us</span></a></p>
-        </div>
-        <div class="mNavLink">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-more.svg"></a>
-
-            <p><a href="">More</a></p>
-        </div>
-    </div>
-</nav>
+<?php //get_template_part('templates/sections/header/section', 'more-menu'); ?>
+<?php //get_template_part('templates/sections/header/section', 'nav-bottom'); ?>
 <section class="section1">
     <div class="sideBar"></div>
     <!--<div class="navBlock"></div>-->
@@ -95,24 +62,7 @@
 </section>
 
 <section class="sec-2">
-    <div class="sec-2-sidebar purple-dark"></div>
-    <div class="sec-2-bg purple">
-        <div class="sec-2-content">
-            <p class="p2">Subscribe to our newsletter for the latest in <br>customer experience, design and big data. </p>
-            <form class="signup-form" action="" method="post">
-                <div class="input-name">
-                    <input id="sub-name" type="text" value="" name="name" placeholder="Name*" required>
-                </div>
-                <div class="input-email">
-                    <input id="sub-email" type="text" value="" name="email" placeholder="Email*" required>
-                </div>
-                <div class="form-button">
-                    <button class="button" type="submit">Sign me up&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png">
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
+
 </section>
 <?php get_template_part('templates/sections/section', 'footer-contact'); ?>
 <footer>

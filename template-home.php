@@ -9,7 +9,8 @@
 ?>
 <?php get_header();?>
 <div class="home-bg">
-    <?php get_template_part('templates/sections/section', 'newsletter'); ?>
+    <?php get_template_part('templates/sections/header/section', 'newsletter'); ?>
+
     <div class="nav-side-bg"></div>
     <nav class="nav-top">
          <?php get_template_part('templates/sections/header/section', 'head-logo'); ?>
