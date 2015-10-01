@@ -76,7 +76,7 @@ class WorkingThree_Walker extends Walker_Nav_Menu {
             $item_output = $args->before;
             $item_output .= '<p class="menu-top-link" onclick="toggle_visibility(\'Dropdown\');">';
             $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
-            $item_output .= '</p>';
+            $item_output .= '&darr;</p>';
             $item_output .= $args->after;
         }else{
             $item_output = $args->before;
