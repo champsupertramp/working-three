@@ -391,6 +391,8 @@ class WD_WorkingThree{
 
         }
 
+         wp_enqueue_style( 'working-three', $this->tpl_url['assets'].'css/main.css' );
+
     }
 
     /**
@@ -400,7 +402,7 @@ class WD_WorkingThree{
      */
     public function single_post_template( $template ){
 
-          if ( is_single() &&  get_post_type(get_the_ID() ) ) {
+          if ( is_single() &&  get_post_type(get_the_ID() ) == 'casestudy' ) {
             $_template = locate_template( array( 'single-casestudy.php'  ) );
             $template = ( $_template ) ? $_template : $template;
           }
