@@ -9,7 +9,7 @@
 ?>
 <?php get_header();?>
 <?php get_template_part('templates/sections/section', 'newsletter'); ?>
-<?php get_template_part('templates/sections/section', 'contact-head'); ?>
+<?php get_template_part('templates/sections/header/section', 'inner-head'); ?>
 <section class="sec-1">
     <div class="sec-1-sidebar blue-dark"></div>
     <div class="sec-1-bg blue">
