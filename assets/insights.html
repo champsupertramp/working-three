@@ -1,0 +1,369 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet/less" type="text/css" href="styles/insights.less"/>
+    <link rel="stylesheet" type="text/css"
+          media="only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)"
+          href="css/insights_mobile.css"/>
+    <link rel="stylesheet" type="text/css"
+          media="only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)"
+          href="css/insights_tablet.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css"/>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div id="dNewsletter" style="display: none;">
+    <div class="closeWrap"><a class="closeButton" href="#" onclick="toggle_visibility('dNewsletter');">Close</a></div>
+    <img class="newsletterLogo" src="img/placeholder.jpe">
+
+    <div class="newsletterContent">
+        <div class="newsletterTitle">Be in the Know.</div>
+        <div class="newsletterText">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                venenatis feugiat ex, a vestibulum turpis consequat in. Integer
+                mi purus, tincidunt finibus ligula vel, vulputate facilisis tellus. Ut
+                non consequat mauris.</p>
+            <br>
+
+            <p class="ns-hide">Sed nec auctor lectus. Nullam quis ex ut magna lacinia placerat.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                erat volutpat.</p>
+        </div>
+        <form class="signupForm" action="" method="post">
+            <div style="float:left;margin-right:20px;">
+                <label for="name">Name*</label>
+                <input id="ns-name" type="text" value="" name="name">
+            </div>
+
+            <div style="float:left;">
+                <label for="email">Email*</label>
+                <input id="ns-email" type="text" value="" name="email">
+            </div>
+            <div class="nsButton">
+                <button type="submit">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+<div class="nav-side-bg"></div>
+<nav class="nav-top">
+    <div class="logo-wrap">
+        <img class="logo" src="img/w3logo.png">
+    </div>
+    <div class="logo-wrap-t">
+        <img class="logo" src="img/w3logo.png">
+    </div>
+    <div class="menu-wrap">
+        <p class="ns-text"><a class="ns-link" href="#" onclick="toggle_visibility('dNewsletter');">Newsletter Sign
+            Up&nbsp;&nbsp;&nbsp;<img
+                    class="ns-arrow" src="img/newsletter-arrow.png"></a>
+        </p>
+        <ul class="menu-top">
+            <li class="menu-top-item"><a class="menu-top-link" href="">Services</a></li>
+            <li id="dd" class="menu-top-item" tabindex="1">
+                <p class="menu-top-link" onclick="toggle_visibility('Dropdown');">Our Work</p>
+                <ul id="Dropdown" class="dropdown" style="display: none;">
+                    <li><a href="#">Case studies</a></li>
+                    <li><a href="#">Who we work with</a></li>
+                </ul>
+            </li>
+            <li class="menu-top-item"><a class="menu-top-link" href="">Leadership</a></li>
+            <li class="menu-top-item"><a class="menu-top-link" href="">Insights</a></li>
+            <li class="menu-top-item"><a class="menu-top-link" href="">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="soc-wrap">
+        <ul class="soc-menu">
+            <li class="soc-icons"><a class="soc-link" href=""><img src="img/social-li.png"></a></li>
+            <li class="soc-icons"><a class="soc-link" href=""><img src="img/social-fb.png"></a></li>
+            <li class="soc-icons"><a class="soc-link" href=""><img src="img/social-twitter.png"></a></li>
+        </ul>
+        <p class="soc-phone">+61 3 8060 4700</p>
+    </div>
+</nav>
+<div id="#more-m" class="more-menu" style="display: none;">
+    <div class="more-close" onclick="toggle_visibility('#more-m');">Close</div>
+    <img class="more-logo" src="img/w3logo.png">
+    <menu class="more-menu-items">
+        <a class="more-menu-item">Leadership</a>
+        <a class="more-menu-item">Who we work for</a>
+        <a class="more-menu-item">Insights</a>
+
+        <p class="more-menu-item" onclick="toggle_visibility('dNewsletter');">Newsletter sign up</p>
+    </menu>
+</div>
+<nav class="nav-bot">
+    <div id="our-work-menu" style="display: none;">
+        <a class="menu-case" href="">Case studies</a>
+        <a class="menu-who" href="">Who we work with</a>
+    </div>
+    <div class="nav-bot-wrap">
+        <div class="nav-bot-link">
+            <a href=""><img src="img/icn-services.svg"></a>
+
+            <p><a href="">Services</a></p>
+        </div>
+        <div class="nav-bot-link" onclick="toggle_visibility('our-work-menu');">
+            <img src="img/icn-work.svg">
+
+            <p><span class="tablet">Our </span>Work</p>
+        </div>
+        <div class="nav-bot-link">
+            <a href=""><img src="img/icn-leadership.svg"></a>
+
+            <p><a href="">Leadership</a></p>
+        </div>
+        <div class="nav-bot-link">
+            <a href=""><img src="img/icn-insights.svg"></a>
+
+            <p><a href="">Insights</a></p>
+        </div>
+        <div class="nav-bot-link">
+            <a href=""><img src="img/icn-contact.svg"></a>
+
+            <p><a href="">Contact<span class="tablet"> Us</span></a></p>
+        </div>
+        <div class="nav-bot-link" onclick="toggle_visibility('#more-m');">
+            <div><img src="img/icn-more.svg"></div>
+
+            <p>More</p>
+        </div>
+    </div>
+</nav>
+
+<section class="sec-1">
+    <div class="sec-1-side"></div>
+    <div class="sec-1-content-wrap">
+        <div class="sec-1-content">
+            <h1 class="title"><span class="underline">We think</span> about
+                people and data <span class="underline">a lot</span></h1>
+
+
+            <p class="p1">Read our blog to find insights into the changing ways customers and businesses are
+                engaging, and how we can use data to keep up.</p>
+
+        </div>
+    </div>
+</section>
+
+<section class="sec-2">
+    <div class="sec-2-side">
+        <nav class="nav-side">
+            <form action="" class="search-form" method="get" role="search">
+                <input type="text" id="search" name="s" value="" placeholder="Search" class="sb-search-input">
+            </form>
+            <p>Filter articles by:</p>
+            <ul>
+                <li><a href="#" class="active">All</a></li>
+                <li><a href="#">Insights</a></li>
+                <li><a href="#">Strategy</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Technology</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="sec-2-content-wrap">
+        <div class="sec-2-content">
+            <div class="blog-item">
+                <p class="blogTitle" id="blogTitle1">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
+
+                <p class="blogDate" id="blogDate1">25th, Oct 2014 in <span class="blogSection" id="blogSection1"><a href="#">Digital</a>, <a href="#">Innovation</a></span>
+                </p>
+
+                <p class="blogSnip" id="blogSnip1">Innovation can be a tricky beast to tame, especially in the
+                    digital
+                    space. It's far too easy to get excited about ideas early on and jump into a project without
+                    understanding what impact it may have...</p>
+
+                <div class="button">
+                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                </div>
+            </div>
+            <div class="blog-item">
+                <p class="blogTitle" id="blogTitle1">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
+
+                <p class="blogDate" id="blogDate1">25th, Oct 2014 in <span class="blogSection" id="blogSection1"><a href="#">Digital</a>, <a href="#">Innovation</a></span>
+                </p>
+
+                <p class="blogSnip" id="blogSnip1">Innovation can be a tricky beast to tame, especially in the
+                    digital
+                    space. It's far too easy to get excited about ideas early on and jump into a project without
+                    understanding what impact it may have...</p>
+
+                <div class="button">
+                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                </div>
+            </div>
+            <div class="blog-item">
+                <p class="blogTitle" id="blogTitle1">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
+
+                <p class="blogDate" id="blogDate1">25th, Oct 2014 in <span class="blogSection" id="blogSection1"><a href="#">Digital</a>, <a href="#">Innovation</a></span>
+                </p>
+
+                <p class="blogSnip" id="blogSnip1">Innovation can be a tricky beast to tame, especially in the
+                    digital
+                    space. It's far too easy to get excited about ideas early on and jump into a project without
+                    understanding what impact it may have...</p>
+
+                <div class="button">
+                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                </div>
+            </div>
+            <div class="blog-item">
+                <p class="blogTitle" id="blogTitle1">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
+
+                <p class="blogDate" id="blogDate1">25th, Oct 2014 in <span class="blogSection" id="blogSection1"><a href="#">Digital</a>, <a href="#">Innovation</a></span>
+                </p>
+
+                <p class="blogSnip" id="blogSnip1">Innovation can be a tricky beast to tame, especially in the
+                    digital
+                    space. It's far too easy to get excited about ideas early on and jump into a project without
+                    understanding what impact it may have...</p>
+
+                <div class="button">
+                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                </div>
+            </div>
+            <div class="blog-item">
+                <p class="blogTitle" id="blogTitle1">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
+
+                <p class="blogDate" id="blogDate1">25th, Oct 2014 in <span class="blogSection" id="blogSection1"><a href="#">Digital</a>, <a href="#">Innovation</a></span>
+                </p>
+
+                <p class="blogSnip" id="blogSnip1">Innovation can be a tricky beast to tame, especially in the
+                    digital
+                    space. It's far too easy to get excited about ideas early on and jump into a project without
+                    understanding what impact it may have...</p>
+
+                <div class="button">
+                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                </div>
+            </div>
+            <div class="blog-item">
+                <p class="blogTitle" id="blogTitle1">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
+
+                <p class="blogDate" id="blogDate1">25th, Oct 2014 in <span class="blogSection" id="blogSection1"><a href="#">Digital</a>, <a href="#">Innovation</a></span>
+                </p>
+
+                <p class="blogSnip" id="blogSnip1">Innovation can be a tricky beast to tame, especially in the
+                    digital
+                    space. It's far too easy to get excited about ideas early on and jump into a project without
+                    understanding what impact it may have...</p>
+
+                <div class="button">
+                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                </div>
+            </div>
+            <div class="blog-item">
+                <p class="blogTitle" id="blogTitle1">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
+
+                <p class="blogDate" id="blogDate1">25th, Oct 2014 in <span class="blogSection" id="blogSection1"><a href="#">Digital</a>, <a href="#">Innovation</a></span>
+                </p>
+
+                <p class="blogSnip" id="blogSnip1">Innovation can be a tricky beast to tame, especially in the
+                    digital
+                    space. It's far too easy to get excited about ideas early on and jump into a project without
+                    understanding what impact it may have...</p>
+
+                <div class="button">
+                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                </div>
+            </div>
+            <div class="blog-item">
+                <p class="blogTitle" id="blogTitle1">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
+
+                <p class="blogDate" id="blogDate1">25th, Oct 2014 in <span class="blogSection" id="blogSection1"><a href="#">Digital</a>, <a href="#">Innovation</a></span>
+                </p>
+
+                <p class="blogSnip" id="blogSnip1">Innovation can be a tricky beast to tame, especially in the
+                    digital
+                    space. It's far too easy to get excited about ideas early on and jump into a project without
+                    understanding what impact it may have...</p>
+
+                <div class="button">
+                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                </div>
+            </div>
+            <div class="blog-item">
+                <p class="blogTitle" id="blogTitle1">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
+
+                <p class="blogDate" id="blogDate1">25th, Oct 2014 in <span class="blogSection" id="blogSection1"><a href="#">Digital</a>, <a href="#">Innovation</a></span>
+                </p>
+
+                <p class="blogSnip" id="blogSnip1">Innovation can be a tricky beast to tame, especially in the
+                    digital
+                    space. It's far too easy to get excited about ideas early on and jump into a project without
+                    understanding what impact it may have...</p>
+
+                <div class="button">
+                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                </div>
+            </div>
+            <div class="pagination">
+                <p class="blog_pagination">
+                    <a href="#1">&#8592;</a>
+                    <a href="#1">1</a>
+                    <a href="#2">2</a>
+                    <a href="#3">3</a>
+                    <a href="#4">4</a>
+                    <a href="#5">5</a>
+                    <a href="#6">6</a>
+                    <a href="#7">7</a>
+                    <a href="#7">&#8594;</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sec-contact">
+    <div class="sec-contact-sidebar black-dark"></div>
+    <div class="sec-contact-bg black">
+        <div class="sec-contact-content">
+            <p class="sec-contact-text">Create outstanding digital experiences for you and your customers</p>
+            <a class="button" href="">Contact us&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="footer-sidebar grey-dark"></div>
+    <div class="footer-bg grey">
+        <div class="footer-content">
+            <p>41 Cubitt Street, <br class="br-m">Cremorne VIC 3121, Australia <br class="br-t">Copyright © Working
+                Three</p>
+
+            <p>+61 3 8060 4700</p>
+        </div>
+    </div>
+</footer>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+<script src="js/jquery.colorscroll.min.js" type="text/javascript"></script>
+<script src="js/jquery.snapscroll.js" type="text/javascript"></script>
+<script src="js/jquery.scroll_to.js" type="text/javascript"></script>
+<!--<script src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>-->
+<script>
+    function toggle_visibility(id) {
+        var e = document.getElementById(id);
+        if (e.style.display == 'block')
+            e.style.display = 'none';
+        else
+            e.style.display = 'block';
+    }
+
+</script>
+</body>
+</html>
