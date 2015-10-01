@@ -44,6 +44,7 @@
             </p>
             <div class="blog-content">
               <?php the_content(); ?>
+               <?php edit_post_link('Edit this post', '<hr/><p>', '</p>'); ?>
             </div>
             <div class="blog-autor">
                 <div class="member">
@@ -71,6 +72,13 @@
         </div>
      </div>
 </section>
+<?php
+                        $arr = array(
+                            'post_type' => 'post',
+                            'posts_per_page' => 3,
+                            'post__not_in'  => array(get_the_ID()),
+                        );
+?>
 <?php endwhile;
  endif; ?>
 <section class="section2 grey">
@@ -80,7 +88,11 @@
         <div class="wrapper">
                     <table>
                         <tr>
+
                         <?php
+
+
+                        $the_query = new WP_Query( $arr );
                         while(  $the_query->have_posts() ){
                               $the_query->the_post();
                               $categories = get_the_category();
