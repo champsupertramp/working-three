@@ -1,14 +1,16 @@
 <?php global $wd_wt; ?>
+<?php global $swap_color; ?>
+
 <div class="nav-side-bg"></div>
 <nav class="nav-top">
     <?php get_template_part('templates/sections/header/section', 'head-logo'); ?>
-    <div class="menu-wrap">
+    <div class="menu-wrap <?php echo  isset($swap_color->main_menu)? $swap_color->main_menu:'blue-gradient'; ?>">
         <?php  $has_enabled = cs_get_option( 'wd_enable_newsletter' );?>
           <?php if( $has_enabled ){ ?>
-	        <p class="ns-text"><a class="ns-link" href="#" onclick="toggle_visibility('dNewsletter');">Newsletter Sign
-	            Up&nbsp;&nbsp;&nbsp;<img
-	                    class="ns-arrow" src="<?php echo $wd_wt->tpl_url['assets'];?>img/newsletter-arrow.png"></a>
-	        </p>
+          <p class="ns-text"><a class="ns-link" href="#" onclick="toggle_visibility('dNewsletter');">Newsletter Sign
+              Up&nbsp;&nbsp;&nbsp;<img
+                      class="ns-arrow" src="<?php echo $wd_wt->tpl_url['assets'];?>img/newsletter-arrow.png"></a>
+          </p>
         <?php } ?>
         <?php
         $defaults = array(
@@ -34,9 +36,9 @@
           wp_nav_menu( $defaults );
         ?>
     </div>
-    <div class="soc-wrap">
+    <div class="soc-wrap <?php echo isset($swap_color->social_menu)? $swap_color->social_menu:'blue-gradient'; ?>">
         <ul class="soc-menu">
-        	  <?php  $social_link = cs_get_option( 'social_icon_linkedin' ); ?>
+            <?php  $social_link = cs_get_option( 'social_icon_linkedin' ); ?>
               <?php if( ! empty( $social_link ) ){ ?>
                 <li class="soc-icons"><a class="soc-link" href="<?php echo cs_get_option( 'social_icon_linkedin' );?>"><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/social-li.png"></a></li>
               <?php } ?>

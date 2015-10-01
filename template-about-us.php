@@ -5,6 +5,12 @@
  *  @since  1.0
  */
  global $wd_wt;
+ global $swap_color;
+ $swap_color = new stdClass();
+ $swap_color->logo = 'green-gradient-dark';
+ $swap_color->main_menu = 'green-gradient';
+ $swap_color->social_menu = 'green-gradient';
+
 ?>
 <?php get_header();?>
 <?php get_template_part('templates/sections/header/section', 'newsletter'); ?>
@@ -20,6 +26,7 @@
         <p class="more-menu-item" onclick="toggle_visibility('dNewsletter');">Newsletter sign up</p>
     </menu>
 </div>
+
 <nav class="nav-bot">
     <div id="our-work-menu" style="display: none;">
         <a class="menu-case" href="">Case studies</a>
@@ -58,6 +65,7 @@
         </div>
     </div>
 </nav>
+
 <a class="anchor" name="1"></a>
 <section class="sec-1">
     <div class="sec-1-sidebar green-dark">

@@ -5,10 +5,17 @@
  *  @since  1.0
  */
  global $wd_wt;
+ global $swap_color;
+ $swap_color = new stdClass();
+ $swap_color->logo = 'purple-gradient-dark';
+ $swap_color->main_menu = 'purple-gradient';
+ $swap_color->social_menu = 'purple-gradient';
+
 ?>
 <?php get_header();?>
-<?php get_template_part('templates/sections/section', 'newsletter'); ?>
-<?php get_template_part('templates/sections/section', 'inner-head'); ?>
+<?php get_template_part('templates/sections/header/section', 'newsletter'); ?>
+<?php get_template_part('templates/sections/header/section', 'inner-head'); ?>
+
 <nav class="bottomNav">
     <div class="mNavWrapper">
         <div class="mNavLink">
@@ -86,31 +93,7 @@
         </div>
     </div>
 </section>
-<nav class="nav-top">
-    <div class="logoWrapper">
-        <img src="<?php echo $wd_wt->tpl_url['assets'];?>img/w3logo.png">
-    </div>
-    <div class="navWrapper">
-        <p class="newsletter"><a href="#" onclick="toggle_visibility('dNewsletter');">Newsletter Sign Up&nbsp;&nbsp;&nbsp;<img
-                src="<?php echo $wd_wt->tpl_url['assets'];?>img/newsletter-arrow.png"></a>
-        </p>
-        <ul class="navMenu">
-            <li><a href=""><span>Services</span></a></li>
-            <li><a href=""><span>Our Work</span></a></li>
-            <li><a href=""><span>Leadership</span></a></li>
-            <li><a href=""><span>Insights</span></a></li>
-            <li><a href=""><span>Contact Us</span></a></li>
-        </ul>
-    </div>
-    <div class="socialWrapper">
-        <ul>
-            <li><a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/social-li.png"></a></li>
-            <li><a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/social-fb.png"></a></li>
-            <li><a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/social-twitter.png"></a></li>
-        </ul>
-        <p>+61 3 8060 4700</p>
-    </div>
-</nav>
+
 <section class="sec-2">
     <div class="sec-2-sidebar purple-dark"></div>
     <div class="sec-2-bg purple">
