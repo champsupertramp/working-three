@@ -6,12 +6,12 @@ and (orientation: portrait) {
   @topNavFontSize: 0.9vw;
   @sideNavFontSize: 1vw;
   @headerFontSize: 9vw;
-  @h2FontSize: 2.2vw;
+  @h2FontSize: 6vw;
   @akRegular: 'akkuratRegular', arial, sans-serif;
   @akLight: 'akkuratLight', arial, sans-serif;
-  @p1FontSize: 1.15vw;
-  @p2FontSize: 1.8vw;
-  @buttonFontSize: 1.2vw;
+  @p1FontSize: 2.5vw;
+  @p2FontSize: 3vw;
+  @buttonFontSize: 2.5vw;
   @yellowBg: #FFD24F;
   @yellowBgDark: #FFC425;
 
@@ -156,6 +156,13 @@ and (orientation: portrait) {
           margin-left: 2.7vw;
         }
       }
+      .mNavLink:nth-child(6) {
+        display: none;
+        img {
+          margin-bottom: 0;
+          margin-left: 2.7vw;
+        }
+      }
     }
   }
 
@@ -165,8 +172,10 @@ and (orientation: portrait) {
     }
     .s1Content {
       width: 100vw;
-      height: 100vh;
+      height: 55vh;
+      margin-top: 0;
       .s1Title {
+        margin-top: 20vh;
         font-size: @headerFontSize;
         line-height: 7.5vh;
         width: 73vw;
@@ -174,34 +183,37 @@ and (orientation: portrait) {
       .s1Text {
         margin-top: 3vh;
         font-size: 2.3vw;
-        width: 73vw;
+        width: 65vw;
         line-height: 2.5vh;
         P {
-          margin-bottom: 2vh;
+          margin-bottom: 1.5vh;
         }
       }
     }
   }
 
   .section2 {
-    height: 310vh;
+    height: 90vh;
     .sideBar {
       display: none;
     }
     .s2content {
       .wrapper:nth-child(1) {
-        margin-top: 25vh;
+        margin-top: 1vh;
+        margin-left: 0.3vh;
       }
       .wrapper {
-        width: 80vw;
+        width: 100vw;
+//        border: 1px solid black;
         margin-top: 8vh;
         .title {
           font-size: 9vw;
           margin-bottom: 0;
         }
         img {
-          width: 15vw;
+          width: 47vw;
         }
+
         .contentWrapper {
           font-family: @akRegular;
           color: #000;
@@ -223,6 +235,10 @@ and (orientation: portrait) {
         }
       }
     }
+  }
+
+  .section2 .wrapper .case-study .hover-info {
+    display: none;
   }
 
   .section3 {
@@ -309,13 +325,13 @@ and (orientation: portrait) {
         font-size: 2vw;
         line-height: 2vh;
         margin-left: 21vw;
-        margin-top: 6vh;
+        margin-top: 12vh;
         margin-bottom: 5vh;
       }
       .signupForm {
         width: 35vw;
         position: absolute;
-        margin-top: 0;
+        margin-top: 32vh;
         margin-left: 21vw;
         label {
           display: block;
@@ -347,72 +363,86 @@ and (orientation: portrait) {
     }
   }
 
-  .contact {
-    background: #2D2C2B;
+  .sec-contact {
     height: 10vh;
     width: 100vw;
-    .contactDark {
+    display: block;
+    .sec-contact-sidebar {
+      height: 14vh;
+      width: 16vw;
       display: none;
     }
-    .contactContent {
-      position: relative;
-      p {
-        color: #fff;
-        font-family: @akRegular;
-        padding-top: 2.2vh;
-        padding-right: 0vw;
-        padding-left: 0vw;
-        font-size: 2.3vw;
-        line-height: 2.5vh;
-        margin-top: 0;
-        margin-left: 3vw;
-        width: 45vw;
-      }
-      .contactButton {
-        position: absolute;
+    .sec-contact-bg {
+      height: 10vh;
+      width: 100vw;
+      display: inline-block;
+      float: right;
+      .sec-contact-content {
         display: inline-block;
-        margin-top: 2.5vh;
-        background: @yellowBg;
-        color: #fff;
-        height: 1.5vh;
-        font-size: 2.3vw;
-        width: 18vw;
-        margin-left: 24vw;
-        padding: 1.5vh 2vw 1.5vh 2vw;
-        a img {
+        float: left;
+        width: 96vw;
+        .sec-contact-text {
+          width: 45vw;
+          color: #fff;
+          font-family: @akRegular;
+          font-size: 2.5vw;
+          margin-left: 4vw;
+          margin-top: 2.5vh;
+          line-height: 2.5vh;
+        }
+        .button {
+          vertical-align: top;
+          display: inline-block;
+          float: right;
           background: @yellowBg;
-          width: 2.3vw;
+          padding: 1.6vw;
+          margin-top: -4.5vh;
+          text-decoration: none;
+          font-size: 2.8vw;
+          img {
+            background: transparent;
+          }
         }
       }
     }
   }
 
   footer {
-    background: #E9EAEA;
+    height: 17vh;
     width: 100vw;
-    padding-top: 2vh;
-    height: 9vh;
-
-    .footerDark {
+    display: block;
+    .footer-sidebar {
+      height: 30vh;
+      width: 16vw;
       display: none;
     }
-    .footerD {
-      display: none;
-    }
-    p.footerT {
+    .footer-bg {
+      width: 100vw;
+      height: 17vh;
       display: inline-block;
-      font-size: 1.9vw;
-      width: 50vw;
-      margin-left: 3vw;
-      margin-top: 1vw;
-      line-height: 2.5vh;
-    }
-    p.footerT:nth-child(3) {
       float: right;
-      width: 20vw;
-      margin-top: 3.3vh;
+      color: #000;
+      font-family: @akRegular;
+      font-size: 2vw;
+      .footer-content {
+        margin-left: 4vw;
+        margin-top: 3vh;
+        p {
+          display: inline;
+          line-height: 2.2vh;
+          margin-right: 10.7vw;
+        }
+        p:nth-child(2) {
+          float: right;
+        }
+      }
     }
   }
+
+  .br-t {
+    display: block;
+  }
+
 
   .tSpace {
     width: 100vw;
