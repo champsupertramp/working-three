@@ -389,6 +389,11 @@ class WD_WorkingThree{
             wp_enqueue_style( 'working-three-insights-and-article-content-mobile', $this->tpl_url['assets'].'css/insights-and-article-content-mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
             wp_enqueue_style( 'working-three-insights-and-article-content-table', $this->tpl_url['assets'].'css/insights-and-article-content-tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
 
+        }else{
+            wp_enqueue_style( 'working-three-insights-and-article', $this->tpl_url['assets'].'css/insights-and-article.css' );
+            wp_enqueue_style( 'working-three-insights-and-article-mobile', $this->tpl_url['assets'].'css/insights-and-article-mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
+            wp_enqueue_style( 'working-three-insights-and-article-table', $this->tpl_url['assets'].'css/insights-and-article-tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
+
         }
 
          wp_enqueue_style( 'working-three', $this->tpl_url['assets'].'css/main.css' );

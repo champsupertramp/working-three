@@ -13,8 +13,12 @@
           </p>
         <?php } ?>
         <?php
+        $theme_location = 'primary_navigation';
+        if( is_page_template("template-about-us.php") ){
+            $theme_location = 'leadership_navigation';
+        }
         $defaults = array(
-          'theme_location'  => 'primary_navigation',
+          'theme_location'  => $theme_location,
           'menu'            => '',
           'container'       => '',
           'container_class' => '',

@@ -24,27 +24,13 @@
 </section>
 
 <section class="section2">
-    <div class="sideBar">
-        <nav class="nav-side nav-side-grey">
-      <form action="" class="search-form" method="get" role="search">
-        <input type="text" id="search" name="s" value="" placeholder="Search" class="sb-search-input">
-      </form>
-          <p>Filter articles by:</p>
-            <ul>
-                <li><a href="#" class="active">All</a></li>
-                <li><a href="#">Insights</a></li>
-                <li><a href="#">Strategy</a></li>
-                <li><a href="#">Design</a></li>
-                <li><a href="#">Technology</a></li>
-            </ul>
-        </nav>
-    </div>
+    <?php get_sidebar(); ?>
     <div class="s2content">
         <?php
             $case_study_category_id = 0;
             $arr = array(
                 'post_type' => 'post',
-                'posts_per_page' => 9,
+                'posts_per_page' => get_option('posts_per_page'),
             );
 
             if( $case_study_category_id ){
@@ -83,16 +69,27 @@
                                         <a href="<?php the_permalink(); ?>">Read More&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
                                     </div>
                       </td>
-            <?php if(  $i%3 == 0){ ?>
+            <?php if(  $i%3 == 0 || ($the_query->post_count < 3   && $the_query->post_count == $i  ) ){ ?>
                   </tr>
               </table>
-            </div><?php } ?>
+            </div>
+            <?php } ?>
         <?php $i++; ?>
         <?php }  ?>
-
         <div class="wrapper">
-          <p class="blog_pagination">
-            <a href="#1">&#8592;</a>
+             <p class="blog_pagination">
+
+             <?php
+              echo paginate_links( array(
+                  'base' => str_replace( $the_query->found_posts, '%#%', esc_url( get_pagenum_link( $the_query->found_posts ) ) ),
+                  'format' => '/page/%#%',
+                  'current' => max( 1, get_query_var('paged') ),
+                  'total' => $the_query->max_num_pages,
+                  'prev_text' => '&lt;&lt;',
+                  'next_text' => '&gt;&gt;'
+                ) );
+              ?>
+   <!--          <a href="#1">&#8592;</a>
             <a href="#1">1</a>
             <a href="#2">2</a>
             <a href="#3">3</a>
@@ -100,7 +97,7 @@
             <a href="#5">5</a>
             <a href="#6">6</a>
             <a href="#7">7</a>
-            <a href="#7">&#8594;</a>
+            <a href="#7">&#8594;</a> -->
           </p>
         </div>
 

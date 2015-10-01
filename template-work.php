@@ -10,6 +10,9 @@
 <?php get_header();?>
 <?php get_template_part('templates/sections/section', 'newsletter'); ?>
 <?php get_template_part('templates/sections/header/section', 'inner-head'); ?>
+<?php get_template_part('templates/sections/header/section', 'more-menu'); ?>
+<?php get_template_part('templates/sections/header/section', 'nav-bottom'); ?>
+
 <section class="sec-1">
     <div class="sec-1-sidebar blue-dark"></div>
     <div class="sec-1-bg blue">
