@@ -8,41 +8,8 @@
 ?>
 <?php get_header();?>
 <?php get_template_part('templates/sections/section', 'newsletter'); ?>
-<?php get_template_part('templates/sections/section', 'inner-head'); ?>
-<nav class="bottomNav">
-    <div class="mNavWrapper">
-        <div class="mNavLink">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-services.svg"></a>
+<?php get_template_part('templates/sections/header/section', 'blog-header'); ?>
 
-            <p><a href="">Services</a></p>
-        </div>
-        <div class="mNavLink">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-work.svg"></a>
-
-            <p><a href=""><span class="tablet">Our </span>Work</a></p>
-        </div>
-        <div class="mNavLink">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-leadership.svg"></a>
-
-            <p><a href="">Leadership</a></p>
-        </div>
-        <div class="mNavLink">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-insights.svg"></a>
-
-            <p><a href="">Insights</a></p>
-        </div>
-        <div class="mNavLink">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-contact.svg"></a>
-
-            <p><a href="">Contact<span class="tablet"> Us</span></a></p>
-        </div>
-        <div class="mNavLink">
-            <a href=""><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/icn-more.svg"></a>
-
-            <p><a href="">More</a></p>
-        </div>
-    </div>
-</nav>
 <section class="section1">
     <div class="sideBar"></div>
     <!--<div class="navBlock"></div>-->
