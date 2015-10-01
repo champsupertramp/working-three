@@ -49,7 +49,7 @@ table {
   border-spacing: 0;
 }
 
-#mobile, #tablet {
+#mobile, #tablet, .nav-bot {
   display: none;
 }
 
@@ -78,6 +78,7 @@ sans-serif;
 @link-visited: #9C8DC3;
 @dark-grey: #231F20;
 @headerFontSize: 4.4vw;
+@menu-font-size: 0.9vw;
 //FONTS//
 @font-face {
   font-family: "akkuratRegular";
@@ -199,61 +200,108 @@ body {
 
 //TOP NAVIGATION//
 .nav-top {
-  position: absolute;
-  width: 100vw;
+  top: 0;
   font-family: @akRegular;
-  font-size: @topNavFontSize;
+  width: 100vw;
+  height: 20vh;
+  display: block;
+  position: absolute;
+  text-transform: uppercase;
   color: #fff;
-  .logoWrapper{
-    background-image: linear-gradient( rgba(255, 196, 37, 1) 60%, rgba(255, 196, 37, 0));
+  font-size: @menu-font-size;
+  z-index: 10;
+  .logo-wrap-t {
+    display: none;
+  }
+  .logo-wrap {
     width: 16vw;
-    img {
+    display: inline-block;
+    height: 20vh;
+    margin: 0;
+    float: left;
+    .logo {
       margin: 6.5vh 0 0 2vw;
       width: 9vw;
     }
   }
-  .navWrapper{
-    background-image: linear-gradient( rgba(255, 210, 79, 1) 60%, rgba(255, 210, 79, 0));
-    width: 60vw;
-    text-transform: uppercase;
-    p {
+  .menu-wrap {
+    width: 68vw;
+    display: inline-block;
+    height: 20vh;
+    margin: 0;
+    float: left;
+    .ns-text {
       margin-left: 12vw;
       margin-top: 4vh;
-      a {
+      .ns-link {
         color: inherit;
         text-decoration: none;
-        img {
-          height: 1.2vh;
+      }
+    }
+    .menu-top {
+      margin-left: 12vw;
+      margin-top: 6vh;
+      .menu-top-item {
+        display: inline;
+        margin-right: 3vw;
+        .menu-top-link {
+          display: inline;
+          color: inherit;
+          text-decoration: none;
         }
       }
     }
-    ul{
-      margin-left: 12vw;
-      margin-top: 6vh;
-      li {
-        display: inline;
-        margin-right: 3vw;
-      }
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-    }
   }
-  .socialWrapper{
-    background-image: linear-gradient( rgba(255, 210, 79, 1) 60%, rgba(255, 210, 79, 0));
-    width: 24vw;
-    p {
-      margin-left: 3vw
-    }
-    ul {
-      margin: 3vh 0 5vh 3vw;
-      li {
+  .soc-wrap {
+    width: 16vw;
+    display: inline-block;
+    height: 20vh;
+    margin: 0;
+    float: left;
+    .soc-menu {
+      margin: 3.7vh 0 5vh 0;
+      .soc-icons {
         display: inline;
         margin-right: 1.9vw;
+        .soc-link img {
+          height: 2.2vh;
+        }
       }
     }
+    .soc-phone {
+      margin-left: 0;
+    }
   }
+}
+
+#dd {
+  position: relative;
+  width: 200px;
+  padding: 10px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+}
+
+
+#dd .dropdown {
+  color: @yellowBgDark;
+  position: absolute;
+  top: 140%;
+  left: 0;
+  right: 0;
+  width: 11.5vw;
+  font-weight: normal;
+  list-style: none;
+  pointer-events: none;
+}
+
+#dd .dropdown li a {
+  display: block;
+  padding: 2vh;
+  text-decoration: none;
+  color: #fff;
 }
 
 //SECTION 1//

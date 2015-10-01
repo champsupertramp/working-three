@@ -127,7 +127,8 @@ table {
   border-spacing: 0;
 }
 #mobile,
-#tablet {
+#tablet,
+.nav-bot {
   display: none;
 }
 @font-face {
@@ -240,61 +241,104 @@ body {
   height: 20vh;
 }
 .nav-top {
-  position: absolute;
-  width: 100vw;
+  top: 0;
   font-family: 'akkuratRegular', arial, sans-serif;
-  font-size: 0.9vw;
+  width: 100vw;
+  height: 20vh;
+  display: block;
+  position: absolute;
+  text-transform: uppercase;
   color: #fff;
+  font-size: 0.9vw;
+  z-index: 10;
 }
-.nav-top .logoWrapper {
-  background-image: linear-gradient(#ffc425 60%, rgba(255, 196, 37, 0));
+.nav-top .logo-wrap-t {
+  display: none;
+}
+.nav-top .logo-wrap {
   width: 16vw;
+  display: inline-block;
+  height: 20vh;
+  margin: 0;
+  float: left;
 }
-.nav-top .logoWrapper img {
+.nav-top .logo-wrap .logo {
   margin: 6.5vh 0 0 2vw;
   width: 9vw;
 }
-.nav-top .navWrapper {
-  background-image: linear-gradient(#ffd24f 60%, rgba(255, 210, 79, 0));
-  width: 60vw;
-  text-transform: uppercase;
+.nav-top .menu-wrap {
+  width: 68vw;
+  display: inline-block;
+  height: 20vh;
+  margin: 0;
+  float: left;
 }
-.nav-top .navWrapper p {
+.nav-top .menu-wrap .ns-text {
   margin-left: 12vw;
   margin-top: 4vh;
 }
-.nav-top .navWrapper p a {
+.nav-top .menu-wrap .ns-text .ns-link {
   color: inherit;
   text-decoration: none;
 }
-.nav-top .navWrapper p a img {
-  height: 1.2vh;
-}
-.nav-top .navWrapper ul {
+.nav-top .menu-wrap .menu-top {
   margin-left: 12vw;
   margin-top: 6vh;
 }
-.nav-top .navWrapper ul li {
+.nav-top .menu-wrap .menu-top .menu-top-item {
   display: inline;
   margin-right: 3vw;
 }
-.nav-top .navWrapper ul a {
+.nav-top .menu-wrap .menu-top .menu-top-item .menu-top-link {
+  display: inline;
   color: inherit;
   text-decoration: none;
 }
-.nav-top .socialWrapper {
-  background-image: linear-gradient(#ffd24f 60%, rgba(255, 210, 79, 0));
-  width: 24vw;
+.nav-top .soc-wrap {
+  width: 16vw;
+  display: inline-block;
+  height: 20vh;
+  margin: 0;
+  float: left;
 }
-.nav-top .socialWrapper p {
-  margin-left: 3vw;
+.nav-top .soc-wrap .soc-menu {
+  margin: 3.7vh 0 5vh 0;
 }
-.nav-top .socialWrapper ul {
-  margin: 3vh 0 5vh 3vw;
-}
-.nav-top .socialWrapper ul li {
+.nav-top .soc-wrap .soc-menu .soc-icons {
   display: inline;
   margin-right: 1.9vw;
+}
+.nav-top .soc-wrap .soc-menu .soc-icons .soc-link img {
+  height: 2.2vh;
+}
+.nav-top .soc-wrap .soc-phone {
+  margin-left: 0;
+}
+#dd {
+  position: relative;
+  width: 200px;
+  padding: 10px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+}
+#dd .dropdown {
+  color: #ffc425;
+  position: absolute;
+  top: 140%;
+  left: 0;
+  right: 0;
+  width: 11.5vw;
+  font-weight: normal;
+  list-style: none;
+  pointer-events: none;
+}
+#dd .dropdown li a {
+  display: block;
+  padding: 2vh;
+  text-decoration: none;
+  color: #fff;
 }
 .section1 {
   color: #fff;
