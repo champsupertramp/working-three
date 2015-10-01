@@ -8,7 +8,7 @@
 ?>
 <?php get_header();?>
 <?php get_template_part('templates/sections/section', 'newsletter'); ?>
-<?php get_template_part('templates/sections/header/section', 'blog-header'); ?>
+<?php get_template_part('templates/sections/header/section', 'inner-head'); ?>
 
 <section class="section1">
     <div class="sideBar"></div>
