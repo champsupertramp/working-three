@@ -4,8 +4,14 @@
  * @since  1.0
  */
 global $wd_wt;
+ global $swap_color;
+ $swap_color = new stdClass();
+  $swap_color->main_menu = 'grey-gradient';
+ $swap_color->social_menu = 'grey-gradient';
+
 ?>
 <?php get_header();?>
+<!-- Case Study single -->
 <?php get_template_part('templates/sections/header/section', 'newsletter'); ?>
 <?php get_template_part('templates/sections/header/section', 'inner-head'); ?>
 <div id="#more-m" class="more-menu" style="display: none;">
@@ -57,6 +63,7 @@ global $wd_wt;
         </div>
     </div>
 </nav>
+
 <?php
  if( have_posts() ):
   while( have_posts() ) : the_post();
