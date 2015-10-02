@@ -604,3 +604,105 @@ footer .footer-bg .footer-content p {
   color: #FFF;
   background: #bbbbbb;
 }
+.sec-4 {
+  height: 45vh;
+  width: 100vw;
+  display: block;
+}
+.sec-4 .sec-4-sidebar {
+  height: 45vh;
+  width: 16vw;
+  display: inline-block;
+  background: #e95944;
+}
+.sec-4 .sec-4-bg {
+  width: 84vw;
+  height: 45vh;
+  display: inline-block;
+  float: right;
+  color: #fff;
+  background: #eb6852;
+  font-family: 'akkuratRegular', arial, sans-serif;
+}
+.sec-4 .sec-4-bg .sec-4-content {
+  width: 60vw;
+  margin-left: 12vw;
+  margin-top: 8vh;
+}
+.sec-4 .sec-4-bg .sec-4-content .p2 {
+  font-size: 1.6vw;
+  line-height: 4.5vh;
+  width: 35vw;
+}
+.sec-4 .sec-4-bg .sec-4-content .signup-form {
+  margin-top: 10vh;
+}
+.sec-4 .sec-4-bg .sec-4-content .signup-form .input-name {
+  display: inline;
+  margin-right: 1vw;
+}
+.sec-4 .sec-4-bg .sec-4-content .signup-form .input-name input {
+  width: 18vw;
+  height: 5vh;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  font-family: 'akkuratRegular', arial, sans-serif;
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-4 .sec-4-bg .sec-4-content .signup-form .input-name input::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-4 .sec-4-bg .sec-4-content .signup-form .input-name input::-moz-placeholder {
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-4 .sec-4-bg .sec-4-content .signup-form .input-name input:-moz-placeholder {
+  /* Older versions of Firefox */
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-4 .sec-4-bg .sec-4-content .signup-form .input-name input:-ms-input-placeholder {
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-4 .sec-4-bg .sec-4-content .signup-form .input-email {
+  display: inline;
+  margin-right: 1vw;
+}
+.sec-4 .sec-4-bg .sec-4-content .signup-form .input-email input {
+  width: 18vw;
+  height: 5vh;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  font-family: 'akkuratRegular', arial, sans-serif;
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-4 .sec-4-bg .sec-4-content .signup-form .input-email input::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-4 .sec-4-bg .sec-4-content .signup-form .input-email input::-moz-placeholder {
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-4 .sec-4-bg .sec-4-content .signup-form .input-email input:-moz-placeholder {
+  /* Older versions of Firefox */
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-4 .sec-4-bg .sec-4-content .signup-form .input-email input:-ms-input-placeholder {
+  color: #fff;
+  font-size: 1.2vw;
+}
+.sec-4 .sec-4-bg .sec-4-content .signup-form .form-button {
+  display: inline;
+}
+.sec-4 .sec-4-bg .sec-4-content .signup-form .form-button button {
+  height: 6vh;
+  background: #4a2f24;
+}

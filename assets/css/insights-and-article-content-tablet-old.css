@@ -1,0 +1,369 @@
+@media only screen and (min-width: 768px) and (max-width: 959px) and (orientation: portrait) {
+  @font-face {
+    font-family: "akkuratRegular";
+    src: url('../fonts/AkkuratRegular.otf') format('opentype');
+  }
+  @font-face {
+    font-family: "akkuratLight";
+    src: url('../fonts/AkkuratLight.otf') format('opentype');
+  }
+  #topNav2 {
+    margin-top: 100vh;
+    background: #eb6852;
+    width: 100vw;
+    z-index: 0;
+    height: 18vh;
+  }
+  #topNav2 .logoWrapper,
+  #topNav2 .socialWrapper,
+  #topNav2 .navWrapper {
+    height: 18vh;
+  }
+  .nav-top {
+    height: 10vh;
+    position: absolute;
+  }
+  .nav-top .logoWrapper {
+    width: 33vw;
+    background: #eb6852;
+  }
+  .nav-top .logoWrapper img {
+    width: 17vw;
+    margin-top: 6vw;
+    margin-left: 6vw;
+  }
+  .nav-top .navWrapper {
+    width: 33vw;
+  }
+  .nav-top .navWrapper .newsletter {
+    margin-left: 5.5vw;
+    margin-top: 8.3vh;
+  }
+  .nav-top .navWrapper .newsletter a {
+    font-size: 2vw;
+  }
+  .nav-top .navWrapper .navMenu {
+    display: none;
+  }
+  .nav-top .socialWrapper {
+    width: 33vw;
+  }
+  .nav-top .socialWrapper ul {
+    margin-left: 9vw;
+    margin-top: 3vh;
+    display: flex;
+    width: 16vw;
+    justify-content: space-between;
+  }
+  .nav-top .socialWrapper ul li img {
+    height: 1.7vh;
+    margin-right: 3.5vw;
+  }
+  .nav-top .socialWrapper p {
+    display: block;
+    margin-left: 8vw;
+    margin-top: -1.8vh;
+    font-family: 'akkuratRegular', arial, sans-serif;
+    color: #fff;
+    font-size: 2.3vw;
+    width: 18vw;
+  }
+  .bottomNav {
+    display: block;
+    width: 100vw;
+    height: 9vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #e95944;
+    color: #fff;
+    z-index: 1;
+  }
+  .bottomNav .mNavWrapper {
+    margin-top: 1.7vw;
+    display: flex;
+    justify-content: space-between;
+    width: 92vw;
+    padding: 0 4vw;
+  }
+  .bottomNav .mNavWrapper .mNavLink {
+    display: inline-block;
+  }
+  .bottomNav .mNavWrapper .mNavLink a img {
+    width: 5vw;
+    margin-left: 1.5vw;
+  }
+  .bottomNav .mNavWrapper .mNavLink p {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'akkuratRegular', arial, sans-serif;
+    font-size: 1.7vw;
+    margin-top: 1vh;
+  }
+  .bottomNav .mNavWrapper .mNavLink p a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .bottomNav .mNavWrapper .mNavLink:nth-child(1) img {
+    margin-bottom: 0;
+  }
+  .bottomNav .mNavWrapper .mNavLink:nth-child(2) img {
+    margin-bottom: 0;
+    margin-left: 2.2vw;
+  }
+  .bottomNav .mNavWrapper .mNavLink:nth-child(3) img {
+    margin-bottom: 0;
+    margin-left: 3vw;
+  }
+  .bottomNav .mNavWrapper .mNavLink:nth-child(4) img {
+    margin-bottom: 0;
+    margin-left: 1.2vw;
+  }
+  .bottomNav .mNavWrapper .mNavLink:nth-child(5) img {
+    margin-bottom: 0;
+    margin-left: 2.7vw;
+  }
+  .section1 .sideBar {
+    display: none;
+  }
+  .section1 .s1Content {
+    width: 100vw;
+    height: 100vh;
+  }
+  .section1 .s1Content .s1Title {
+    font-size: 9vw;
+    line-height: 7.5vh;
+    width: 73vw;
+  }
+  .section1 .s1Content .s1Text {
+    margin-top: 3vh;
+    font-size: 2.3vw;
+    width: 73vw;
+    line-height: 2.5vh;
+  }
+  .section1 .s1Content .s1Text P {
+    margin-bottom: 2vh;
+  }
+  .section2 {
+    height: 310vh;
+  }
+  .section2 .sideBar {
+    display: none;
+  }
+  .section2 .s2content .wrapper:nth-child(1) {
+    margin-top: 25vh;
+  }
+  .section2 .s2content .wrapper {
+    width: 80vw;
+    margin-top: 8vh;
+  }
+  .section2 .s2content .wrapper .title {
+    font-size: 9vw;
+    margin-bottom: 0;
+  }
+  .section2 .s2content .wrapper img {
+    width: 15vw;
+  }
+  .section2 .s2content .wrapper .contentWrapper {
+    font-family: 'akkuratRegular', arial, sans-serif;
+    color: #000;
+    width: 57vw;
+  }
+  .section2 .s2content .wrapper .contentWrapper .text {
+    font-size: 3vw;
+    line-height: 3vh;
+    width: 56vw;
+    margin-bottom: 3vh;
+    color: #000;
+  }
+  .section2 .s2content .wrapper .contentWrapper .subText {
+    width: 56vw;
+    font-size: 2.5vw;
+    line-height: 2.5vh;
+    color: #000;
+  }
+  .section3 .sideBar {
+    display: none;
+  }
+  .section3 .content {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 0vh;
+    border: 1px solid transparent;
+  }
+  .section3 .content .wrapper {
+    margin-top: 20vh;
+    margin-left: 14vw;
+    width: 72vw;
+    padding-top: 0;
+  }
+  .section3 .content .wrapper .title {
+    margin-top: 0;
+    font-size: 9vw;
+    width: 50vw;
+  }
+  .section3 .content .wrapper .text {
+    font-size: 2.3vw;
+    line-height: 2.5vh;
+    width: 85%;
+    margin-bottom: 2vh;
+  }
+  .section3 .content .wrapper .subText {
+    font-size: 3vw;
+  }
+  .section3 .content .wrapper .button {
+    margin-top: 3vh;
+    font-size: 2.3vw;
+    width: 30vw;
+    height: 5vh;
+  }
+  .section3 .content .wrapper .button a img {
+    width: 2.3vw;
+  }
+  #dNewsletter {
+    color: #fff;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    float: left;
+    z-index: 100000;
+    position: fixed;
+  }
+  #dNewsletter .closeWrap {
+    width: 100vw;
+    height: 3vh;
+    padding-top: 4vh;
+  }
+  #dNewsletter .closeWrap .closeButton {
+    margin-left: 85vw;
+    text-transform: uppercase;
+    font-size: 2vw;
+    color: #fff;
+    text-decoration: none;
+  }
+  #dNewsletter .newsletterLogo {
+    width: 12vw;
+    height: 12vw;
+    display: block;
+    text-align: justify;
+    margin-left: 45vw;
+    margin-top: 5vh;
+  }
+  #dNewsletter .newsletterContent .newsletterTitle {
+    margin-left: 31vw;
+    text-transform: uppercase;
+    font-size: 5vw;
+    margin-top: 3vh;
+    position: absolute;
+  }
+  #dNewsletter .newsletterContent .newsletterText {
+    position: abslute;
+    width: 60vw;
+    font-size: 2vw;
+    line-height: 2vh;
+    margin-left: 21vw;
+    margin-top: 6vh;
+    margin-bottom: 5vh;
+  }
+  #dNewsletter .newsletterContent .signupForm {
+    width: 35vw;
+    position: absolute;
+    margin-top: 0;
+    margin-left: 21vw;
+  }
+  #dNewsletter .newsletterContent .signupForm label {
+    display: block;
+    font-size: 2.5vw;
+    margin-bottom: 1vh;
+  }
+  #dNewsletter .newsletterContent .signupForm input {
+    display: block;
+    width: 60vw;
+    margin-bottom: 2vh;
+    height: 35px;
+  }
+  #dNewsletter .newsletterContent .signupForm .nsButton {
+    display: block;
+    position: absolute;
+    margin-top: 18vh;
+    margin-left: 45vw;
+  }
+  #dNewsletter .newsletterContent .signupForm .nsButton button {
+    width: 16vw;
+    font-size: 2.5vw;
+    color: #fff;
+    background: #00BCDD;
+    border: 0;
+    border-radius: 3px;
+    height: 3vh;
+  }
+  .contact {
+    background: #2D2C2B;
+    height: 10vh;
+    width: 100vw;
+  }
+  .contact .contactDark {
+    display: none;
+  }
+  .contact .contactContent {
+    position: relative;
+  }
+  .contact .contactContent p {
+    color: #fff;
+    font-family: 'akkuratRegular', arial, sans-serif;
+    padding-top: 2.2vh;
+    padding-right: 0vw;
+    padding-left: 0vw;
+    font-size: 2.3vw;
+    line-height: 2.5vh;
+    margin-top: 0;
+    margin-left: 3vw;
+    width: 45vw;
+  }
+  .contact .contactContent .contactButton {
+    position: absolute;
+    display: inline-block;
+    margin-top: 2.5vh;
+    background: #eb6852;
+    color: #fff;
+    height: 1.5vh;
+    font-size: 2.3vw;
+    width: 18vw;
+    margin-left: 24vw;
+    padding: 1.5vh 2vw 1.5vh 2vw;
+  }
+  .contact .contactContent .contactButton a img {
+    background: #eb6852;
+    width: 2.3vw;
+  }
+  footer {
+    background: #E9EAEA;
+    width: 100vw;
+    padding-top: 2vh;
+    height: 9vh;
+  }
+  footer .footerDark {
+    display: none;
+  }
+  footer .footerD {
+    display: none;
+  }
+  footer p.footerT {
+    display: inline-block;
+    font-size: 1.9vw;
+    width: 50vw;
+    margin-left: 3vw;
+    margin-top: 1vw;
+    line-height: 2.5vh;
+  }
+  footer p.footerT:nth-child(3) {
+    float: right;
+    width: 20vw;
+    margin-top: 3.3vh;
+  }
+  .tSpace {
+    width: 100vw;
+    height: 9vh;
+    display: block;
+  }
+}

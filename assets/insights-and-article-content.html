@@ -21,6 +21,7 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
+
 <div id="dNewsletter" style="display: none;">
     <div class="closeWrap"><a class="closeButton" href="#" onclick="toggle_visibility('dNewsletter');">Close</a></div>
     <img class="newsletterLogo" src="img/placeholder.jpe">
@@ -34,19 +35,19 @@
                 non consequat mauris.</p>
             <br>
 
-            <p>Sed nec auctor lectus. Nullam quis ex ut magna lacinia placerat.
+            <p class="ns-hide">Sed nec auctor lectus. Nullam quis ex ut magna lacinia placerat.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
                 erat volutpat.</p>
         </div>
         <form class="signupForm" action="" method="post">
             <div style="float:left;margin-right:20px;">
                 <label for="name">Name*</label>
-                <input id="name" type="text" value="" name="name">
+                <input id="ns-name" type="text" value="" name="name">
             </div>
 
             <div style="float:left;">
                 <label for="email">Email*</label>
-                <input id="email" type="text" value="" name="email">
+                <input id="ns-email" type="text" value="" name="email">
             </div>
             <div class="nsButton">
                 <button type="submit">Submit</button>
@@ -55,238 +56,264 @@
         </form>
     </div>
 </div>
-
-<!--DESKTOP-->
-
+<div class="nav-side-bg"></div>
 <nav class="nav-top">
-    <div class="logoWrapper">
-        <img src="img/w3logo.png">
+    <div class="logo-wrap">
+        <img class="logo" src="img/w3logo.png">
     </div>
-    <div class="navWrapper">
-        <p class="newsletter"><a href="#" onclick="toggle_visibility('dNewsletter');">Newsletter Sign Up&nbsp;&nbsp;&nbsp;<img
-                src="img/newsletter-arrow.png"></a>
+    <div class="logo-wrap-t">
+        <img class="logo" src="img/w3logo.png">
+    </div>
+    <div class="menu-wrap">
+        <p class="ns-text"><a class="ns-link" href="#" onclick="toggle_visibility('dNewsletter');">Newsletter Sign
+            Up&nbsp;&nbsp;&nbsp;<img
+                    class="ns-arrow" src="img/newsletter-arrow.png"></a>
         </p>
-        <ul class="navMenu">
-            <li><a href=""><span>Services</span></a></li>
-            <li><a href=""><span>Our Work</span></a></li>
-            <li><a href=""><span>Leadership</span></a></li>
-            <li><a href=""><span>Insights</span></a></li>
-            <li><a href=""><span>Contact Us</span></a></li>
+        <ul class="menu-top">
+            <li class="menu-top-item"><a class="menu-top-link" href="">Services</a></li>
+            <li id="dd" class="menu-top-item" tabindex="1">
+                <p class="menu-top-link" onclick="toggle_visibility('Dropdown');">Our Work</p>
+                <ul id="Dropdown" class="dropdown" style="display: none;">
+                    <li><a href="#">Case studies</a></li>
+                    <li><a href="#">Who we work with</a></li>
+                </ul>
+            </li>
+            <li class="menu-top-item"><a class="menu-top-link" href="">Leadership</a></li>
+            <li class="menu-top-item"><a class="menu-top-link" href="">Insights</a></li>
+            <li class="menu-top-item"><a class="menu-top-link" href="">Contact Us</a></li>
         </ul>
     </div>
-    <div class="socialWrapper">
-        <ul>
-            <li><a href=""><img src="img/social-li.png"></a></li>
-            <li><a href=""><img src="img/social-fb.png"></a></li>
-            <li><a href=""><img src="img/social-twitter.png"></a></li>
+    <div class="soc-wrap">
+        <ul class="soc-menu">
+            <li class="soc-icons"><a class="soc-link" href=""><img src="img/social-li.png"></a></li>
+            <li class="soc-icons"><a class="soc-link" href=""><img src="img/social-fb.png"></a></li>
+            <li class="soc-icons"><a class="soc-link" href=""><img src="img/social-twitter.png"></a></li>
         </ul>
-        <p>+61 3 8060 4700</p>
+        <p class="soc-phone">+61 3 8060 4700</p>
     </div>
 </nav>
-<nav class="bottomNav">
-    <div class="mNavWrapper">
-        <div class="mNavLink">
+<div id="#more-m" class="more-menu" style="display: none;">
+    <div class="more-close" onclick="toggle_visibility('#more-m');">Close</div>
+    <img class="more-logo" src="img/w3logo.png">
+    <menu class="more-menu-items">
+        <a class="more-menu-item">Leadership</a>
+        <a class="more-menu-item">Who we work for</a>
+        <a class="more-menu-item">Insights</a>
+
+        <p class="more-menu-item" onclick="toggle_visibility('dNewsletter');">Newsletter sign up</p>
+    </menu>
+</div>
+<nav class="nav-bot">
+    <div id="our-work-menu" style="display: none;">
+        <a class="menu-case" href="">Case studies</a>
+        <a class="menu-who" href="">Who we work with</a>
+    </div>
+    <div class="nav-bot-wrap">
+        <div class="nav-bot-link">
             <a href=""><img src="img/icn-services.svg"></a>
 
             <p><a href="">Services</a></p>
         </div>
-        <div class="mNavLink">
-            <a href=""><img src="img/icn-work.svg"></a>
+        <div class="nav-bot-link" onclick="toggle_visibility('our-work-menu');">
+            <img src="img/icn-work.svg">
 
-            <p><a href=""><span class="tablet">Our </span>Work</a></p>
+            <p><span class="tablet">Our </span>Work</p>
         </div>
-        <div class="mNavLink">
+        <div class="nav-bot-link">
             <a href=""><img src="img/icn-leadership.svg"></a>
 
             <p><a href="">Leadership</a></p>
         </div>
-        <div class="mNavLink">
+        <div class="nav-bot-link">
             <a href=""><img src="img/icn-insights.svg"></a>
 
             <p><a href="">Insights</a></p>
         </div>
-        <div class="mNavLink">
+        <div class="nav-bot-link">
             <a href=""><img src="img/icn-contact.svg"></a>
 
             <p><a href="">Contact<span class="tablet"> Us</span></a></p>
         </div>
-        <div class="mNavLink">
-            <a href=""><img src="img/icn-more.svg"></a>
+        <div class="nav-bot-link" onclick="toggle_visibility('#more-m');">
+            <div><img src="img/icn-more.svg"></div>
 
-            <p><a href="">More</a></p>
+            <p>More</p>
         </div>
     </div>
 </nav>
-<section class="section1">
-    <div class="sideBar"></div>
-    <!--<div class="navBlock"></div>-->
-    <div class="s1Content">
-        <div class="s1Title">Social media governance for <br />company directors</div>
-        <div class="s1Text">
-            <p>24 April 2015</p>
+
+<section class="sec-1">
+    <div class="sec-1-side"></div>
+    <div class="sec-1-content-wrap">
+        <div class="sec-1-content">
+            <h1 class="title">Social media governance for company directors</h1>
+        </div>
+        <div class="search">
+            <p class="date">24 April 2015</p>
+
+            <form action="" class="search-form" method="get" role="search">
+                <input type="text" id="search" name="s" value="" class="sb-search-input">
+            </form>
         </div>
     </div>
 </section>
-<nav class="nav-top" id="topNav2">
-    <div class="logoWrapper">
-        <img src="img/w3logo.png">
-    </div>
-    <div class="navWrapper">
-        <p class="newsletter"><a href="#" onclick="toggle_visibility('dNewsletter');">Newsletter Sign Up&nbsp;&nbsp;&nbsp;<img
-                src="img/newsletter-arrow.png"></a>
-        </p>
-        <ul class="navMenu">
-            <li><a href=""><span>Services</span></a></li>
-            <li><a href=""><span>Our Work</span></a></li>
-            <li><a href=""><span>Leadership</span></a></li>
-            <li><a href=""><span>Insights</span></a></li>
-            <li><a href=""><span>Contact Us</span></a></li>
-        </ul>
-    </div>
-    <div class="socialWrapper">
-        <ul>
-            <li><a href=""><img src="img/social-li.png"></a></li>
-            <li><a href=""><img src="img/social-fb.png"></a></li>
-            <li><a href=""><img src="img/social-twitter.png"></a></li>
-        </ul>
-        <p>+61 3 8060 4700</p>
-    </div>
-</nav>
-<section class="section2">
-    <div class="sideBar">
-        <nav class="nav-side nav-side-grey">
 
-        	<p>Share this article</p>
-	                <ul class="socials">
-	                	<li><a href=""><img src="img/social-in-grey.png"></a></li>
-            			<li><a href=""><img src="img/social-fb-grey.png"></a></li>
-            			<li><a href=""><img src="img/social-tw-grey.png"></a></li>
-            			<li><a href=""><img src="img/social-st-grey.png"></a></li>
-	                </ul>
-        </nav>
-    </div>
-    <div class="s2content">
-        <div class="wrapper">
-			<p class="heading-blog">I recently attended an event that focused on Big Data insights and techniques for retailers. It was well attended and had some great speakers presenting including Myer CEO Bernie Brooks. By the end of the two hour seminar it was clear that Australian businesses have been busy investing in Big Data technology thereby ensuring they have access to a large number of data sets. But as my taxi pulled away from the venue I felt bothered by how little was actually being achieved with that data. We have the big data, but we seem to be lacking the big Ideas to make the most of it.</p>
-			<div class="blog-content">
-				<p>One of the major constraints on what organisations achieve with big data relates to their approach to the acquisition, ownership and use of big data. Companies have their own set of objectives and as a result, are currently viewing customer data as a resource to squeeze value from. I wrote about this in an article titled “Data is not the new oil, it’s the new soil” in October 2013 for the website of Smart Data Collective. In this article I suggested that businesses view customer data to a resource akin to oil: “Oil is valuable. If you find, collect and store oil it will remain valuable. Data is a very different thing. Data is generated when	people do something. It is a record of an event. That means it starts losing value almost as soon as it is generated because it ages. We can see trends and obtain insights but to get real value from data, it must be used in real time. Simply gathering and storing data is a pointless exercise.”</p>
-				<p><strong>If a company views the data as a marketing and communications asset then they will naturally try and get as much value from it as possible. But think about what will happen in the longer term. If businesses invest in big data systems and techniques they will have to show a return on this investment.</strong></p>
-				<p>As this return on investment starts to be proven and reported shareholders will come to expect consistent and even higher returns on this type of activity.This means more data will need to be collected and even more messages (mostly in the form of emails) will need to be sent out to drive customer behaviour. This will then produce a vicious cycle where customers become fatigued at best, and completely distrusting at worst.</p>
-				<p>What businesses need to do now is start to shift their perception of data. It is an asset, but it is an asset they share with their customers. The only real way of creating true long-term value from customer data is to take a step back and say “how can we use customer data to generate value for the very customers who are generating it?”, or put another way, how can a business create amazing data-driven experiences that will develop their customer relationships?</p>
-				<p>To really make the most of data companies need to work with everything they have. They need to get the most creative people working with the data scientists to ensure data is used to benefit the customer. To do this, they must have great digital and data strategists that know how to speak the language of business, technology, creativity and customers all at once.</p>
-
-				<p>There is a big opportunity for businesses to become much more than the sum of all of the data-parts they collect. They need to move back towards big Ideas-which now can be underpinned by big data.</p>
-			</div>
-			<div class="blog-autor">
-				<div class="member">
-	                <img class="avatar" src="img/placeholder.jpe">
-
-	                <p class="name">Rob Cameron</p>
-
-	                <p class="position">Chairman</p>
-	                <ul class="socials">
-	                	<li><a href=""><img src="img/social-li.png"></a></li>
-            			<li><a href=""><img src="img/social-twitter.png"></a></li>
-	                </ul>
-            	</div>
-			</div>
-
-        </div>
-
-
-
-
-    </div>
-</section>
-<section class="section2 grey">
-    <div class="sideBar">
-    </div>
-    <div class="s2content">
-        <div class="wrapper">
-                    <table>
-                        <tr>
-                            <td>
-                                <p class="blogTitle" id="blogTitle1">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
-
-                                <p class="blogDate" id="blogDate1">25th, Oct 2014 in <span class="blogSection" id="blogSection1"><a href="#">Digital</a>, <a href="#">Innovation</a></span>
-                                </p>
-
-                                <p class="blogSnip" id="blogSnip1">Innovation can be a tricky beast to tame, especially in the
-                                    digital
-                                    space. It's far too easy to get excited about ideas early on and jump into a project without
-                                    understanding what impact it may have...</p>
-
-                                <div class="button">
-                                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="blogTitle" id="blogTitle2">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
-
-                                <p class="blogDate" id="blogDate2">25th, Oct 2014 in <span class="blogSection" id="blogSection2"><a href="#">Thinking</a></span>
-                                </p>
-
-                                <p class="blogSnip" id="blogSnip2">Innovation can be a tricky beast to tame, especially in the
-                                    digital
-                                    space. It's far too easy to get excited about ideas early on and jump into a project without
-                                    understanding what impact it may have...</p>
-
-                                <div class="button">
-                                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="blogTitle" id="blogTitle3">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
-
-                                <p class="blogDate" id="blogDate3">25th, Oct 2014 in <span class="blogSection" id="blogSection3"><a href="#">Digital</a>, <a href="#">Innovation</a></span>
-                                </p>
-
-                                <p class="blogSnip" id="blogSnip3">Innovation can be a tricky beast to tame, especially in the
-                                    digital
-                                    space. It's far too easy to get excited about ideas early on and jump into a project without
-                                    understanding what impact it may have...</p>
-
-                                <div class="button">
-                                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
-                                </div>
-                            </td>
-                    </table>
-        </div>
-    </div>
-</section>
-<nav class="nav-top">
-    <div class="logoWrapper">
-        <img src="img/w3logo.png">
-    </div>
-    <div class="navWrapper">
-        <p class="newsletter"><a href="#" onclick="toggle_visibility('dNewsletter');">Newsletter Sign Up&nbsp;&nbsp;&nbsp;<img
-                src="img/newsletter-arrow.png"></a>
-        </p>
-        <ul class="navMenu">
-            <li><a href=""><span>Services</span></a></li>
-            <li><a href=""><span>Our Work</span></a></li>
-            <li><a href=""><span>Leadership</span></a></li>
-            <li><a href=""><span>Insights</span></a></li>
-            <li><a href=""><span>Contact Us</span></a></li>
-        </ul>
-    </div>
-    <div class="socialWrapper">
-        <ul>
-            <li><a href=""><img src="img/social-li.png"></a></li>
-            <li><a href=""><img src="img/social-fb.png"></a></li>
-            <li><a href=""><img src="img/social-twitter.png"></a></li>
-        </ul>
-        <p>+61 3 8060 4700</p>
-    </div>
-</nav>
 <section class="sec-2">
-    <div class="sec-2-sidebar purple-dark"></div>
-    <div class="sec-2-bg purple">
-        <div class="sec-2-content">
-            <p class="p2">Subscribe to our newsletter for the latest in <br>customer experience, design and big data.
+    <div class="sec-2-side"></div>
+    <!--<div class="social-list">-->
+        <!--<p class="p1">Share this article</p>-->
+        <!--<img src="img/social-li.png">-->
+        <!--<img src="img/social-fb.png">-->
+        <!--<img src="img/social-twitter.png">-->
+        <!--<img src="img/social-li.png">-->
+    <!--</div>-->
+    <div class="sec-2-content-wrap">
+        <div class="blog-content">
+            <p class="block-quote-1">I recently attended an event that focused on Big Data insights and techniques for
+                retailers. It
+                was well attended and had some great speakers presenting including Myer CEO Bernie
+                Brooks. By the end of the two hour seminar it was clear that Australian businesses have been
+                busy investing in Big Data technology thereby ensuring they have access to a large number of
+                data sets. But as my taxi pulled away from the venue I felt bothered by how little was
+                actually being achieved with that data. We have the big data, but we seem to be lacking the
+                big Ideas to make the most of it.</p>
+
+            <div class="content">
+                <p class="p2">One of the major constraints on what organisations achieve with big data relates to their
+                    approach to the acquisition, ownership and use of big data. Companies have their own set
+                    of objectives and as a result, are currently viewing customer data as a resource to squeeze
+                    value from. I wrote about this in an article titled “Data is not the new oil, it’s the new soil” in
+                    October 2013 for the website of Smart Data Collective. In this article I suggested that
+                    businesses view customer data to a resource akin to oil: “Oil is valuable. If you find, collect
+                    and store oil it will remain valuable. Data is a very different thing. Data is generated when
+                    people do something. It is a record of an event. That means it starts losing value almost as
+                    soon as it is generated because it ages. We can see trends and obtain insights but to get
+                    real value from data, it must be used in real time. Simply gathering and storing data is a
+                    pointless exercise.”</p>
+
+                <p class="p2">Many businesses are now past the point of simply gathering and storing data. They are
+                    using it, but the focus is too heavily weighted towards simply deploying it as a marketing
+                    tool. Using customer data as a tool to better target and personalise communications is
+                    extremely important. In a fragmented media landscape it is vital to invest in this kind of
+                    marketing to remain relevant. But it is not enough.</p>
+
+                <p class="block-quote-2">If a company views the data as a marketing and communications asset
+                    then they will naturally try and get as much value from it as possible.
+                    But think about what will happen in the longer term. If businesses
+                    invest in big data systems and techniques they will have to show a
+                    return on this investment.</p>
+
+                <p class="p2">As this return on investment starts to be proven and reported shareholders will come to
+                    expect consistent and even higher returns on this type of activity.This means more data will
+                    need to be collected and even more messages (mostly in the form of emails) will need to be
+                    sent out to drive customer behaviour. This will then produce a vicious cycle where
+                    customers become fatigued at best, and completely distrusting at worst.</p>
+
+                <p class="p2">What businesses need to do now is start to shift their perception of data. It is an asset,
+                    but
+                    it is an asset they share with their customers. The only real way of creating true long-term
+                    value from customer data is to take a step back and say “how can we use customer data
+                    to generate value for the very customers who are generating it?”, or put another way,
+                    how can a business create amazing data-driven experiences that will develop their
+                    customer relationships?</p>
+
+                <p class="p2">To really make the most of data companies need to work with everything they have. They
+                    need to get the most creative people working with the data scientists to ensure data is used
+                    to benefit the customer. To do this, they must have great digital and data strategists that
+                    know how to speak the language of business, technology, creativity and customers all at
+                    once.</p>
+
+                <p class="p2">There is a big opportunity for businesses to become much more than the sum of all of the
+                    data-parts they collect. They need to move back towards big Ideas-which now can be
+                    underpinned by big data.</p>
+
+                <p class="blog-details">Published in <span class="cat-1">Digital</span>, <span
+                        class="cat-2">Innovation</span>, <span class="cat-3">Thinking</span></p>
+
+                <p class="date">14th, April 2015</p>
+            </div>
+            <div class="blog-autor">
+                <div class="member">
+                    <img class="avatar" src="img/placeholder.jpe">
+
+                    <p class="name">Rob Cameron</p>
+
+                    <p class="position">Chairman</p>
+                    <ul class="socials">
+                        <li><a href=""><img src="img/social-li.png"></a></li>
+                        <li><a href=""><img src="img/social-twitter.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="sec-3">
+    <div class="sec-3-side"></div>
+    <div class="sec-3-content-wrap">
+
+        <div class="sec-3-content">
+            <div class="blog-item">
+                <p class="blogTitle" id="blogTitle1">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
+
+                <p class="blogDate" id="blogDate1">25th, Oct 2014 in <span class="blogSection" id="blogSection1"><a
+                        href="#">Digital</a>, <a href="#">Innovation</a></span>
+                </p>
+
+                <p class="blogSnip" id="blogSnip1">Innovation can be a tricky beast to tame, especially in the
+                    digital
+                    space. It's far too easy to get excited about ideas early on and jump into a project without
+                    understanding what impact it may have...</p>
+
+                <div class="button">
+                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                </div>
+            </div>
+            <div class="blog-item">
+                <p class="blogTitle" id="blogTitle1">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
+
+                <p class="blogDate" id="blogDate1">25th, Oct 2014 in <span class="blogSection" id="blogSection1"><a
+                        href="#">Digital</a>, <a href="#">Innovation</a></span>
+                </p>
+
+                <p class="blogSnip" id="blogSnip1">Innovation can be a tricky beast to tame, especially in the
+                    digital
+                    space. It's far too easy to get excited about ideas early on and jump into a project without
+                    understanding what impact it may have...</p>
+
+                <div class="button">
+                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                </div>
+            </div>
+            <div class="blog-item">
+                <p class="blogTitle" id="blogTitle1">DISCUSSION WITH CATHERINE HEATH FROM HUGE INC.</p>
+
+                <p class="blogDate" id="blogDate1">25th, Oct 2014 in <span class="blogSection" id="blogSection1"><a
+                        href="#">Digital</a>, <a href="#">Innovation</a></span>
+                </p>
+
+                <p class="blogSnip" id="blogSnip1">Innovation can be a tricky beast to tame, especially in the
+                    digital
+                    space. It's far too easy to get excited about ideas early on and jump into a project without
+                    understanding what impact it may have...</p>
+
+                <div class="button">
+                    <a href="">Read More&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sec-4" id="Section4">
+    <div class="sec-4-sidebar purple-dark"></div>
+    <div class="sec-4-bg purple">
+        <div class="sec-4-content">
+            <p class="p2">Pop your email in so we can send
+                you updates about what we're doing.
             </p>
-            <p class="p2-t">Pop your email in so we can send
-                you updates about what we're doing.</p>
 
             <form class="signup-form" action="" method="post">
                 <div class="input-name">
@@ -303,29 +330,35 @@
         </div>
     </div>
 </section>
-<section class="contact">
-    <div class="contactDark"></div>
-    <div class="contactContent">
-        <p>Create outstanding digital experiences for you and your customers</p>
 
-        <div class="contactButton"><a href="">Contact Us&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a></div>
+<section class="sec-contact">
+    <div class="sec-contact-sidebar black-dark"></div>
+    <div class="sec-contact-bg black">
+        <div class="sec-contact-content">
+            <p class="sec-contact-text">Create outstanding digital experiences for you and your customers</p>
+            <a class="button" href="">Contact us&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png"></a>
+        </div>
     </div>
 </section>
 <footer>
-    <div class="footerDark"></div>
-    <div class="footerContent">
-        <p class="footerD">41 Cubitt Street, Cremorne VIC 3121, Australia Copyright © Working Three&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+61
-            3 8060 4700</p>
-        <p class="footerT">41 Cubitt Street, Cremorne VIC 3121, Australia <br>Copyright © Working Three</p>
-        <p class="footerT">+61 3 8060 4700</p>
+    <div class="footer-sidebar grey-dark"></div>
+    <div class="footer-bg grey">
+        <div class="footer-content">
+            <p>41 Cubitt Street, <br class="br-m">Cremorne VIC 3121, Australia <br class="br-t">Copyright © Working
+                Three</p>
+
+            <p>+61 3 8060 4700</p>
+        </div>
     </div>
 </footer>
-<div class="mSpace">asd</div>
-<div class="tSpace">asd</div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+<script src="js/jquery.colorscroll.min.js" type="text/javascript"></script>
+<script src="js/jquery.snapscroll.js" type="text/javascript"></script>
+<script src="js/jquery.scroll_to.js" type="text/javascript"></script>
+<!--<script src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>-->
 <script>
     function toggle_visibility(id) {
         var e = document.getElementById(id);
@@ -335,23 +368,6 @@
             e.style.display = 'block';
     }
 
-    $('a').click(function () {
-        $('html, body').animate({
-            scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-        }, 400);
-        return false;
-    });
-    $(document).ready(function () {
-        $(window).scroll(function () {
-            if ($(document).scrollTop() > $(window).height() * 0.55) {
-                $(".topNav").addClass("scrolled2", 300, "linear");
-            } else {
-                $(".topNav").removeClass("scrolled2", 300, "linear");
-            }
-
-        });
-
-    });
 </script>
 </body>
 </html>

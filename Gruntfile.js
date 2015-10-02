@@ -56,22 +56,22 @@ module.exports = function(grunt) {
             'assets/less/mobile.less'
           ],
           'assets/css/insights-and-article-content.css': [
-            'assets/less/insights-and-article-content.less'
+            'assets/less/insights-and-article-content-old.less'
           ],
           'assets/css/insights-and-article-content-mobile.css': [
-            'assets/less/insights-and-article-content-mobile.less'
+            'assets/less/insights-and-article-content-mobile-old.less'
           ],
           'assets/css/insights-and-article-content-tablet.css': [
-            'assets/less/insights-and-article-content-tablet.less'
+            'assets/less/insights-and-article-content-tablet-old.less'
           ],
           'assets/css/insights-and-article.css': [
-            'assets/less/insights-and-article.less'
+            'assets/less/insights-and-article-old.less'
           ],
           'assets/css/insights-and-article-mobile.css': [
-            'assets/less/insights-and-article-mobile.less'
+            'assets/less/insights-and-article-mobile-old.less'
           ],
           'assets/css/insights-and-article-tablet.css': [
-            'assets/less/insights-and-article-tablet.less'
+            'assets/less/insights-and-article-tablet-old.less'
           ],
           // home
           'assets/css/home.css': [
