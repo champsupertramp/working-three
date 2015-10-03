@@ -321,6 +321,9 @@ class WD_WorkingThree{
 
         //stylesheets
         wp_enqueue_style( 'jquery-ui', "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" );
+        wp_enqueue_style( 'working-three-main-style', $this->tpl_url['assets'].'css/main-style.css' );
+        wp_enqueue_style( 'working-three-main-style-mobile', $this->tpl_url['assets'].'css/main-style-mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
+		wp_enqueue_style( 'working-three-main-style-table', $this->tpl_url['assets'].'css/main-style-tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
 
         /**
          * Home / Landing page

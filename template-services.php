@@ -8,9 +8,9 @@
  global $wd_wt;
  global $swap_color;
  $swap_color = new stdClass();
- $swap_color->logo = 'purple-gradient-dark';
- $swap_color->main_menu = 'purple-gradient';
- $swap_color->social_menu = 'purple-gradient';
+ $swap_color->logo = 'red-gradient';
+ $swap_color->main_menu = 'red-gradient';
+ $swap_color->social_menu = 'red-gradient';
 
 ?>
 <?php get_header();?>

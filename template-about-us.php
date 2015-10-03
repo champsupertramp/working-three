@@ -270,7 +270,7 @@
         </div>
     </div>
 </section>
-<?php get_template_part('templates/sections/footer/section', 'footer-contact'); ?>
+<?php get_template_part('templates/sections/footer/section', 'footer-contact-custom'); ?>
 <footer>
     <div class="footer-sidebar grey-dark"></div>
     <div class="footer-bg grey">

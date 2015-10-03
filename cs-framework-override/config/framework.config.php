@@ -139,6 +139,35 @@ $options[]      = array(
 
                   )
                 ),
+
+			array(
+                  'id'              => 'wd_mobile_menu_our_work_items',
+                  'type'            => 'group',
+                  'title'           => 'More Menu Items',
+                  'button_title'    => 'Add New',
+                  'accordion_title' => 'Add New More Menu Item',
+                  'fields'          => array(
+
+                    array(
+                        'id'          => 'wd_mobile_more_menu_our_work_title',
+                        'type'        => 'text',
+                        'title'       => 'Title',
+                    ),
+
+					array(
+						  'id'            => 'wd_mobile_more_menu_our_work_link',
+						  'type'          => 'select',
+						  'title'         => 'Select Field for Pages',
+						  'options'       => 'pages',
+						  'query_args'    => array(
+						    'sort_order'  => 'ASC',
+						    'sort_column' => 'post_title',
+						  ),
+					),
+
+
+                  )
+                ),
     )
 );
 /**

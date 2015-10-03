@@ -105,23 +105,10 @@ if( have_posts() ):
         </div>
     </div>
 </section>
-
-
-
-<?php endwhile;
- endif; ?>
-
+<?php endwhile; endif; ?>
 <?php get_template_part('templates/sections/footer/section', 'footer-contact'); ?>
-<footer>
-    <div class="footer-sidebar grey-dark"></div>
-    <div class="footer-bg grey">
-        <div class="footer-content">
-            <p><?php echo cs_get_option("wd_copyright");?></p>
+<?php get_template_part('templates/sections/footer/section', 'footer-copyright'); ?>
 
-            <p><?php echo cs_get_option("wd_contact_number");?></p>
-        </div>
-    </div>
-</footer>
 <script>
     function toggle_visibility(id) {
         var e = document.getElementById(id);

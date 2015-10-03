@@ -15,8 +15,8 @@
 <?php get_header();?>
 <?php get_template_part('templates/sections/header/section', 'newsletter'); ?>
 <?php get_template_part('templates/sections/header/section', 'inner-head'); ?>
-<?php //get_template_part('templates/sections/header/section', 'more-menu'); ?>
-<?php //get_template_part('templates/sections/header/section', 'nav-bottom'); ?>
+<?php get_template_part('templates/sections/header/section', 'more-menu'); ?>
+<?php get_template_part('templates/sections/header/section', 'nav-bottom'); ?>
 <section class="section1">
     <div class="sideBar"></div>
     <!--<div class="navBlock"></div>-->
@@ -64,17 +64,8 @@
 <section class="sec-2">
 
 </section>
-<?php get_template_part('templates/sections/section', 'footer-contact'); ?>
-<footer>
-    <div class="footerDark"></div>
-    <div class="footerContent">
-        <p class="footerD"><?php echo cs_get_option("wd_copyright");?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo cs_get_option("wd_contact_number");?></p>
-        <p class="footerT"><?php echo cs_get_option("wd_copyright");?></p>
-        <p class="footerT"><?php echo cs_get_option("wd_contact_number");?></p>
-    </div>
-</footer>
-<div class="mSpace">asd</div>
-<div class="tSpace">asd</div>
+<?php get_template_part('templates/sections/footer/section', 'footer-contact'); ?>
+<?php get_template_part('templates/sections/footer/section', 'footer-copyright'); ?>
 
 <script type="text/css">
     $(document).ready(function () {

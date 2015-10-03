@@ -1,8 +1,6 @@
     <div class="sideBar">
         <nav class="nav-side nav-side-grey">
-      <form action="" class="search-form" method="get" role="search">
-        <input type="text" id="search" name="s" value="" placeholder="Search" class="sb-search-input">
-      </form>
+		<?php get_search_form(); ?>
           <p><?php _e("Filter articles by","workingthree");?>:</p>
             <ul>
                 <li><a href="/blog/" class="active">All</a></li>
