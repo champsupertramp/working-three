@@ -8,7 +8,7 @@
  global $wd_wt;
 ?>
 <?php get_header();?>
-<?php get_template_part('templates/sections/section', 'newsletter'); ?>
+<?php get_template_part('templates/sections/header/section', 'newsletter'); ?>
 <?php get_template_part('templates/sections/header/section', 'inner-head'); ?>
 <?php get_template_part('templates/sections/header/section', 'more-menu'); ?>
 <?php get_template_part('templates/sections/header/section', 'nav-bottom'); ?>
@@ -33,54 +33,41 @@
 <section class="sec-2">
     <div class="sec-2-sidebar white-dark"></div>
     <div id="Container" class="container">
-
         <div class="controls">
             <button class="filter" data-filter="all">All</button>
-
-            <?php $case_study_terms = get_terms('casestudy_categories', array( 'hide_empty' => 0 )); ?>
-            <?php foreach( $case_study_terms  as $term ){ ?>
-            <button class="filter" data-filter=".<?php echo $term->slug;?>"><?php echo $term->name;?></button>
-            <?php } ?>
-
+            <button class="filter" data-filter=".sport">Sport</button>
+            <button class="filter" data-filter=".retail">Retail</button>
+            <button class="filter" data-filter=".consultation">Consultation</button>
+            <button class="filter" data-filter=".agriculture">Agriculture</button>
+            <button class="filter" data-filter=".education">Education</button>
+            <button class="filter" data-filter=".government">Government</button>
+            <button class="filter" data-filter=".not-for-profit">Not-for-profit</button>
+            <button class="filter" data-filter=".technology">Technology</button>
         </div>
         <div class="mix-container">
-        <?php
-        $args = array(
-          'post_type' => 'casestudy',
-          'post_status' => 'public',
-          'posts_per_page' => -1,
-        );
-        ?>
-        <?php $case_studies = new WP_Query(  $args ); ?>
-        <?php while( $case_studies->have_posts() ){ $case_studies->the_post(); ?>
-        <?php
-          $categories = get_the_terms(get_the_ID(),'casestudy_categories');
-
-          $arr_category = array();
-          if( ! empty( $categories ) ){
-             foreach ($categories as $category) {
-                  array_push( $arr_category , strtolower($category->name));
-              }
-          }
-        ?>
-        <div class="mix <?php echo implode(" ",$arr_category); ?>">
-            <?php echo get_the_post_thumbnail( get_the_ID(), 'image_174x174', array( 'class' => 'client-logo' ) ); ?>
-            <?php  $meta_data = get_post_meta( get_the_ID(), '_custom_meta_options', true );?>
-            <div class="mix-study-wrap"><a href="<?php the_permalink(); ?>" class="mix-study <?php echo ! empty( $meta_data['show_casestudy_link'] ) && $meta_data['show_casestudy_link'] == true?'on':'off'?>">VIEW CASE STUDY</a></div>
-        </div>
-        <?php } ?>
-        <div class="gap"></div>
-        <div class="gap"></div>
-            </div>
+		<?php
+		if( have_rows('logos') ):
+		    while ( have_rows('logos') ) : the_row();?>
+		    <?php $cats = get_sub_field('category'); ?>
+		        <div class="mix <?php echo implode(" ", $cats); ?>">
+		            <img class="client-logo" src="<?php the_sub_field('logo');?>">
+		            <?php if (get_sub_field('has_case_study')){?>
+		            	<div class="mix-study-wrap">
+		            		<a class="mix-study on" href="<?php the_sub_field('has_case_study');?>">VIEW CASE STUDY</a>
+		          		</div>
+		          	<?}?>
+		        </div>
+		    <?endwhile;
+		else : endif; ?>
+       </div>
     </div>
 </section>
-
 <script type="text/javascript">
 jQuery(function () {
   jQuery('#Container').mixItUp();
 });
 </script>
-
-<?php get_template_part('templates/sections/section', 'inner-work-footer'); ?>
+<?php get_template_part('templates/sections/footer/section', 'footer-contact'); ?>
+<?php get_template_part('templates/sections/footer/section', 'footer-copyright'); ?>
 <?php get_footer();?>
 

@@ -55,10 +55,10 @@ if( have_posts() ):
         <div class="sec-2-img">
 
          <?php if( ! empty( $casestudy_meta['casestudy_section2_gallery'] )  ){ ?>
-          <ul>
+          <ul id="slick">
 
             <?php $i = 1; foreach( $casestudy_meta['casestudy_section2_gallery'] as $key ){ ?>
-              <li <?php echo $i > 1? 'style="display:none;"':''; ?>>
+              <li>
                 <img src="<?php echo $key['casestudy_section2_uploader']; ?>"/>
               </li>
             <?php $i++; }   ?>
@@ -117,7 +117,14 @@ if( have_posts() ):
         else
             e.style.display = 'block';
     }
-
+jQuery(document).ready(function(){
+  jQuery('#slick').slick({
+    slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  });
+});
 
 </script>
 <?php get_footer();?>
