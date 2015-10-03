@@ -4,13 +4,22 @@
  * @since  1.0
  */
 global $wd_wt;
- global $swap_color;
- $swap_color = new stdClass();
- $swap_color->main_menu = 'grey-gradient';
- $swap_color->social_menu = 'grey-gradient';
+global $swap_color;
+
+get_header();
+
+if( have_posts() ):
+  while( have_posts() ) : the_post();
+
+
+  $casestudy_meta = get_post_meta( get_the_ID() , "_casestudy_meta_fields",true);
+  $scheme = isset($casestudy_meta['casestudy_section1_image_select_option'])? $casestudy_meta['casestudy_section1_image_select_option']:'blue';
+
+  $swap_color = new stdClass();
+  $swap_color->main_menu = "{$scheme}-gradient";
+  $swap_color->social_menu = "{$scheme}-gradient";
 
 ?>
-<?php get_header();?>
 <!-- Case Study single -->
 <?php get_template_part('templates/sections/header/section', 'newsletter'); ?>
 <?php get_template_part('templates/sections/header/section', 'inner-head'); ?>
@@ -18,14 +27,16 @@ global $wd_wt;
 <?php get_template_part('templates/sections/header/section', 'nav-bottom'); ?>
 
 <?php
- if( have_posts() ):
-  while( have_posts() ) : the_post();
 
-  $casestudy_meta = get_post_meta(get_the_ID(), "_casestudy_meta_fields",true);
+
+  $colors = $wd_wt->get_gradient_color( $scheme );
+  $left = $colors['left'];
+  $right = $colors['right'];
+
  ?>
  <section class="sec-1">
-    <div class="sec-1-side-bg darkgrey-dark"></div>
-    <div class="sec-1-content-wrap darkgrey">
+    <div class="sec-1-side-bg <?php echo $left;?>"></div>
+    <div class="sec-1-content-wrap <?php echo $right;?>">
         <div class="sec-1-content">
             <h1 class="title"><?php _e( isset($casestudy_meta['casestudy_section1_title'])?$casestudy_meta['casestudy_section1_title']:'', "workingthree" );?></h1>
 			     <?php _e( isset($casestudy_meta['casestudy_section1_description'])?$casestudy_meta['casestudy_section1_description']:'', "workingthree" );?>

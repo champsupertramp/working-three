@@ -71,7 +71,20 @@ $metaboxes[]      = array(
             'title' => 'Title',
             'sanitize' => false,
           ),
-
+          array(
+            'id'        => 'casestudy_section1_image_select_option',
+            'type'      => 'image_select',
+            'title'     => 'Background Color',
+            'options'   => array(
+              'blue'    => get_template_directory_uri() .'/assets/img/color-picker-skyblue.png',
+              'green'    => get_template_directory_uri() .'/assets/img/color-picker-green.png',
+              'grey'    => get_template_directory_uri() .'/assets/img/color-picker-grey.png',
+              'purple'    => get_template_directory_uri() .'/assets/img/color-picker-purple.png',
+              'red'    => get_template_directory_uri() .'/assets/img/color-picker-red.png',
+              'yellow'    => get_template_directory_uri() .'/assets/img/color-picker-yellow.png',
+            ),
+            'default'   => 'skyblue',
+          ),
           array(
             'id'    => 'casestudy_section1_description',
             'type'  => 'wysiwyg',

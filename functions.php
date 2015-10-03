@@ -271,6 +271,42 @@ class WD_WorkingThree{
     }
 
     /**
+     * Template color schemes
+     * @param  string $scheme
+     * @return string
+     */
+    public function get_gradient_color( $scheme = 'blue' ){
+
+        $arr = array(
+            'blue' => array(
+                'left'  => 'blue',
+                'right' => 'blue-dark'
+            ),
+            'green' => array(
+                'left'  => 'green',
+                'right' => 'green-dark'
+            ),
+            'yellow' => array(
+                'left'  => 'yellow',
+                'right' => 'yellow-dark'
+            ),
+            'purple' => array(
+                'left'  => 'purple',
+                'right' => 'purple-dark'
+            ),
+            'red' => array(
+                'left'  => 'red',
+                'right' => 'red-dark'
+            ),
+            'grey' => array(
+                'left'  => 'darkgrey-dark',
+                'right' => 'darkgrey'
+            ),
+        );
+        return $arr[ $scheme ];
+    }
+
+    /**
      * Loads all scripts and styles
      *
      * @since 1.0
