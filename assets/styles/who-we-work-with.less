@@ -384,11 +384,11 @@ sans-serif;
 
 
 .sec-2 {
-  height: 285vh;
+  height: auto;
   width: 100vw;
-  display: block;
+  display: flex;
   .sec-2-sidebar {
-    height: 285vh;
+    height: auto;
     width: 16vw;
     display: inline-block;
   }
@@ -451,7 +451,7 @@ sans-serif;
     display: inline-block;
     float: right;
     width: 84vw;
-    height: 250vh;
+    height: auto;
     -webkit-backface-visibility: hidden;
   }
 
@@ -475,6 +475,10 @@ sans-serif;
 
   .container .mix .mix-study-wrap {
     height: 6vh;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
   }
   .on {
     display: block;
@@ -490,15 +494,21 @@ sans-serif;
     line-height: 6vh;
   }
   .container .mix{
-    text-align: left;
     background: transparent;
-    margin: 0 0 2vh 0;
-//    border: 1px solid lightgray;
+    border-top: 0 none;
+    border-left: 0 none;
+    border-right: 1px solid #cfd0d1;
+    border-bottom: 1px solid #cfd0d1;
     display: none;
+    float: left;
+    margin: 0;
+    text-align: left;
+    width: 25%;
+        position: relative;
   }
   .mix-container {
-    margin-left: 2vh;
-    margin-top: 2vh;
+    margin-left: 0;
+    margin-top: 0;
   }
 
   .container .mix:after{
