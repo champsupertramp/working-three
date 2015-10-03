@@ -50,6 +50,133 @@ $metaboxes[]      = array(
   ),
 );
 
+$metaboxes[]      = array(
+  'id'            => '_casestudy_meta_fields',
+  'title'         => 'Case Study',
+  'post_type'     => 'casestudy', // or post or CPT
+  'context'       => 'normal',
+  'priority'      => 'default',
+  'sections'      => array(
+
+    // section 1
+    array(
+        'name'      => 'section_1',
+        'title'     => 'Section 1',
+        'fields'    => array(
+
+          // a field
+          array(
+            'id'    => 'casestudy_section1_title',
+            'type'  => 'text',
+            'title' => 'Title',
+            'sanitize' => false,
+          ),
+
+          array(
+            'id'    => 'casestudy_section1_description',
+            'type'  => 'wysiwyg',
+            'title' => 'Description',
+          ),
+
+          array(
+              'id'      => 'casestudy_section1_image',
+              'type'    => 'upload',
+              'title'   => 'Select an Image',
+              'settings' => array(
+                  'upload_type'    => 'image',
+                  'button_title'   => 'Upload',
+                  'frame_title'    => 'Select an image',
+                  'insert_title'   => 'Use this image',
+              ),
+          ),
+
+        ),
+    ),
+    // section 2
+    array(
+        'name'      => 'section_2',
+        'title'     => 'Section 2',
+        'fields'    => array(
+
+          // a field
+          array(
+              'id'    => 'casestudy_section2_title',
+              'type'  => 'text',
+              'title' => 'Title',
+              'sanitize' => false,
+          ),
+
+          array(
+              'id'    => 'casestudy_section2_description',
+              'type'  => 'wysiwyg',
+              'title' => 'Description',
+          ),
+
+          array(
+              'id'              => 'casestudy_section2_gallery',
+              'type'            => 'group',
+              'title'           => 'Photos',
+              'button_title'    => 'Add New',
+              'accordion_title' => 'Add New Photo',
+              'fields'          => array(
+                  array(
+                      'id'      => 'casestudy_section2_uploader',
+                      'type'    => 'upload',
+                      'title'   => 'Select an Image',
+                      'settings'      => array(
+                         'upload_type'    => 'image',
+                         'button_title'   => 'Upload',
+                         'frame_title'    => 'Select an image',
+                         'insert_title'   => 'Use this image',
+                      ),
+                  ),
+
+              ),
+          ),
+
+
+        ),
+    ),
+    // section 3
+    array(
+        'name'      => 'section_3',
+        'title'     => 'Section 3',
+        'fields'    => array(
+
+          // a field
+          array(
+            'id'    => 'casestudy_section3_title',
+            'type'  => 'text',
+            'title' => 'Title',
+            'sanitize' => false,
+          ),
+
+          array(
+            'id'    => 'casestudy_section3_description',
+            'type'  => 'wysiwyg',
+            'title' => 'Description',
+          ),
+
+          array(
+              'id'      => 'casestudy_section3_image',
+              'type'    => 'upload',
+              'title'   => 'Select an Image',
+              'settings' => array(
+                  'upload_type'    => 'image',
+                  'button_title'   => 'Upload',
+                  'frame_title'    => 'Select an image',
+                  'insert_title'   => 'Use this image',
+              ),
+          ),
+
+
+        ),
+    ),
+
+
+  ),
+);
+
 /**
  * Single post
  */

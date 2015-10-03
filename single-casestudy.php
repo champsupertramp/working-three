@@ -6,7 +6,7 @@
 global $wd_wt;
  global $swap_color;
  $swap_color = new stdClass();
-  $swap_color->main_menu = 'grey-gradient';
+ $swap_color->main_menu = 'grey-gradient';
  $swap_color->social_menu = 'grey-gradient';
 
 ?>
@@ -20,16 +20,20 @@ global $wd_wt;
 <?php
  if( have_posts() ):
   while( have_posts() ) : the_post();
+
+  $casestudy_meta = get_post_meta(get_the_ID(), "_casestudy_meta_fields",true);
  ?>
  <section class="sec-1">
     <div class="sec-1-side-bg darkgrey-dark"></div>
     <div class="sec-1-content-wrap darkgrey">
         <div class="sec-1-content">
-            <h1 class="title"><?php the_field('section_1_title');?></h1>
-			<?php the_field('section_1_description');?>
+            <h1 class="title"><?php _e( isset($casestudy_meta['casestudy_section1_title'])?$casestudy_meta['casestudy_section1_title']:'', "workingthree" );?></h1>
+			     <?php _e( isset($casestudy_meta['casestudy_section1_description'])?$casestudy_meta['casestudy_section1_description']:'', "workingthree" );?>
         </div>
         <div class="sec-1-img">
-            <img src="<?php the_field('section_1_image');?>">
+        <?php if( isset( $casestudy_meta['casestudy_section1_image'] ) ){ ?>
+            <img src="<?php echo $casestudy_meta['casestudy_section1_image'];?>">
+        <?php } ?>
         </div>
     </div>
 </section>
@@ -38,11 +42,21 @@ global $wd_wt;
     <div class="sec-2-side-bg purple-dark"></div>
     <div class="sec-2-content-wrap purple">
         <div class="sec-2-img">
-            <img src="<?php the_field('section_2_image');?>">
+
+         <?php if( ! empty( $casestudy_meta['casestudy_section2_gallery'] )  ){ ?>
+          <ul>
+
+            <?php $i = 1; foreach( $casestudy_meta['casestudy_section2_gallery'] as $key ){ ?>
+              <li <?php echo $i > 1? 'style="display:none;"':''; ?>>
+                <img src="<?php echo $key['casestudy_section2_uploader']; ?>"/>
+              </li>
+            <?php $i++; }   ?>
+          </ul>
+        <?php } ?>
         </div>
         <div class="sec-2-content">
-            <h1 class="title"><?php the_field('section_2_title');?></h1>
-			<?php the_field('section_2_description');?>
+            <h1 class="title"><?php _e( isset($casestudy_meta['casestudy_section2_title'])?$casestudy_meta['casestudy_section2_title']:'', "workingthree" );?></h1>
+			     <?php _e( isset($casestudy_meta['casestudy_section2_description'])?$casestudy_meta['casestudy_section2_description']:'', "workingthree" );?>
 
         </div>
     </div>
@@ -52,15 +66,31 @@ global $wd_wt;
     <div class="sec-3-side-bg white-dark"></div>
     <div class="sec-3-content-wrap white">
         <div class="sec-3-content">
-            <h1 class="title"><?php the_field('section_3_title');?></h1>
-			<?php the_field('section_3_description');?>
+            <h1 class="title"><?php _e( isset($casestudy_meta['casestudy_section3_title'])?$casestudy_meta['casestudy_section3_title']:'', "workingthree" );?></h1>
+			     <?php _e( isset($casestudy_meta['casestudy_section3_description'])?$casestudy_meta['casestudy_section3_description']:'', "workingthree" );?>
 
         </div>
         <div class="sec-3-more">
             <p class="p2">More Case Studies</p>
-            <img src="<?php echo $wd_wt->tpl_url['assets'];?>img/placeholder.jpe">
-            <img src="<?php echo $wd_wt->tpl_url['assets'];?>img/placeholder.jpe">
-            <img src="<?php echo $wd_wt->tpl_url['assets'];?>img/placeholder.jpe">
+                    <?php
+            $arr = array(
+                'post_type' => 'casestudy',
+                'posts_per_page' => 3,
+            );
+
+
+            $the_query = new WP_Query( $arr );
+
+        while(  $the_query->have_posts() ){
+          $the_query->the_post();
+          echo "<a href='".get_the_permalink()."'>";
+          if ( has_post_thumbnail() ) {
+                the_post_thumbnail('image_174x174');
+          }
+          echo "</a>";
+        }
+        ?>
+
         </div>
     </div>
 </section>

@@ -140,7 +140,7 @@ class WD_WorkingThree{
           'has_archive'        => true,
           'hierarchical'       => false,
           'menu_position'      => null,
-          'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+          'supports'           => array( 'title',/*, 'editor', 'author', */'thumbnail'/*, 'excerpt', 'comments' */)
         );
 
         register_post_type( 'casestudy', $args );
