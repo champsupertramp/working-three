@@ -454,12 +454,7 @@
     margin-left: 0vw;
   }
   .sec-3-content-wrap .sec-3-col-a .button {
-    position: absolute;
-    margin-top: 63vh;
-    margin-left: 0;
-    float: left;
-    padding: 4vw;
-    width: 67vw;
+    display: none;
   }
   .sec-3-content-wrap .sec-3-col-b {
     margin-top: 5vh;
