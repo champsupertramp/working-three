@@ -298,70 +298,77 @@
   #dNewsletter .closeWrap {
     width: 100vw;
     height: 3vh;
-    padding-top: 4vh;
+    padding-top: 2vh;
   }
   #dNewsletter .closeWrap .closeButton {
-    margin-left: 85vw;
+    margin-left: 80vw;
     text-transform: uppercase;
-    font-size: 2vw;
+    font-size: 5vw;
     color: #fff;
     text-decoration: none;
   }
   #dNewsletter .newsletterLogo {
-    width: 12vw;
-    height: 12vw;
+    width: 24vw;
+    height: 24vw;
     display: block;
     text-align: justify;
-    margin-left: 45vw;
-    margin-top: 5vh;
+    margin-left: 39vw;
+    margin-top: 3vh;
   }
   #dNewsletter .newsletterContent .newsletterTitle {
-    margin-left: 31vw;
+    margin-left: 17vw;
     text-transform: uppercase;
-    font-size: 5vw;
-    margin-top: 3vh;
+    font-size: 8vw;
+    margin-top: 5vh;
     position: absolute;
   }
   #dNewsletter .newsletterContent .newsletterText {
     position: abslute;
-    width: 60vw;
-    font-size: 2vw;
-    line-height: 2vh;
-    margin-left: 21vw;
+    width: 90vw;
+    font-size: 4vw;
+    line-height: 4vh;
+    margin-left: 5vw;
     margin-top: 12vh;
     margin-bottom: 5vh;
   }
+  #dNewsletter .newsletterContent .newsletterText p {
+    text-align: center;
+  }
+  #dNewsletter .newsletterContent .newsletterText .ns-hide {
+    display: none;
+  }
   #dNewsletter .newsletterContent .signupForm {
-    width: 35vw;
+    width: 90vw;
     position: absolute;
-    margin-top: 32vh;
-    margin-left: 21vw;
+    margin-top: 35vh;
+    margin-left: 5vw;
   }
   #dNewsletter .newsletterContent .signupForm label {
     display: block;
-    font-size: 2.5vw;
+    font-size: 5vw;
     margin-bottom: 1vh;
   }
   #dNewsletter .newsletterContent .signupForm input {
     display: block;
-    width: 60vw;
+    width: 88vw;
     margin-bottom: 2vh;
     height: 35px;
   }
   #dNewsletter .newsletterContent .signupForm .nsButton {
     display: block;
     position: absolute;
-    margin-top: 18vh;
-    margin-left: 45vw;
+    margin-top: 27vh;
+    margin-left: 0;
   }
   #dNewsletter .newsletterContent .signupForm .nsButton button {
-    width: 16vw;
-    font-size: 2.5vw;
+    width: 89vw;
+    font-size: 5vw;
     color: #fff;
     background: #00BCDD;
     border: 0;
     border-radius: 3px;
-    height: 3vh;
+    padding: 0;
+    height: 6vh;
   }
   .sec-1 {
     height: 140vh;
