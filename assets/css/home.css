@@ -228,6 +228,9 @@ table {
   display: inline;
   margin-right: 1.9vw;
 }
+.nav-top .soc-wrap .soc-menu .soc-icons .soc-link img {
+  height: 2.2vh;
+}
 .nav-top .soc-wrap .soc-phone {
   margin-left: 0;
 }
