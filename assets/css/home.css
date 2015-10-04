@@ -155,6 +155,9 @@ table {
 .black-dark {
   background: #262626;
 }
+#underline-t {
+  text-decoration: underline;
+}
 @font-face {
   font-family: "akkuratRegular";
   src: url('../fonts/AkkuratRegular.otf') format('opentype');
