@@ -312,6 +312,7 @@
     width: 100vw;
     display: inline-block;
     float: right;
+    border-bottom: 1px solid lightgray;
   }
   .sec-2 label {
     font-weight: 300;
@@ -330,7 +331,16 @@
     text-transform: uppercase;
   }
   .sec-2 button:first-child {
-    margin-left: 2vw;
+    margin-left: 4vw;
+    margin-bottom: 5vh;
+    margin-top: -1.1vh;
+    z-index: 10000;
+    padding: 0;
+  }
+  .sec-2 .slick-next {
+    margin-right: 5vw;
+    margin-top: -1.1vh;
+    padding: 0;
   }
   .sec-2 button.active {
     color: #000;
@@ -360,7 +370,7 @@
   .sec-2 .container .mix,
   .sec-2 .container .gap {
     display: inline-block;
-    width: 24%;
+    width: 25%;
   }
   .sec-2 .container .mix .client-logo {
     width: 80%;
@@ -385,12 +395,12 @@
   .sec-2 .container .mix {
     text-align: left;
     background: transparent;
-    margin: 0 0 2vh 0;
+    margin: 0;
     display: none;
   }
   .sec-2 .mix-container {
     margin-left: 0;
-    margin-top: 2vh;
+    margin-top: 0;
   }
   .sec-2 .container .mix:after {
     content: attr(data-myorder);

@@ -420,8 +420,8 @@ and (orientation: portrait) {
 
 
     .controls{
-      margin-top: -15vh;
-      background: @blue-bg;
+      margin-top: -5vh;
+      background: lightgray;
       height: 3.4vh;
       color: #eee;
       width: 100vw;
@@ -437,7 +437,7 @@ and (orientation: portrait) {
     button{
       display: inline-block;
       padding: .8em .8em;
-      background: @blue-bg;
+      background: lightgray;
       border: 0;
       color: #000;
       font-size: 3vw;
@@ -449,7 +449,18 @@ and (orientation: portrait) {
     }
 
     button:first-child {
-      margin-left: 0;
+      margin-left: 5vw;
+      margin-top: -1.1vh;
+      padding: 0;
+      width: 12vw;
+      z-index: 1000;
+    }
+
+    .slick-next {
+      margin-right: 8vw;
+      margin-top: -1.1vh;
+      padding: 0;
+      width: 7vw;
     }
 
     button.active{
@@ -485,7 +496,7 @@ and (orientation: portrait) {
     .container .mix,
     .container .gap{
       display: inline-block;
-      width: 48%;
+      width: 50%;
     }
 
     .container .mix .client-logo {
@@ -513,13 +524,13 @@ and (orientation: portrait) {
     .container .mix{
       text-align: left;
       background: transparent;
-      margin: 0 0 2vh 0;
+      margin: 0;
       //    border: 1px solid lightgray;
       display: none;
     }
     .mix-container {
       margin-left: 0;
-      margin-top: 2vh;
+      margin-top: 0;
     }
 
     .container .mix:after{
