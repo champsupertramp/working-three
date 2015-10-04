@@ -222,11 +222,10 @@ table {
   float: left;
 }
 .nav-top .soc-wrap .soc-menu {
+  width: 7vw;
   margin: 3.7vh 0 5vh 0;
-}
-.nav-top .soc-wrap .soc-menu .soc-icons {
-  display: inline;
-  margin-right: 1.9vw;
+  display: flex;
+  justify-content: space-between;
 }
 .nav-top .soc-wrap .soc-menu .soc-icons .soc-link img {
   height: 2.2vh;

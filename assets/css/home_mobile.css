@@ -72,10 +72,8 @@
     margin-left: 8vw;
     margin-top: 4vw;
     width: 35vw;
-  }
-  .nav-top .soc-wrap .soc-menu .soc-icons {
-    width: 40vw;
-    margin-left: 0;
+    display: flex;
+    justify-content: space-between;
   }
   .nav-top .soc-wrap .soc-menu .soc-icons .soc-link img {
     margin-right: 6vw;
