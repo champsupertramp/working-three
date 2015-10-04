@@ -395,6 +395,12 @@ body {
   text-decoration: none;
   color: #fff;
 }
+.underline {
+  text-decoration: underline;
+}
+.underline-t {
+  text-decoration: underline;
+}
 .section1 {
   color: #fff;
   width: 100vw;
@@ -420,9 +426,6 @@ body {
   font-size: 5vw;
   width: 45vw;
   line-height: 10vh;
-}
-.section1 .s1Content .s1Title span {
-  text-decoration: underline;
 }
 .section1 .s1Content .s1Text {
   font-family: 'akkuratRegular', arial, sans-serif;
