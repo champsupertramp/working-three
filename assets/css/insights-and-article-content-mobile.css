@@ -402,6 +402,7 @@
     display: block;
     height: 59vh;
     width: 100vw;
+    z-index: 1000;
   }
   .sec-1 .sec-1-side {
     display: none;
@@ -430,10 +431,11 @@
     line-height: 3vh;
   }
   .sec-1 .sec-1-content-wrap .search {
+    z-index: 1000;
     background: #e95944;
     display: block;
     padding: 2vh;
-    margin-top: 9.5vh;
+    margin-top: 8vh;
     margin-left: 0vw;
   }
   .sec-1 .sec-1-content-wrap .search .date {
@@ -461,6 +463,7 @@
     display: block;
     height: 590vh;
     width: 100vw;
+    z-index: 0;
   }
   .sec-2 .sec-2-side {
     display: none;
@@ -470,9 +473,12 @@
     float: left;
     height: 590vh;
     width: 84vw;
+    z-index: -1;
+    position: relative;
     background: #ffffff;
   }
   .sec-2 .sec-2-content-wrap .blog-content {
+    z-index: 0;
     margin-left: 12vw;
     margin-top: 6vh;
     width: 75vw;

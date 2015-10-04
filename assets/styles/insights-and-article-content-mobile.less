@@ -488,6 +488,7 @@ and (orientation: portrait) {
     display: block;
     height: 59vh;
     width: 100vw;
+    z-index: 1000;
     .sec-1-side {
       display: none;
     }
@@ -515,10 +516,11 @@ and (orientation: portrait) {
 
       }
       .search {
+        z-index: 1000;
         background: @red-bg-dark;
         display: block;
         padding: 2vh;
-        margin-top: 9.5vh;
+        margin-top: 8vh;
         margin-left: 0vw;
         .date {
           font-size: @p1-font-size;
@@ -549,6 +551,7 @@ and (orientation: portrait) {
     display: block;
     height: 590vh;
     width: 100vw;
+    z-index: 0;
     .sec-2-side {
       display: none;
     }
@@ -557,8 +560,11 @@ and (orientation: portrait) {
       float: left;
       height: 590vh;
       width: 84vw;
+      z-index: -1;
+      position: relative;
       background: @white-bg;
       .blog-content {
+        z-index: 0;
         margin-left: 12vw;
         margin-top: 6vh;
         width: 75vw;
