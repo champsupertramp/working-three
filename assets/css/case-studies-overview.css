@@ -323,7 +323,7 @@ body {
   color: #fff;
 }
 #dd .dropdown {
-  color: #ffc425;
+  background: #ffc425;
   position: absolute;
   top: 140%;
   left: 0;
