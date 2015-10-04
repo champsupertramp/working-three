@@ -483,7 +483,7 @@
   .sec-4-content-wrap {
     display: inline-block;
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     float: right;
     font-family: 'akkuratRegular', arial, sans-serif;
     color: #fff;
@@ -518,7 +518,7 @@
     position: relative;
     width: 90vw;
     font-size: 5.5vw;
-    margin-bottom: 1vh;
+    margin-bottom: 8vh;
   }
   .sec-4-content-wrap .sec-4-col-b .button {
     float: left;
