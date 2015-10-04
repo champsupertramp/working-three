@@ -59,14 +59,12 @@
   .nav-top .soc-wrap .soc-menu {
     margin-left: 10vw;
     margin-top: 4vw;
-  }
-  .nav-top .soc-wrap .soc-menu .soc-icons {
-    display: inline;
-    margin-right: 4.7vw;
-    margin-bottom: 0;
+    width: 16vw;
+    display: flex;
+    justify-content: space-between;
   }
   .nav-top .soc-wrap .soc-menu .soc-icons .soc-link img {
-    height: 1.8vh;
+    height: 1.5vh;
   }
   .nav-top .soc-wrap .soc-phone {
     margin-left: 10vw;

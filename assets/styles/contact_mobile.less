@@ -73,16 +73,14 @@ and (orientation: portrait) {
       .soc-menu {
         margin-left: 8vw;
         margin-top: 4vw;
-        text-align: justify;
-        -ms-text-justify: distribute-all-lines;
-        text-justify: distribute-all-lines;
         width: 35vw;
+        display:flex;
+        justify-content:space-between;
         .soc-icons {
-          display: inline-block;
-          *display: inline;
-          img {
-            height: 2.5vh;
+          .soc-link img {
+            margin-right: 6vw;
             display: inline-block;
+            height: 2.5vh;
           }
         }
         .stretch {
