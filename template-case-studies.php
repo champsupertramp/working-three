@@ -48,6 +48,7 @@
 							<?php if ( has_post_thumbnail() ) {
 								the_post_thumbnail('image_580x400');
 							} ?>
+							<a class="case-study-anchor" href="<?php the_permalink(); ?>"></a>
 							<div class="hover-info">
 								<h2><?php the_title();?></h2>
 								<p><?php echo substr(get_the_excerpt(),0,230); ?>...</p>

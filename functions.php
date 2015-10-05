@@ -336,7 +336,7 @@ class WD_WorkingThree{
             wp_enqueue_script( 'jquery-colorscroll', $this->tpl_url['assets'] . '/js/jquery.colorscroll.min.js', array(), '1.0.0', true );
             wp_enqueue_script( 'jquery-snapscroll', $this->tpl_url['assets'] . '/js/jquery.snapscroll.js', array(), '1.0.0', true );
             wp_enqueue_script( 'jquery-scroll_to', $this->tpl_url['assets'] . '/js/jquery.scroll_to.js', array(), '1.0.0', true );
-			      wp_enqueue_script( 'working-three-homepage-scripts', $this->tpl_url['assets'] . '/js/homepage.js', array(), '1.0.0', true );
+			wp_enqueue_script( 'working-three-homepage-scripts', $this->tpl_url['assets'] . '/js/homepage.js', array(), '1.0.0', true );
 
         }
         /**
@@ -374,7 +374,10 @@ class WD_WorkingThree{
             wp_enqueue_style( 'working-three-who-we-work-with-mobile', $this->tpl_url['assets'].'css/who-we-work-with_mobile.css',array(),'1.0.0','only screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait)' );
             wp_enqueue_style( 'working-three-who-we-work-with-table', $this->tpl_url['assets'].'css/who-we-work-with_tablet.css',array(),'1.0.0','only screen and (min-width: 768px) and (max-width: 959px)and (orientation: portrait)' );
             wp_enqueue_script( 'mixitup', 'http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js', array(), '1.0.0', true );
-
+			wp_enqueue_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-1.2.1.min.js', array(), '1.0.0', true );
+			wp_enqueue_script( 'slick', '//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js', array(), '1.0.0', true );
+			wp_enqueue_style( 'slick-css', "https://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css" );
+			wp_enqueue_style( 'slick-theme', $this->tpl_url['assets'].'css/slick-theme.css' );
 		    }
         /**
          * Case Studies
@@ -485,3 +488,15 @@ class WD_WorkingThree{
 
 $wd_wt = new WD_WorkingThree;
 global $wd_wt;
+function remove_sharethis() {
+  remove_filter('the_content', 'st_add_widget');
+  remove_filter('the_excerpt', 'st_add_widget');
+  remove_action('wp_head', 'st_widget_head');
+}
+add_action( 'template_redirect', 'remove_sharethis' );
+
+function print_sharethis_widget( ){
+    print st_widget_head();
+    print st_add_widget('');
+}
+add_action( 'custom_sharethis_widget','print_sharethis_widget');

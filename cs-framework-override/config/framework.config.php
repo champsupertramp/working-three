@@ -34,7 +34,7 @@ $options[]      = array(
 
         array(
             'id'      => 'wd_copyright',
-            'type'    => 'text',
+            'type'    => 'textarea',
             'title'   => 'Copyright',
             'default' => '123 Street, Wordpress Village',
         ),

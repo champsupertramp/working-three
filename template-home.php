@@ -198,24 +198,33 @@
 
 
         <section class="sec-3">
-            <a name="3"></a>
-            <nav class="nav-side">
-                <ul>
-                    <li class="hoverable">
-                        <span class="normal"><a href="#1">1</a></span><span class="hover"><a href="#1">one</a></span>
-                    </li>
-                    <li class="hoverable">
-                        <span class="normal"><a href="#2">2</a></span><span class="hover"><a href="#2">two</a></span>
-                    </li>
-                    <li><a href="#3">three</a></li>
-                    <li class="hoverable">
-                        <span class="normal"><a href="#4">4</a></span><span class="hover"><a href="#4">four</a></span>
-                    </li>
-                    <li class="hoverable">
-                        <span class="normal"><a href="#5">5</a></span><span class="hover"><a href="#5">five</a></span>
-                    </li>
-                </ul>
-            </nav>
+            <a class="anchor" name="3"></a>
+		    <nav class="nav-side">
+		        <ul>
+		            <li class="hoverable">
+		                <span class="normal"><a href="#1">1</a></span><span class="hover"><a href="#1">one</a></span>
+		            </li>
+		            <li class="hoverable">
+		                <span class="normal"><a href="#2">2</a></span><span class="hover"><a href="#2">two</a></span>
+		            </li>
+		            <li><a href="#3">three</a></li>
+		            <li class="hoverable">
+		                <span class="normal"><a href="#4">4</a></span><span class="hover"><a href="#4">four</a></span>
+		            </li>
+		            <li class="hoverable">
+		                <span class="normal"><a href="#5">5</a></span><span class="hover"><a href="#5">five</a></span>
+		            </li>
+		        </ul>
+		    </nav>
+		    <nav class="nav-side-tablet">
+		        <div class="nav-side-tablet-wrap">
+		            <a href="#1">1</a>
+		            <a href="#2">2</a>
+		            <a class="nav-side-active-3" href="#3">3</a>
+		            <a href="#4">4</a>
+		            <a href="#5">5</a>
+		        </div>
+		    </nav>
             <div class="sec-3-content-wrap">
                 <div class="sec-3-col-a">
                     <h1 class="title"><?php _e( cs_get_option( 'wd_s3_title' ), "workingthree" ); ?></h1>
@@ -247,24 +256,33 @@
         </section>
 
         <section class="sec-4">
-            <a name="4"></a>
-            <nav class="nav-side">
-                <ul>
-                    <li class="hoverable">
-                        <span class="normal"><a href="#1">1</a></span><span class="hover"><a href="#1">one</a></span>
-                    </li>
-                    <li class="hoverable">
-                        <span class="normal"><a href="#2">2</a></span><span class="hover"><a href="#2">two</a></span>
-                    </li>
-                    <li class="hoverable">
-                        <span class="normal"><a href="#3">3</a></span><span class="hover"><a href="#3">three</a></span>
-                    </li>
-                    <li><a href="#4">four</a></li>
-                    <li class="hoverable">
-                        <span class="normal"><a href="#5">5</a></span><span class="hover"><a href="#5">five</a></span>
-                    </li>
-                </ul>
-            </nav>
+            <a class="anchor" name="4"></a>
+		    <nav class="nav-side">
+		        <ul>
+		            <li class="hoverable">
+		                <span class="normal"><a href="#1">1</a></span><span class="hover"><a href="#1">one</a></span>
+		            </li>
+		            <li class="hoverable">
+		                <span class="normal"><a href="#2">2</a></span><span class="hover"><a href="#2">two</a></span>
+		            </li>
+		            <li class="hoverable">
+		                <span class="normal"><a href="#3">3</a></span><span class="hover"><a href="#3">three</a></span>
+		            </li>
+		            <li><a href="#4">four</a></li>
+		            <li class="hoverable">
+		                <span class="normal"><a href="#5">5</a></span><span class="hover"><a href="#5">five</a></span>
+		            </li>
+		        </ul>
+		    </nav>
+		    <nav class="nav-side-tablet">
+		        <div class="nav-side-tablet-wrap">
+		            <a href="#1">1</a>
+		            <a href="#2">2</a>
+		            <a href="#3">3</a>
+		            <a class="nav-side-active-4" href="#4">4</a>
+		            <a href="#5">5</a>
+		        </div>
+		    </nav>
             <div class="sec-4-content-wrap">
                 <div class="sec-4-col-a">
                     <h1 class="title"><?php _e( cs_get_option( 'wd_s4_title' ), "workingthree"); ?></h1>
@@ -284,24 +302,33 @@
         </section>
 
         <section class="sec-5">
-            <a name="5"></a>
-            <nav class="nav-side">
-                <ul>
-                    <li class="hoverable">
-                        <span class="normal"><a href="#1">1</a></span><span class="hover"><a href="#1">one</a></span>
-                    </li>
-                    <li class="hoverable">
-                        <span class="normal"><a href="#2">2</a></span><span class="hover"><a href="#2">two</a></span>
-                    </li>
-                    <li class="hoverable">
-                        <span class="normal"><a href="#3">3</a></span><span class="hover"><a href="#3">three</a></span>
-                    </li>
-                    <li class="hoverable">
-                        <span class="normal"><a href="#4">4</a></span><span class="hover"><a href="#4">4</a></span>
-                    </li>
-                    <li><a href="#5">five</a></li>
-                </ul>
-            </nav>
+    		<a class="anchor" name="5"></a>
+		    <nav class="nav-side">
+		        <ul>
+		            <li class="hoverable">
+		                <span class="normal"><a href="#1">1</a></span><span class="hover"><a href="#1">one</a></span>
+		            </li>
+		            <li class="hoverable">
+		                <span class="normal"><a href="#2">2</a></span><span class="hover"><a href="#2">two</a></span>
+		            </li>
+		            <li class="hoverable">
+		                <span class="normal"><a href="#3">3</a></span><span class="hover"><a href="#3">three</a></span>
+		            </li>
+		            <li class="hoverable">
+		                <span class="normal"><a href="#4">4</a></span><span class="hover"><a href="#4">4</a></span>
+		            </li>
+		            <li><a href="#5">five</a></li>
+		        </ul>
+		    </nav>
+		    <nav class="nav-side-tablet">
+		        <div class="nav-side-tablet-wrap">
+		            <a href="#1">1</a>
+		            <a href="#2">2</a>
+		            <a href="#3">3</a>
+		            <a href="#4">4</a>
+		            <a class="nav-side-active-5" href="#5">5</a>
+		        </div>
+		    </nav>
             <div class="sec-5-content-wrap">
                 <div class="sec-5-content">
                     <h1 class="title"><?php _e( cs_get_option( 'wd_s5_title' ), "workingthree"); ?></h1>
@@ -368,8 +395,6 @@
             <div class="footer-sidebar grey-dark"></div>
             <div class="footer-bg grey">
                 <div class="footer-content">
-                    <!-- <p>41 Cubitt Street, <br class="br-m">Cremorne VIC 3121, Australia <br class="br-t">Copyright © Working Three</p>
-                     -->
                      <p><?php echo cs_get_option("wd_copyright");?></p>
                      <p><?php echo cs_get_option("wd_contact_number");?></p>
 

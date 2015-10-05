@@ -109,7 +109,7 @@
 
             <p class="subText">Be outstanding.</p>
 
-            <div class="button"><a href="">Let's get to work&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets']; ?>img/btn-arrow.png"></a>
+            <div class="button"><a href="/contact-us/">Let's get to work&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets']; ?>img/btn-arrow.png"></a>
             </div>
         </div>
     </div>
@@ -119,7 +119,7 @@
     <div class="contactContent">
         <p>Create outstanding digital experiences for you and your customers</p>
 
-        <div class="contactButton"><a href="">Contact Us&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets']; ?>img/btn-arrow.png"></a></div>
+        <div class="contactButton"><a href="/contact-us/">Contact Us&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets']; ?>img/btn-arrow.png"></a></div>
     </div>
 </section>
 <footer>

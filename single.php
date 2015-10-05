@@ -32,14 +32,13 @@
     </div>
 </section>
 <section class="sec-2">
-    <div class="sec-2-side"></div>
-    <!--<div class="social-list">-->
-        <!--<p class="p1">Share this article</p>-->
-        <!--<img src="img/social-li.png">-->
-        <!--<img src="img/social-fb.png">-->
-        <!--<img src="img/social-twitter.png">-->
-        <!--<img src="img/social-li.png">-->
-    <!--</div>-->
+    <div class="sec-2-side">
+	    <div class="social-list">
+	    	<p class="share-title">Share this article:</p>
+			<?php do_action( 'custom_sharethis_widget' ); ?>
+	    </div>
+    </div>
+
     <div class="sec-2-content-wrap">
         <div class="blog-content">
             <p class="block-quote-1">I recently attended an event that focused on Big Data insights and techniques for
@@ -71,7 +70,7 @@
                     <?php echo get_avatar( get_the_author_meta( 'ID' ), 164 ); ?>
 
                     <p class="name"><?php echo ucfirst(get_the_author()); ?></p>
-
+					<?php $position = get_the_author_meta( 'position', get_the_author_meta( 'ID' )  ); ?>
                     <?php if( ! empty( $position ) ){ ?>
                         <p class="position"><?php echo $position; ?></p>
                     <?php } ?>
@@ -86,6 +85,7 @@
                           <li><a href="<?php echo $linkedin;?>"><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/social-twitter.png"></a></li>
                         <?php } ?>
                         </ul>
+                        <p class="position">Published in <span class="cat-1"><?php echo implode(", ",$arr_category);?></p>
                 </div>
 
             </div>

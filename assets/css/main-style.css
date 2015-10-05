@@ -1,0 +1,202 @@
+.more-menu .more-menu-items a.more-menu-item{
+	color: #FFF;
+	text-decoration: none;
+}
+body .nav-bot #our-work-menu .menu-case{
+	margin-top: 3.5vh;
+}
+body .nav-bot #our-work-menu{
+	height: 9vh;
+}
+.page-template-template-contact .nav-bot #our-work-menu,
+.page-template-template-contact .nav-bot{
+	background: #00BCDD;
+}
+.page-template-template-about-us .nav-bot #our-work-menu{
+	background: #26b8b0;
+}
+.page-template-template-services .nav-bot #our-work-menu{
+	background: #906fb4;
+}
+.page-template-template-blog .nav-bot #our-work-menu{
+	background: #e95944;
+}
+.page-template-template-case-studies #dd .dropdown{
+	background: #FFC425;
+}
+.sec-2 .sec-2-content-wrap .sec-2-content .blog-item .blogDate .blogSection a.cat-link-Digital{
+	color: #42C4DD;
+	text-decoration: none;
+}
+.sec-2 .sec-2-content-wrap .sec-2-content .blog-item .blogDate .blogSection a.cat-link-Innovation{
+	color: #9C8DC3;
+	text-decoration: none;
+}
+.sec-2 .sec-2-content-wrap .sec-2-content .blog-item .blogDate .blogSection a.cat-link-Design{
+	color: #60C5BA;
+	text-decoration: none;
+}
+.sec-2 .sec-2-content-wrap .sec-2-content .blog-item .blogDate .blogSection a.cat-link-Technology{
+	color: #FFD24F;
+	text-decoration: none;
+}
+.slick-arrow{
+	width: 80px;
+	height: 80px;
+	background: url('../img/case-study-arrows.png') no-repeat;
+	    border: medium none;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    margin-top: -40px;
+    outline: medium none;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+}
+.slick-prev{
+	background-position: top left;
+	left: -2vw;
+}
+.slick-next{
+	background-position: top right;
+	right: -2vw;
+}
+.page-template-template-case-studies .case-study-anchor{
+	display: none;
+}
+.page-template-template-work #close-icon{
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	cursor: pointer;
+}
+.page-template-template-work .sec-2 .container .mix{
+	cursor: pointer;
+}
+.page-template-template-work #No-case-study .ncs-wrap{
+	position: relative;
+}
+#No-case-study .ncs-wrap .p1{
+	color: #595959;
+}
+.social-list{
+	margin-left: 2vw;
+    margin-top: 6vh;
+    color: #808285;
+    font-family: "akkuratRegular",arial,sans-serif;
+    font-size: 1vw;
+    line-height: 3vh;
+    margin-bottom: 4vh;
+    width: 14vw;
+}
+.social-list p.share-title{
+	margin-left: 8px;
+}
+.social-list .st_linkedin_large .stButton .stLarge{
+	background-image: url("../img/social-in-grey.png")!important;
+	background-position: center center;
+    background-repeat: no-repeat;
+}
+.social-list .st_facebook_large .stButton .stLarge{
+	background-image: url("../img/social-fb-grey.png")!important;
+	background-position: center center;
+    background-repeat: no-repeat;
+}
+.social-list .st_twitter_large .stButton .stLarge{
+	background-image: url("../img/social-tw-grey.png")!important;
+	background-position: center center;
+    background-repeat: no-repeat;
+}
+.social-list .st_sharethis_large .stButton .stLarge{
+	background-image: url("../img/social-st-grey.png")!important;
+	background-position: center center;
+    background-repeat: no-repeat;
+}
+.gform_wrapper.signupForm_wrapper{
+	margin: auto;
+	max-width: 100%;
+}
+#dNewsletter .newsletterContent .signupForm label{
+	font-weight: normal;
+	line-height: 1;
+}
+#dNewsletter .newsletterContent .signupForm {
+  width: 35vw;
+  position: absolute;
+  float: left;
+  margin-top: 15vh;
+  margin-left: 50vw;
+}
+#dNewsletter .newsletterContent .signupForm label {
+  display: block;
+  font-family: 'akkuratRegular', arial, sans-serif;
+  font-size: 1.2vw;
+  margin-bottom: 1vh;
+  margin-top: 0;
+
+}
+#dNewsletter .newsletterContent .signupForm input {
+  display: block;
+  width: 30vw;
+  margin-bottom: 3vh;
+  height: 35px;
+  padding: 0.1em 0;
+}
+#dNewsletter .newsletterContent .signupForm .gform_footer {
+  display: block;
+  position: absolute;
+  margin-top: 4vh;
+  margin-left: 22.5vw;
+}
+#dNewsletter .newsletterContent .signupForm .gform_footer .gform_button {
+  width: 8vw;
+  font-family: 'akkuratRegular', arial, sans-serif;
+  font-size: 1.2vw;
+  color: #fff;
+  background: #00BCDD;
+  border: 0;
+  border-radius: 3px;
+  height: 5vh;
+  text-transform: none;
+}
+
+
+
+
+
+
+
+@media only screen and (min-width : 959px) {
+.sec-2 .sec-2-content-wrap .sec-2-content .blog-item{
+	width: 17vw;
+	vertical-align: top;
+}
+.single-casestudy .sec-2 .sec-2-content-wrap .sec-2-content{
+	float: right;
+	margin-right: 12vw;
+	width: 39vw;
+	margin-left: 0;
+
+}
+.single-casestudy .sec-2 .sec-2-content-wrap .sec-2-content .p1{
+	width: auto;
+}
+
+.single-casestudy .sec-2 .sec-2-content-wrap .sec-2-img{
+	float: left;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 30vw;
+}
+#slick{
+
+}
+.single-casestudy .sec-2{
+	position: relative;
+}
+}
+
