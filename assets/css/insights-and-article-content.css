@@ -501,23 +501,25 @@ footer .footer-bg .footer-content p {
   color: #999b9d;
 }
 .sec-2 {
-  display: block;
-  height: 280vh;
+  display: flex;
+  height: auto;
   width: 100vw;
 }
 .sec-2 .sec-2-side {
   display: inline-block;
   float: left;
-  height: 280vh;
+  height: auto;
   width: 16vw;
   background: #f2f2f3;
+  padding-bottom: 10vh;
 }
 .sec-2 .sec-2-content-wrap {
   display: inline-block;
   float: right;
-  height: 280vh;
+  height: auto;
   width: 84vw;
   background: #ffffff;
+  padding-bottom: 10vh;
 }
 .sec-2 .sec-2-content-wrap .blog-content {
   margin-left: 6vw;
