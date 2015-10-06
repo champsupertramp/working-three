@@ -377,7 +377,7 @@ class WD_WorkingThree{
 			wp_enqueue_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-1.2.1.min.js', array(), '1.0.0', true );
 			wp_enqueue_script( 'slick', '//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js', array(), '1.0.0', true );
 			wp_enqueue_style( 'slick-css', "https://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css" );
-			wp_enqueue_style( 'slick-theme', $this->tpl_url['assets'].'css/slick-theme.css' );
+			//wp_enqueue_style( 'slick-theme', $this->tpl_url['assets'].'css/slick-theme.css' );
 		    }
         /**
          * Case Studies
@@ -483,7 +483,6 @@ class WD_WorkingThree{
          flush_rewrite_rules();
     }
 
-
 }
 
 $wd_wt = new WD_WorkingThree;
@@ -500,3 +499,8 @@ function print_sharethis_widget( ){
     print st_add_widget('');
 }
 add_action( 'custom_sharethis_widget','print_sharethis_widget');
+
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

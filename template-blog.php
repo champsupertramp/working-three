@@ -57,12 +57,12 @@
 	            }
         ?>
             <div class="blog-item">
-                <p class="blogTitle" id="blogTitle1"><?php echo strtoupper(get_the_title()); ?></p>
+                <p class="blogTitle" id="blogTitle1"><?php echo wp_trim_words( get_the_title(), 5 ); ?></p>
 
                 <p class="blogDate" id="blogDate1"><?php the_time('jS, M Y') ?> in <span class="blogSection" id="blogSection1"><?php echo implode(", ",$arr_category);?></span>
                 </p>
 
-                <p class="blogSnip" id="blogSnip1"><?php echo substr(get_the_excerpt(), 0,120); ?></p>
+                <p class="blogSnip" id="blogSnip1"><?php echo get_the_excerpt(); ?></p>
 
                 <div class="button">
                     <a href="<?php the_permalink(); ?>">Read More&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
@@ -86,35 +86,9 @@
         </div>
     </div>
 </section>
-
-
-
-<section class="sec-4" id="Section4">
-    <div class="sec-4-sidebar purple-dark"></div>
-    <div class="sec-4-bg purple">
-        <div class="sec-4-content">
-            <p class="p2">Pop your email in so we can send
-                you updates about what we're doing.
-            </p>
-
-            <form class="signup-form" action="" method="post">
-                <div class="input-name">
-                    <input id="sub-name" type="text" value="" name="name" placeholder="Name*" required>
-                </div>
-                <div class="input-email">
-                    <input id="sub-email" type="text" value="" name="email" placeholder="Email*" required>
-                </div>
-                <div class="form-button">
-                    <button class="button" type="submit">Sign me up&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png">
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
+<?php get_template_part('templates/sections/footer/section', 'footer-newsletter'); ?>
 <?php get_template_part('templates/sections/footer/section', 'footer-contact'); ?>
 <?php get_template_part('templates/sections/footer/section', 'footer-copyright'); ?>
-
 <script type="text/css">
     $(document).ready(function () {
         $(window).scroll(function () {

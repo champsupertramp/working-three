@@ -30,7 +30,7 @@
 					            <p><?php echo $menuitem["wd_mobile_menu_item_title"];?></p>
         					</div>
                     	<?php }else{?>
-					        <div class="nav-bot-link">
+					        <div class="nav-bot-link <?php if(get_page_link($menuitem["wd_mobile_menu_item_link"]) == get_page_link()){echo "active-bot";}; ?>" >
 					            <a href="<?php echo get_page_link($menuitem["wd_mobile_menu_item_link"]); ?>"><img src="<?php echo $menuitem["wd_mobile_menu_item_icon"];?>"></a>
 					            <p><a href="<?php echo get_page_link($menuitem["wd_mobile_menu_item_link"]); ?>"><?php echo $menuitem["wd_mobile_menu_item_title"];?></a></p>
 					        </div>

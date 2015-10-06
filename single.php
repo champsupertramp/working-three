@@ -27,6 +27,7 @@
         </div>
         <div class="search">
             <p class="date"><?php the_time('jS, F Y') ?></p>
+            <a href="<?php bloginfo('rss_url'); ?>" class="rss-blog-post"><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/white-rss.png"></a>
             <?php get_search_form(); ?>
         </div>
     </div>
@@ -41,14 +42,10 @@
 
     <div class="sec-2-content-wrap">
         <div class="blog-content">
-            <p class="block-quote-1">I recently attended an event that focused on Big Data insights and techniques for
-                retailers. It
-                was well attended and had some great speakers presenting including Myer CEO Bernie
-                Brooks. By the end of the two hour seminar it was clear that Australian businesses have been
-                busy investing in Big Data technology thereby ensuring they have access to a large number of
-                data sets. But as my taxi pulled away from the venue I felt bothered by how little was
-                actually being achieved with that data. We have the big data, but we seem to be lacking the
-                big Ideas to make the most of it.</p>
+        	<?php if(get_field('block_quote')){?>
+              <p class="block-quote-1"><?php echo get_field('block_quote') ;?></p>
+        	<?php } ?>
+
 
             <div class="content">
 				<?php the_content(); ?>
@@ -85,6 +82,7 @@
                           <li><a href="<?php echo $linkedin;?>"><img src="<?php echo $wd_wt->tpl_url['assets'];?>img/social-twitter.png"></a></li>
                         <?php } ?>
                         </ul>
+                        <br />
                         <p class="position">Published in <span class="cat-1"><?php echo implode(", ",$arr_category);?></p>
                 </div>
 
@@ -116,9 +114,9 @@
 					}
             ?>
             <div class="blog-item">
-                <p class="blogTitle" id="blogTitle1"><?php _e( strtoupper(get_the_title()),"workingthree"); ?></p>
+                <p class="blogTitle" id="blogTitle1"><?php echo wp_trim_words( get_the_title(), 4 ); ?><?php // _e( strtoupper(get_the_title()),"workingthree"); ?></p>
                 <p class="blogDate" id="blogDate1"><?php the_time('jS, M Y') ?> in <span class="blogSection" id="blogSection1"><?php echo implode(", ",$arr_category);?></span></p>
-                <p class="blogSnip" id="blogSnip1"><?php echo substr(get_the_excerpt(),0,130); ?>...</p>
+                <p class="blogSnip" id="blogSnip1"><?php echo get_the_excerpt(); ?></p>
 				<div class="button">
 					<a href="<?php the_permalink(); ?>">Read More&nbsp;&nbsp;&nbsp;<img src="<?php echo $wd_wt->tpl_url['assets'];?>img/btn-arrow.png"></a>
 				</div>
@@ -131,29 +129,7 @@
     </div>
 </section>
 <?php endwhile; endif; ?>
-<section class="sec-4" id="Section4">
-    <div class="sec-4-sidebar purple-dark"></div>
-    <div class="sec-4-bg purple">
-        <div class="sec-4-content">
-            <p class="p2">Pop your email in so we can send
-                you updates about what we're doing.
-            </p>
-
-            <form class="signup-form" action="" method="post">
-                <div class="input-name">
-                    <input id="sub-name" type="text" value="" name="name" placeholder="Name*" required>
-                </div>
-                <div class="input-email">
-                    <input id="sub-email" type="text" value="" name="email" placeholder="Email*" required>
-                </div>
-                <div class="form-button">
-                    <button class="button" type="submit">Sign me up&nbsp;&nbsp;&nbsp;<img src="img/btn-arrow.png">
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
+<?php get_template_part('templates/sections/footer/section', 'footer-newsletter'); ?>
 <?php get_template_part('templates/sections/footer/section', 'footer-contact'); ?>
 <?php get_template_part('templates/sections/footer/section', 'footer-copyright'); ?>
 <?php get_footer();?>

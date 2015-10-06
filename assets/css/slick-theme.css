@@ -86,18 +86,11 @@
 }
 .slick-prev:before
 {
-    content: '<';
-    color: #000;
-    font-weight: 900;
-    z-index: 1000;
+    content: '←';
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '>';
-    color: #000;
-    font-weight: 900;
-    z-index: 1000;
-    /*margin-bottom: 5vh;*/
+    content: '→';
 }
 
 .slick-next
@@ -111,23 +104,17 @@
 }
 .slick-next:before
 {
-    content: '>';
-    color: #000;
-    font-weight: 900;
-    z-index: 1000;
+    content: '→';
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '<';
-    color: #000;
-    font-weight: 900;
-    z-index: 1000;
+    content: '←';
 }
 
 /* Dots */
 .slick-slider
 {
-    margin-bottom: 0;
+    margin-bottom: 30px;
 }
 
 .slick-dots

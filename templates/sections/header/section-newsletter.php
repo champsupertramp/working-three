@@ -19,7 +19,7 @@
         <div class="newsletterText">
         <?php _e( $content ,'workingthree');?>
         </div>
-        <?php gravity_form( 1, false, false, false, '', false ); ?>
+        <?php gravity_form( 1, false, false, false, '', true ); ?>
         <?php /*
         <form class="signupForm" action="" method="post">
             <div style="float:left;margin-right:20px;">

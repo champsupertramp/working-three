@@ -24,19 +24,19 @@ body .nav-bot #our-work-menu{
 .page-template-template-case-studies #dd .dropdown{
 	background: #FFC425;
 }
-.sec-2 .sec-2-content-wrap .sec-2-content .blog-item .blogDate .blogSection a.cat-link-Digital{
+a.cat-link-Digital{
 	color: #42C4DD;
 	text-decoration: none;
 }
-.sec-2 .sec-2-content-wrap .sec-2-content .blog-item .blogDate .blogSection a.cat-link-Innovation{
+a.cat-link-Innovation{
 	color: #9C8DC3;
 	text-decoration: none;
 }
-.sec-2 .sec-2-content-wrap .sec-2-content .blog-item .blogDate .blogSection a.cat-link-Design{
+a.cat-link-Design{
 	color: #60C5BA;
 	text-decoration: none;
 }
-.sec-2 .sec-2-content-wrap .sec-2-content .blog-item .blogDate .blogSection a.cat-link-Technology{
+a.cat-link-Technology{
 	color: #FFD24F;
 	text-decoration: none;
 }
@@ -56,6 +56,9 @@ body .nav-bot #our-work-menu{
     position: absolute;
     top: 50%;
 }
+
+
+
 .slick-prev{
 	background-position: top left;
 	left: -2vw;
@@ -162,14 +165,104 @@ body .nav-bot #our-work-menu{
   height: 5vh;
   text-transform: none;
 }
+#dNewsletter .gform_wrapper div.validation_error{
+	display: none;
+}
+#dNewsletter .gform_wrapper li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning{
+	background: transparent;
+	border: 0 none;
+}
 
-
-
-
-
-
+#dNewsletter .newsletterContent .signupForm .gfield_error input{
+	margin-bottom:0;
+}
+#dNewsletter .gform_wrapper .gfield_error .gfield_label{
+	color: #FFF;
+}
+#dNewsletter .gform_wrapper .validation_message{
+	color: #FFF;
+	font-family: 'akkuratRegular', arial, sans-serif;
+	font-weight: normal;
+}
+form.signup-form{
+	margin-top: 4vh!important;
+}
+.sec-4 .sec-4-bg .sec-4-content .signup-form li{
+	float: left!important;
+}
+.sec-4 .sec-4-bg .sec-4-content .gform_wrapper ul li.gfield{
+	clear: none!important;
+}
+.sec-4 .sec-4-bg .sec-4-content .gform_body{
+	float: left;
+}
+.sec-4 .sec-4-bg .sec-4-content .gform_footer{
+	float: left;
+	clear: none!important;
+}
+.sec-4 .sec-4-bg .sec-4-content .gform_wrapper .gform_footer input.button,
+.sec-4 .sec-4-bg .sec-4-content .gform_wrapper .gform_footer input[type="submit"]{
+	background: #4a2f24 none repeat scroll 0 0;
+    height: 6vh;
+    border: medium none;
+    border-radius: 2px;
+    color: #fff;
+    font-family: "akkuratRegular",arial,sans-serif;
+    font-size: 1.2vw;
+    padding: 0 1vw;
+    text-align: center;
+    text-transform: uppercase;
+    padding-right: 55px;
+    background: #4a2f24 url("../img/btn-arrow.png") no-repeat scroll right 15px center;
+}
+.sec-1 .sec-1-content-wrap .search .search-form input{
+    background: #eb6852 url("../img/search-ico-white.png") no-repeat scroll right center!important;
+}
+.rss-blog-post{
+	float: right;
+	margin-right: 12vw;
+	margin-top: -0.1vw;
+}
+.single-post .button,
+.single-post .button a img{
+	background: #4c494a;
+}
+.single-post .sec-1 .sec-1-content-wrap .search .search-form{
+	margin-right: 1vw;
+}
+.single-post .sec-1 .sec-1-content-wrap .sec-1-content .title{
+	text-transform: lowercase;
+}
+.single-post .sec-1 .sec-1-content-wrap .sec-1-content .title:first-letter{
+	text-transform: capitalize;
+}
+.single-post .sec-1 .sec-1-content-wrap .search .search-form input::-webkit-input-placeholder { /* WebKit browsers */
+      color: transparent;
+  }
+.single-post .sec-1 .sec-1-content-wrap .search .search-form input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: transparent;
+  }
+.single-post .sec-1 .sec-1-content-wrap .search .search-form input::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: transparent;
+  }
+.single-post .sec-1 .sec-1-content-wrap .search .search-form input:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: transparent;
+  }
 
 @media only screen and (min-width : 959px) {
+	.single-post .sec-3 .sec-3-content-wrap .sec-3-content .blog-item .blogTitle{
+	width: 16vw;
+	-ms-word-break: break-all;
+     word-break: break-all;
+
+     // Non standard for webkit
+     word-break: break-word;
+
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+        hyphens: auto;
+
+}
 .sec-2 .sec-2-content-wrap .sec-2-content .blog-item{
 	width: 17vw;
 	vertical-align: top;
